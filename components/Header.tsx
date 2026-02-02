@@ -11,13 +11,13 @@ export default function Header() {
           href="/"
           className="flex shrink-0 items-center gap-2 text-lg font-bold text-gray-900 transition-colors hover:text-primary-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-none py-2 min-h-[44px] min-w-[44px] lg:min-w-0 lg:min-h-0"
         >
-          <div className="relative h-8 w-8 shrink-0">
+          <div className="relative h-8 w-auto max-w-[120px] shrink-0">
             <ImagePlaceholder
-              src="/images/logos/logo.webp"
+              src="/images/logos/logo.png"
               alt="Rx Likewise Logo"
-              width={32}
+              width={120}
               height={32}
-              className="object-contain"
+              className="h-8 w-auto object-contain object-left"
               fallback="icon"
             />
           </div>

@@ -35,7 +35,7 @@ function buildOrganizationSchema() {
     description:
       'Same results, smarter choices. Independent decision-support platform for GLP-1 medications. Real-time pricing, verified pharmacies, 2026 policy engine.',
     url: SITE_URL,
-    logo: `${SITE_URL}/images/logos/logo.webp`,
+    logo: `${SITE_URL}/images/logos/logo.png`,
     sameAs: [],
     contactPoint: {
       '@type': 'ContactPoint',
