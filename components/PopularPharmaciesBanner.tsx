@@ -1,5 +1,6 @@
 'use client';
 
+/** Official US pharmacy chain homepages; verified 2026-01. Some may restrict non-US or automated access. */
 const PHARMACIES: { name: string; url: string }[] = [
   { name: 'Kroger', url: 'https://www.kroger.com' },
   { name: 'Walgreens', url: 'https://www.walgreens.com' },
