@@ -9,7 +9,8 @@ export type NavGroupId =
   | 'costsSavings'
   | 'safetyTrust'
   | 'tools'
-  | 'resources';
+  | 'resources'
+  | 'legal';
 
 export interface NavLink {
   href: string;
@@ -23,12 +24,12 @@ export interface NavGroup {
   links: NavLink[];
 }
 
-/** 1. Get Started — 转化漏斗入口，给新手明确起点（Home 由 Logo 承担，不重复） */
+/** 1. Get Started — 按情境分流：有保险/无保险/不确定 → 对应计算器/替代/测验 */
 export const GET_STARTED_GROUP: NavGroup = {
   id: 'getStarted',
   label: 'Get Started',
   links: [
-    { href: '/#start-by-situation', label: 'Start here', icon: 'Compass' },
+    { href: '/#start-by-situation', label: 'By your situation', icon: 'Compass' },
     { href: '/quiz', label: 'Find Your Option (Quiz)', icon: 'HelpCircle' },
   ],
 };
@@ -88,7 +89,19 @@ export const RESOURCES_GROUP: NavGroup = {
   ],
 };
 
-/** 所有一级菜单（下拉组）：Costs 优先于 Alternatives，与战略重心一致 */
+/** 7. Legal & Compliance — 法律与合规（Header 必须有一级入口） */
+export const LEGAL_GROUP: NavGroup = {
+  id: 'legal',
+  label: 'Legal',
+  links: [
+    { href: '/about#disclaimer', label: 'Disclaimer', icon: 'FileText' },
+    { href: '/about#privacy', label: 'Privacy', icon: 'FileText' },
+    { href: '/about#terms', label: 'Terms of Use', icon: 'FileText' },
+    { href: '/legitimacy#compliance', label: 'Lab Compliance', icon: 'Shield' },
+  ],
+};
+
+/** 所有一级菜单（下拉组）：Costs 优先于 Alternatives，Legal 收尾 */
 export const NAV_GROUPS: NavGroup[] = [
   GET_STARTED_GROUP,
   COSTS_SAVINGS_GROUP,
@@ -96,6 +109,7 @@ export const NAV_GROUPS: NavGroup[] = [
   SAFETY_TRUST_GROUP,
   TOOLS_GROUP,
   RESOURCES_GROUP,
+  LEGAL_GROUP,
 ];
 
 /** 主 CTA：Find Your Option → /quiz（右侧高对比度按钮） */

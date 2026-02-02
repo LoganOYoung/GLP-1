@@ -130,8 +130,8 @@ export default function LegitimacyPage() {
         </div>
       </section>
 
-      <section className="mt-10">
-        <h2 className="text-lg font-semibold text-gray-900">Compounding Lab Compliance</h2>
+      <section id="compliance" className="mt-10 scroll-mt-24" aria-labelledby="compliance-heading">
+        <h2 id="compliance-heading" className="text-lg font-semibold text-gray-900">Compounding Lab Compliance</h2>
         <p className="mt-2 text-sm text-gray-600">
           Understanding the difference between 503A and 503B compounding facilities, and how to verify their credentials and FDA inspection records.
         </p>

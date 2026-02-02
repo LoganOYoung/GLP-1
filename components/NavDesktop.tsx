@@ -114,9 +114,9 @@ export default function NavDesktop() {
         </div>
         <button type="submit" className="sr-only">Search</button>
       </form>
-      {/* 6 个一级菜单下拉 */}
+      {/* 一级菜单下拉（含 Legal） */}
       {NAV_GROUPS.map((group, index) => {
-        const isRightAligned = index >= NAV_GROUPS.length - 2; // Tools, Resources 下拉靠右对齐，避免溢出
+        const isRightAligned = index >= NAV_GROUPS.length - 2; // Resources, Legal 下拉靠右对齐，避免溢出
         return (
         <div
           key={group.id}
