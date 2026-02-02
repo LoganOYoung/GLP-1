@@ -1,7 +1,31 @@
 import Link from 'next/link';
-import { NAV_GROUPS } from '@/lib/nav-config';
 
 const SITE_URL = 'https://www.rxlikewise.com';
+
+/** Footer = Quick links：平铺常用链接，不按 header 分组 */
+const QUICK_LINKS = [
+  { href: '/', label: 'Home' },
+  { href: '/quiz', label: 'Find Your Option' },
+  { href: '/cost-insurance', label: 'Cost & Insurance' },
+  { href: '/calculator', label: 'Cost Calculator' },
+  { href: '/alternatives', label: 'Alternatives' },
+  { href: '/comparison', label: 'Tirzepatide vs Semaglutide' },
+  { href: '/legitimacy', label: 'Pharmacy Radar' },
+  { href: '/legitimacy/shortage', label: 'FDA Shortage' },
+  { href: '/tools/dose-converter', label: 'Dose Converter' },
+  { href: '/cost-insurance/appeals', label: 'Appeal Templates' },
+  { href: '/cost-insurance#discount-cards', label: 'Discount Cards' },
+  { href: '/trumprx', label: 'TrumpRx Policy' },
+  { href: '/labs', label: 'Clinical Data' },
+  { href: '/faq', label: 'FAQ' },
+  { href: '/about', label: 'About' },
+] as const;
+
+const LEGAL_LINKS = [
+  { href: '/about#disclaimer', label: 'Disclaimer' },
+  { href: '/about#privacy', label: 'Privacy' },
+  { href: '/about#terms', label: 'Terms of Use' },
+] as const;
 
 function buildOrganizationSchema() {
   return {
@@ -25,24 +49,6 @@ function buildOrganizationSchema() {
   };
 }
 
-/** Footer-only links not in nav (shortage, drug info, discount cards, appeals) */
-const FOOTER_EXTRA_LINKS = {
-  safetyTrust: [
-    { href: '/legitimacy/shortage', label: 'FDA Shortage Status' },
-  ] as const,
-  resources: [
-    { href: '/cost-insurance/appeals', label: 'Appeal Templates' },
-    { href: '/cost-insurance#discount-cards', label: 'Discount Cards' },
-    { href: '/drugs/wegovy', label: 'Drug Info (Wegovy)' },
-  ] as const,
-};
-
-const LEGAL_LINKS = [
-  { href: '/about#disclaimer', label: 'Disclaimer' },
-  { href: '/about#privacy', label: 'Privacy' },
-  { href: '/about#terms', label: 'Terms of Use' },
-] as const;
-
 const linkClass =
   'block py-2 transition-colors hover:text-primary-500 md:py-0 min-h-[44px] flex items-center md:min-h-0 text-sm text-gray-600';
 
@@ -57,7 +63,7 @@ export default function Footer() {
       />
       <footer className="border-t-2 border-primary-100 bg-gradient-to-b from-gray-50 to-white">
         <div className="container-page section-pad">
-          {/* 全站迷你分流：与 nav / 首页一致 */}
+          {/* 全站迷你分流 */}
           <div className="mb-8 rounded-lg border border-primary-200 bg-primary-50/50 px-4 py-3">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
               Start by your situation
@@ -90,66 +96,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {/* 6 个 nav 组合并为 3 列：Get Started+Costs | Alternatives+Safety | Tools+Resources */}
-            <div className="sm:col-span-2 lg:col-span-1">
-              <h3 className="mb-3 text-sm font-bold text-gray-900">Get Started & Costs</h3>
-              <ul className="space-y-0 text-sm">
-                {NAV_GROUPS.filter((g) => g.id === 'getStarted' || g.id === 'costsSavings').flatMap((group) =>
-                  group.links.map((link) => (
-                    <li key={`${group.id}-${link.href}-${link.label}`}>
-                      <Link href={link.href} className={linkClass}>
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))
-                )}
-              </ul>
-            </div>
-            <div>
-              <h3 className="mb-3 text-sm font-bold text-gray-900">Alternatives & Safety</h3>
-              <ul className="space-y-0 text-sm">
-                {NAV_GROUPS.filter((g) => g.id === 'alternatives' || g.id === 'safetyTrust').flatMap((group) => [
-                  ...group.links.map((link) => (
-                    <li key={`${group.id}-${link.href}-${link.label}`}>
-                      <Link href={link.href} className={linkClass}>
-                        {link.label}
-                      </Link>
-                    </li>
-                  )),
-                  ...(group.id === 'safetyTrust'
-                    ? FOOTER_EXTRA_LINKS.safetyTrust.map((extra) => (
-                        <li key={extra.href}>
-                          <Link href={extra.href} className={linkClass}>
-                            {extra.label}
-                          </Link>
-                        </li>
-                      ))
-                    : []),
-                ])}
-              </ul>
-            </div>
-            <div>
-              <h3 className="mb-3 text-sm font-bold text-gray-900">Tools & Resources</h3>
-              <ul className="space-y-0 text-sm">
-                {NAV_GROUPS.filter((g) => g.id === 'tools' || g.id === 'resources').flatMap((group) => [
-                  ...group.links.map((link) => (
-                    <li key={`${group.id}-${link.href}-${link.label}`}>
-                      <Link href={link.href} className={linkClass}>
-                        {link.label}
-                      </Link>
-                    </li>
-                  )),
-                  ...(group.id === 'resources'
-                    ? FOOTER_EXTRA_LINKS.resources.map((extra) => (
-                        <li key={extra.href}>
-                          <Link href={extra.href} className={linkClass}>
-                            {extra.label}
-                          </Link>
-                        </li>
-                      ))
-                    : []),
-                ])}
+          {/* Quick links：平铺，多列流动 */}
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="sm:col-span-2">
+              <h3 className="mb-3 text-sm font-bold text-gray-900">Quick links</h3>
+              <ul className="columns-2 gap-x-8 text-sm lg:columns-3 [&>li]:break-inside-avoid">
+                {QUICK_LINKS.map((link) => (
+                  <li key={`${link.href}-${link.label}`}>
+                    <Link href={link.href} className={linkClass}>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
