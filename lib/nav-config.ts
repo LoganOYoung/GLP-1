@@ -48,7 +48,7 @@ export const ALTERNATIVES_GROUP: NavGroup = {
 /** 3. Costs & Savings — 支付解决方案，计算器+政策+模板打包 */
 export const COSTS_SAVINGS_GROUP: NavGroup = {
   id: 'costsSavings',
-  label: 'Costs & Savings',
+  label: 'Costs',
   links: [
     { href: '/cost-insurance', label: 'Cost & Insurance', icon: 'Wallet' },
     { href: '/calculator', label: 'Insurance Calculator', icon: 'Calculator' },
@@ -60,7 +60,7 @@ export const COSTS_SAVINGS_GROUP: NavGroup = {
 /** 4. Safety & Trust — 信任背书，安全性研究，E-E-A-T */
 export const SAFETY_TRUST_GROUP: NavGroup = {
   id: 'safetyTrust',
-  label: 'Safety & Trust',
+  label: 'Safety',
   links: [
     { href: '/legitimacy', label: 'Pharmacy Radar (Legitimacy)', icon: 'Shield' },
     { href: '/comparison', label: 'Side Effect Database', icon: 'Activity' },
@@ -101,5 +101,5 @@ export const NAV_GROUPS: NavGroup[] = [
 ];
 
 /** 主 CTA：Find Your Option → /quiz（右侧高对比度按钮） */
-export const CTA_LABEL = 'Find Your Option';
+export const CTA_LABEL = 'Find Option';
 export const CTA_HREF = '/quiz';

@@ -80,7 +80,7 @@ export default function MobileMenu() {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex h-11 w-11 min-h-[44px] min-w-[44px] flex-col items-center justify-center gap-1.5 rounded-md p-2 md:hidden touch-manipulation transition-colors hover:bg-gray-100 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+        className="flex h-11 w-11 min-h-[44px] min-w-[44px] flex-col items-center justify-center gap-1.5 rounded-md p-2 lg:hidden touch-manipulation transition-colors hover:bg-gray-100 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
         aria-expanded={isOpen}
       >
@@ -104,12 +104,12 @@ export default function MobileMenu() {
       {isOpen && (
         <>
           <div
-            className="fixed inset-0 z-40 bg-black/50 md:hidden"
+            className="fixed inset-0 z-40 bg-black/50 lg:hidden"
             onClick={close}
             aria-hidden="true"
           />
           <nav
-            className="fixed right-0 top-0 z-50 flex h-full w-full max-w-sm flex-col bg-white shadow-2xl md:hidden"
+            className="fixed right-0 top-0 z-50 flex h-full w-full max-w-sm flex-col bg-white shadow-2xl lg:hidden"
             id="navigation"
             aria-label="Main navigation"
           >

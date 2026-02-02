@@ -99,7 +99,7 @@ export default function NavDesktop() {
       className="flex flex-wrap items-center justify-end gap-0.5 sm:gap-1"
     >
       {/* 全局搜索：提交后跳 FAQ 并带 q 参数 */}
-      <form onSubmit={handleSearch} className="hidden items-center md:flex">
+      <form onSubmit={handleSearch} className="hidden items-center lg:flex">
         <label htmlFor="nav-search" className="sr-only">Search FAQ</label>
         <div className="relative">
           <Search className="pointer-events-none absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" aria-hidden />
@@ -109,13 +109,15 @@ export default function NavDesktop() {
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
             placeholder="Search FAQ"
-            className="w-28 rounded-md border border-gray-200 bg-gray-50 py-1.5 pl-8 pr-2 text-sm text-gray-900 placeholder-gray-500 transition-colors focus:border-primary-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-400/30 sm:w-36 md:w-40"
+            className="w-28 rounded-md border border-gray-200 bg-gray-50 py-1.5 pl-8 pr-2 text-sm text-gray-900 placeholder-gray-500 transition-colors focus:border-primary-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-400/30 sm:w-32 lg:w-36"
           />
         </div>
         <button type="submit" className="sr-only">Search</button>
       </form>
       {/* 6 个一级菜单下拉 */}
-      {NAV_GROUPS.map((group) => (
+      {NAV_GROUPS.map((group, index) => {
+        const isRightAligned = index >= NAV_GROUPS.length - 2; // Tools, Resources 下拉靠右对齐，避免溢出
+        return (
         <div
           key={group.id}
           className="relative"
@@ -126,7 +128,7 @@ export default function NavDesktop() {
             type="button"
             onClick={() => setActiveDropdown(activeDropdown === group.id ? null : group.id)}
             onMouseEnter={() => { clearCloseTimeout(); setActiveDropdown(group.id); }}
-            className={`flex items-center gap-1 rounded-md px-2.5 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-1 sm:px-3 ${
+            className={`flex items-center gap-1 rounded-md px-2 py-1.5 text-sm font-medium leading-tight transition-colors focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-1 lg:px-2.5 lg:py-2 ${
               activeDropdown === group.id
                 ? 'bg-primary-50 text-primary-700'
                 : 'text-gray-700 hover:bg-primary-50 hover:text-primary-600'
@@ -149,14 +151,14 @@ export default function NavDesktop() {
               id={`nav-menu-${group.id}`}
               role="menu"
               aria-labelledby={`nav-trigger-${group.id}`}
-              className="absolute left-0 top-full z-50 mt-0.5 min-w-[200px] rounded-lg border border-gray-200 bg-white py-1 shadow-xl"
+              className={`absolute top-full z-50 mt-0.5 min-w-[200px] rounded-lg border border-gray-200 bg-white py-1 shadow-xl ${isRightAligned ? 'right-0 left-auto' : 'left-0'}`}
             >
               {group.links.map((link) => (
                 <Link
                   key={`${link.href}-${link.label}`}
                   href={link.href}
                   role="menuitem"
-                  className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 transition-colors hover:bg-primary-50 hover:text-primary-700 focus-visible:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-400"
+                  className="flex items-center gap-2 px-4 py-2.5 text-sm leading-tight text-gray-700 transition-colors hover:bg-primary-50 hover:text-primary-700 focus-visible:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-400"
                   onClick={() => setActiveDropdown(null)}
                 >
                   <NavIcon name={link.icon} />
@@ -166,12 +168,12 @@ export default function NavDesktop() {
             </div>
           )}
         </div>
-      ))}
+      ); })}
 
       {/* CTA: Find Your Option */}
       <Link
         href={CTA_HREF}
-        className="ml-1 rounded-md bg-primary-500 px-3 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 sm:px-4"
+        className="ml-1 shrink-0 rounded-md bg-primary-500 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 lg:px-3 lg:py-2"
       >
         {CTA_LABEL}
       </Link>
