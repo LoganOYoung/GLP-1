@@ -2,16 +2,13 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { ChevronDown, Search } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { NAV_GROUPS, CTA_LABEL, CTA_HREF, type NavGroup } from '@/lib/nav-config';
 
 export default function NavDesktop() {
   const [activeDropdown, setActiveDropdown] = useState<NavGroup['id'] | null>(null);
-  const [searchValue, setSearchValue] = useState('');
   const navRef = useRef<HTMLDivElement>(null);
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const router = useRouter();
 
   const clearCloseTimeout = () => {
     if (closeTimeoutRef.current) {
@@ -41,36 +38,12 @@ export default function NavDesktop() {
     };
   }, []);
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    const q = searchValue.trim();
-    if (q) router.push(`/faq?q=${encodeURIComponent(q)}`);
-    else router.push('/faq');
-    setActiveDropdown(null);
-  };
-
   return (
     <div
       ref={navRef}
       className="flex flex-wrap items-center justify-end gap-0.5 sm:gap-1"
     >
-      {/* 全局搜索：提交后跳 FAQ 并带 q 参数 */}
-      <form onSubmit={handleSearch} className="hidden items-center lg:flex">
-        <label htmlFor="nav-search" className="sr-only">Search FAQ</label>
-        <div className="relative">
-          <Search className="pointer-events-none absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" aria-hidden />
-          <input
-            id="nav-search"
-            type="search"
-            value={searchValue}
-            onChange={(e) => setSearchValue(e.target.value)}
-            placeholder="Search FAQ"
-            className="w-28 rounded-none border border-gray-200 bg-gray-50 py-1.5 pl-8 pr-2 text-sm text-gray-900 placeholder-gray-500 transition-colors focus:border-primary-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-400/30 sm:w-32 lg:w-36"
-          />
-        </div>
-        <button type="submit" className="sr-only">Search</button>
-      </form>
-      {/* 一级菜单下拉（含 Legal） */}
+      {/* 一级菜单下拉（含 Legal）；FAQ 搜索在 Resources → FAQ + 页内搜索 */}
       {NAV_GROUPS.map((group, index) => {
         const isRightAligned = index >= NAV_GROUPS.length - 2; // Resources, Legal 下拉靠右对齐，避免溢出
         return (
