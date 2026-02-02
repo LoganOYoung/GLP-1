@@ -98,12 +98,12 @@ function TierCard({
     <div
       className={`relative flex flex-col p-6 sm:p-8 bg-white border shadow-sm transition-colors ${
         tier.highlight
-          ? 'ring-2 ring-emerald-500 z-10 shadow-xl border-emerald-200'
+          ? 'ring-2 ring-primary-500 z-10 shadow-xl border-primary-200'
           : 'border-gray-200'
       }`}
     >
       {tier.highlight && (
-        <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-emerald-500 text-white px-4 py-1 rounded-none text-xs sm:text-sm font-bold uppercase tracking-widest whitespace-nowrap">
+        <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-500 text-white px-4 py-1 rounded-none text-xs sm:text-sm font-bold uppercase tracking-widest whitespace-nowrap">
           Best Value 2026
         </span>
       )}
@@ -145,7 +145,7 @@ function TierCard({
               ? 'bg-green-100 text-green-700'
               : tier.availabilityStatus === 'warning'
                 ? 'bg-amber-100 text-amber-700'
-                : 'bg-blue-100 text-blue-700'
+                : 'bg-primary-100 text-primary-700'
           }`}
         >
           {tier.availability}
@@ -164,7 +164,7 @@ function TierCard({
         href={tier.ctaLink}
         className={`w-full py-3 sm:py-4 font-bold text-sm sm:text-base transition-colors text-center ${
           tier.highlight
-            ? 'bg-emerald-600 text-white hover:bg-emerald-700'
+            ? 'bg-primary-600 text-white hover:bg-primary-700'
             : 'bg-gray-900 text-white hover:bg-gray-800'
         }`}
       >
@@ -187,7 +187,7 @@ function MobileStickyHeader({
             key={idx}
             className={`flex-1 min-w-[100px] text-center px-2 py-2 text-xs font-semibold transition-colors ${
               tier.highlight
-                ? 'bg-emerald-100 text-emerald-700 ring-2 ring-emerald-500'
+                ? 'bg-primary-100 text-primary-700 ring-2 ring-primary-500'
                 : 'bg-white text-gray-700 border border-gray-200'
             }`}
           >

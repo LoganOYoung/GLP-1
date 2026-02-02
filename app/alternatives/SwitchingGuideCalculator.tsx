@@ -36,11 +36,11 @@ export default function SwitchingGuideCalculator() {
             value={doseMg}
             onChange={(e) => setDoseMg(e.target.value)}
             placeholder="e.g. 1.7"
-            className="w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+            className="w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
           />
         </div>
         <div className="flex items-center gap-2 text-slate-500 sm:pb-0.5">
-          <Calculator className="h-5 w-5 shrink-0 text-emerald-600" aria-hidden />
+          <Calculator className="h-5 w-5 shrink-0 text-primary-600" aria-hidden />
           {match ? (
             <p className="text-sm font-medium text-slate-900">
               ≈ <strong>{match.compoundedUnits}</strong> units (compounded)

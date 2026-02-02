@@ -55,7 +55,7 @@ function PriceGauge({ price, status }: { price: string; status: 'high' | 'good' 
     status === 'high'
       ? 'bg-amber-500'
       : status === 'good'
-        ? 'bg-emerald-500'
+        ? 'bg-primary-500'
         : 'bg-slate-400';
 
   return (
@@ -74,7 +74,7 @@ function StockPill({ label, pulse }: { label: string; pulse: 'green' | 'amber' }
     <div className="flex items-center gap-2">
       <span
         className={`inline-block h-2 w-2 flex-shrink-0 rounded-full ${
-          pulse === 'green' ? 'bg-emerald-500' : 'bg-amber-500'
+          pulse === 'green' ? 'bg-primary-500' : 'bg-amber-500'
         } animate-pulse`}
         aria-hidden
       />
@@ -109,7 +109,7 @@ export default function HomeComparisonSection() {
               }`}
             >
               {'saveBadge' in card && card.saveBadge && (
-                <div className="mb-3 inline-flex w-fit animate-pulse rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-800">
+                <div className="mb-3 inline-flex w-fit animate-pulse rounded-full bg-primary-100 px-3 py-1 text-xs font-bold text-primary-800">
                   {card.saveBadge}
                 </div>
               )}

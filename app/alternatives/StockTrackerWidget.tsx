@@ -23,7 +23,7 @@ const DEMO_STOCK: StockItem[] = [
 ];
 
 const statusStyles: Record<StockStatus, string> = {
-  'in-stock': 'border-emerald-200 bg-emerald-50 text-emerald-800',
+  'in-stock': 'border-primary-200 bg-primary-50 text-primary-800',
   limited: 'border-amber-200 bg-amber-50 text-amber-800',
   severe: 'border-red-200 bg-red-50 text-red-800',
 };
@@ -104,7 +104,7 @@ export default function StockTrackerWidget() {
         <AlertTriangle className="h-4 w-4 shrink-0" aria-hidden />
         <Link
           href="/legitimacy/shortage"
-          className="font-medium text-emerald-600 hover:underline"
+          className="font-medium text-primary-600 hover:underline"
         >
           Full FDA shortage status →
         </Link>

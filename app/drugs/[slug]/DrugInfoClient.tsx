@@ -36,7 +36,7 @@ export default function DrugInfoClient({ drug }: DrugInfoClientProps) {
           <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
             <div>
               <div className="flex items-start gap-4">
-                <div className="rounded-none bg-emerald-100 p-3 text-emerald-600">
+                <div className="rounded-none bg-primary-100 p-3 text-primary-600">
                   {drug.type === 'injection' ? <Syringe className="h-8 w-8" /> : <Pill className="h-8 w-8" />}
                 </div>
                 <div className="flex-1">
@@ -255,7 +255,7 @@ export default function DrugInfoClient({ drug }: DrugInfoClientProps) {
                   {drug.priceRange.compounded && (
                     <div>
                       <p className="text-sm font-medium text-slate-500">Compounded Alternative</p>
-                      <p className="mt-1 text-2xl font-bold text-emerald-600">{drug.priceRange.compounded}</p>
+                      <p className="mt-1 text-2xl font-bold text-primary-600">{drug.priceRange.compounded}</p>
                       <p className="mt-1 text-sm text-slate-600">
                         Compounded {drug.genericName.toLowerCase()} from licensed pharmacies. Often HSA/FSA eligible.
                       </p>
@@ -273,7 +273,7 @@ export default function DrugInfoClient({ drug }: DrugInfoClientProps) {
               <div className="mt-4">
                 <Link
                   href="/calculator"
-                  className="inline-flex items-center gap-2 rounded-none bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700"
+                  className="inline-flex items-center gap-2 rounded-none bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-700"
                 >
                   Calculate Your Cost <ExternalLink className="h-4 w-4" />
                 </Link>
@@ -379,8 +379,8 @@ export default function DrugInfoClient({ drug }: DrugInfoClientProps) {
             {drug.monitoring && (
               <section>
                 <h2 className="text-xl font-semibold text-slate-900">What to Monitor</h2>
-                <div className="mt-4 rounded-none border border-blue-200 bg-blue-50 p-6">
-                  <p className="text-sm text-blue-900">{drug.monitoring}</p>
+                <div className="mt-4 rounded-none border border-primary-200 bg-primary-50 p-6">
+                  <p className="text-sm text-primary-900">{drug.monitoring}</p>
                 </div>
               </section>
             )}
@@ -399,7 +399,7 @@ export default function DrugInfoClient({ drug }: DrugInfoClientProps) {
                     <Link
                       key={altId}
                       href={`/drugs/${altId}`}
-                      className="rounded-none border border-slate-200 bg-white p-4 transition hover:border-emerald-300 hover:shadow"
+                      className="rounded-none border border-slate-200 bg-white p-4 transition hover:border-primary-300 hover:shadow"
                     >
                       <div className="flex items-center justify-between">
                         <div>
@@ -415,7 +415,7 @@ export default function DrugInfoClient({ drug }: DrugInfoClientProps) {
               <div className="mt-4">
                 <Link
                   href="/alternatives"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 hover:text-emerald-700"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary-600 hover:text-primary-700"
                 >
                   Compare All Alternatives <ExternalLink className="h-4 w-4" />
                 </Link>
@@ -441,23 +441,23 @@ export default function DrugInfoClient({ drug }: DrugInfoClientProps) {
               <h3 className="font-semibold text-slate-900">Quick Links</h3>
               <ul className="mt-4 space-y-2">
                 <li>
-                  <Link href="/calculator" className="text-sm text-emerald-600 hover:underline">
+                  <Link href="/calculator" className="text-sm text-primary-600 hover:underline">
                     Calculate Your Cost
                   </Link>
                 </li>
                 <li>
-                  <Link href="/alternatives" className="text-sm text-emerald-600 hover:underline">
+                  <Link href="/alternatives" className="text-sm text-primary-600 hover:underline">
                     Compare Alternatives
                   </Link>
                 </li>
                 <li>
-                  <Link href="/faq" className="text-sm text-emerald-600 hover:underline">
+                  <Link href="/faq" className="text-sm text-primary-600 hover:underline">
                     FAQ
                   </Link>
                 </li>
                 {drug.insuranceCoverage.paRequired && (
                   <li>
-                    <Link href="/cost-insurance" className="text-sm text-emerald-600 hover:underline">
+                    <Link href="/cost-insurance" className="text-sm text-primary-600 hover:underline">
                       Insurance Appeal Templates
                     </Link>
                   </li>

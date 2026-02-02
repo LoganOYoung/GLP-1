@@ -14,12 +14,12 @@ export default function ComplianceFlowDiagram() {
         {/* 503A Flow */}
         <div className="rounded-none border border-slate-200 bg-slate-50 p-5">
           <div className="mb-4 flex items-center gap-2">
-            <Building2 className="h-5 w-5 text-blue-600" />
+            <Building2 className="h-5 w-5 text-primary-600" />
             <h3 className="text-lg font-semibold text-slate-900">503A Compounding Pharmacy</h3>
           </div>
           <div className="space-y-3">
             <div className="flex items-start gap-3">
-              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-blue-100 text-xs font-semibold text-blue-700">
+              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-primary-100 text-xs font-semibold text-primary-700">
                 1
               </div>
               <div>
@@ -28,7 +28,7 @@ export default function ComplianceFlowDiagram() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-blue-100 text-xs font-semibold text-blue-700">
+              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-primary-100 text-xs font-semibold text-primary-700">
                 2
               </div>
               <div>
@@ -37,7 +37,7 @@ export default function ComplianceFlowDiagram() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-blue-100 text-xs font-semibold text-blue-700">
+              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-primary-100 text-xs font-semibold text-primary-700">
                 3
               </div>
               <div>
@@ -45,12 +45,12 @@ export default function ComplianceFlowDiagram() {
                 <p className="text-xs text-slate-600">Inspected by state board of pharmacy</p>
               </div>
             </div>
-            <div className="mt-4 rounded-none border border-blue-200 bg-blue-50 p-3">
+            <div className="mt-4 rounded-none border border-primary-200 bg-primary-50 p-3">
               <div className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 shrink-0 text-blue-600 mt-0.5" />
+                <CheckCircle2 className="h-4 w-4 shrink-0 text-primary-600 mt-0.5" />
                 <div>
-                  <p className="text-xs font-semibold text-blue-900">Verification</p>
-                  <p className="text-xs text-blue-700">
+                  <p className="text-xs font-semibold text-primary-900">Verification</p>
+                  <p className="text-xs text-primary-700">
                     Check license status on your state board of pharmacy website
                   </p>
                 </div>
@@ -60,14 +60,14 @@ export default function ComplianceFlowDiagram() {
         </div>
 
         {/* 503B Flow */}
-        <div className="rounded-none border border-emerald-200 bg-emerald-50 p-5">
+        <div className="rounded-none border border-primary-200 bg-primary-50 p-5">
           <div className="mb-4 flex items-center gap-2">
-            <Building2 className="h-5 w-5 text-emerald-600" />
+            <Building2 className="h-5 w-5 text-primary-600" />
             <h3 className="text-lg font-semibold text-slate-900">503B Outsourcing Facility</h3>
           </div>
           <div className="space-y-3">
             <div className="flex items-start gap-3">
-              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-emerald-100 text-xs font-semibold text-emerald-700">
+              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-primary-100 text-xs font-semibold text-primary-700">
                 1
               </div>
               <div>
@@ -76,7 +76,7 @@ export default function ComplianceFlowDiagram() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-emerald-100 text-xs font-semibold text-emerald-700">
+              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-primary-100 text-xs font-semibold text-primary-700">
                 2
               </div>
               <div>
@@ -85,7 +85,7 @@ export default function ComplianceFlowDiagram() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-emerald-100 text-xs font-semibold text-emerald-700">
+              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-primary-100 text-xs font-semibold text-primary-700">
                 3
               </div>
               <div>
@@ -93,12 +93,12 @@ export default function ComplianceFlowDiagram() {
                 <p className="text-xs text-slate-600">Can compound without patient-specific prescriptions</p>
               </div>
             </div>
-            <div className="mt-4 rounded-none border border-emerald-200 bg-emerald-100 p-3">
+            <div className="mt-4 rounded-none border border-primary-200 bg-primary-100 p-3">
               <div className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600 mt-0.5" />
+                <CheckCircle2 className="h-4 w-4 shrink-0 text-primary-600 mt-0.5" />
                 <div>
-                  <p className="text-xs font-semibold text-emerald-900">Verification</p>
-                  <p className="text-xs text-emerald-700">
+                  <p className="text-xs font-semibold text-primary-900">Verification</p>
+                  <p className="text-xs text-primary-700">
                     Check FDA registration and inspection records on FDA website
                   </p>
                 </div>
@@ -148,17 +148,17 @@ export default function ComplianceFlowDiagram() {
         </div>
 
         {/* CTA */}
-        <div className="mt-6 rounded-none border border-emerald-200 bg-emerald-50 p-4">
+        <div className="mt-6 rounded-none border border-primary-200 bg-primary-50 p-4">
           <div className="flex items-start gap-2">
-            <FileText className="h-5 w-5 shrink-0 text-emerald-600 mt-0.5" />
+            <FileText className="h-5 w-5 shrink-0 text-primary-600 mt-0.5" />
             <div>
-              <p className="text-sm font-semibold text-emerald-900">View Full Lab Database</p>
-              <p className="mt-1 text-xs text-emerald-700">
+              <p className="text-sm font-semibold text-primary-900">View Full Lab Database</p>
+              <p className="mt-1 text-xs text-primary-700">
                 See FDA inspection records and credentials for all compounding labs used by Telehealth platforms.
               </p>
               <a
                 href="/labs"
-                className="mt-2 inline-block text-xs font-medium text-emerald-700 underline hover:no-underline"
+                className="mt-2 inline-block text-xs font-medium text-primary-700 underline hover:no-underline"
               >
                 Browse Lab Database →
               </a>

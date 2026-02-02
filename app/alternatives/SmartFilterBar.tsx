@@ -52,7 +52,7 @@ export default function SmartFilterBar({ filter, onFilterChange }: Props) {
             id="current-issue"
             value={filter.currentIssue}
             onChange={(e) => setIssue((e.target.value as CurrentIssue) || '')}
-            className="w-full rounded-none border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+            className="w-full rounded-none border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
           >
             <option value="">Select…</option>
             <option value="out-of-stock">I&apos;m out of stock</option>
@@ -108,7 +108,7 @@ export default function SmartFilterBar({ filter, onFilterChange }: Props) {
                   Math.max(Number(e.target.value), filter.budgetMin)
                 )
               }
-              className="h-2 flex-1 appearance-none rounded-none bg-slate-200 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-none [&::-webkit-slider-thumb]:bg-emerald-600"
+              className="h-2 flex-1 appearance-none rounded-none bg-slate-200 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-none [&::-webkit-slider-thumb]:bg-primary-600"
             />
           </div>
           <div className="mt-1 flex justify-between text-xs text-slate-500">

@@ -44,7 +44,7 @@ function FaqAccordionItem({
       >
         <h3 className="text-base font-semibold text-slate-900">{item.question}</h3>
         <span
-          className={`shrink-0 text-emerald-600 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={`shrink-0 text-primary-600 transition-transform ${isOpen ? 'rotate-180' : ''}`}
           aria-hidden
         >
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -68,8 +68,8 @@ function FaqAccordionItem({
               disabled={feedback != null}
               className={`rounded p-1.5 transition ${
                 feedback === 'up'
-                  ? 'bg-emerald-100 text-emerald-600'
-                  : 'text-slate-400 hover:bg-slate-100 hover:text-emerald-600'
+                  ? 'bg-primary-100 text-primary-600'
+                  : 'text-slate-400 hover:bg-slate-100 hover:text-primary-600'
               } ${feedback != null ? 'cursor-default' : ''}`}
               aria-label="Yes, helpful"
             >
@@ -159,7 +159,7 @@ export default function FAQClient({ initialQuery }: { initialQuery?: string }) {
               onClick={() => setActiveCategory('All')}
               className={`block w-full rounded-none px-3 py-2 text-left text-sm font-medium transition ${
                 activeCategory === 'All'
-                  ? 'bg-emerald-50 text-emerald-700'
+                  ? 'bg-primary-50 text-primary-700'
                   : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
@@ -172,7 +172,7 @@ export default function FAQClient({ initialQuery }: { initialQuery?: string }) {
                 onClick={() => setActiveCategory(cat)}
                 className={`block w-full rounded-none px-3 py-2 text-left text-sm font-medium transition ${
                   activeCategory === cat
-                    ? 'bg-emerald-50 text-emerald-700'
+                    ? 'bg-primary-50 text-primary-700'
                     : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                 }`}
               >
@@ -202,7 +202,7 @@ export default function FAQClient({ initialQuery }: { initialQuery?: string }) {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by keyword, tag (e.g. #Cost, #Insurance)"
-                className="w-full rounded-none border border-slate-300 bg-white py-2.5 pl-10 pr-4 text-sm text-slate-900 placeholder-slate-500 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                className="w-full rounded-none border border-slate-300 bg-white py-2.5 pl-10 pr-4 text-sm text-slate-900 placeholder-slate-500 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
               />
             </div>
           </div>
@@ -256,15 +256,15 @@ export default function FAQClient({ initialQuery }: { initialQuery?: string }) {
 
           <div className="mt-10 border-t border-slate-200 pt-8">
             <p className="text-sm text-slate-600">
-              <Link href="/" className="font-medium text-emerald-600 hover:underline">
+              <Link href="/" className="font-medium text-primary-600 hover:underline">
                 Back to home
               </Link>
               {' · '}
-              <Link href="/about" className="font-medium text-emerald-600 hover:underline">
+              <Link href="/about" className="font-medium text-primary-600 hover:underline">
                 About
               </Link>
               {' · '}
-              <Link href="/calculator" className="font-medium text-emerald-600 hover:underline">
+              <Link href="/calculator" className="font-medium text-primary-600 hover:underline">
                 Calculator
               </Link>
             </p>
@@ -280,7 +280,7 @@ export default function FAQClient({ initialQuery }: { initialQuery?: string }) {
             </p>
             <Link
               href="/calculator"
-              className="mt-4 inline-flex w-full items-center justify-center rounded-none bg-emerald-600 px-3 py-2.5 text-sm font-medium text-white hover:bg-emerald-700"
+              className="mt-4 inline-flex w-full items-center justify-center rounded-none bg-primary-600 px-3 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
             >
               Estimate your cost
             </Link>

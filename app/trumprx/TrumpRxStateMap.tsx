@@ -61,7 +61,7 @@ const STATE_COORDINATES: Record<string, { x: number; y: number }> = {
 function getStatusColor(status: TrumpRxStatus): string {
   switch (status) {
     case 'active':
-      return 'fill-emerald-500';
+      return 'fill-primary-500';
     case 'pending':
       return 'fill-amber-500';
     case 'not-available':
@@ -72,7 +72,7 @@ function getStatusColor(status: TrumpRxStatus): string {
 function getStatusIcon(status: TrumpRxStatus) {
   switch (status) {
     case 'active':
-      return <CheckCircle2 className="h-4 w-4 text-emerald-600" />;
+      return <CheckCircle2 className="h-4 w-4 text-primary-600" />;
     case 'pending':
       return <Clock className="h-4 w-4 text-amber-600" />;
     case 'not-available':
@@ -96,7 +96,7 @@ export default function TrumpRxStateMap() {
       {/* Legend */}
       <div className="mb-6 flex flex-wrap items-center gap-4 text-xs">
         <div className="flex items-center gap-2">
-          <div className="h-4 w-4 rounded bg-emerald-500" />
+          <div className="h-4 w-4 rounded bg-primary-500" />
           <span className="text-slate-700">Active</span>
         </div>
         <div className="flex items-center gap-2">
@@ -153,24 +153,24 @@ export default function TrumpRxStateMap() {
 
       {/* Selected State Info */}
       {selectedState && stateMap.has(selectedState) && (
-        <div className="rounded-none border border-emerald-200 bg-emerald-50 p-4">
+        <div className="rounded-none border border-primary-200 bg-primary-50 p-4">
           {(() => {
             const state = stateMap.get(selectedState)!;
             return (
               <div>
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-emerald-900">{state.stateName}</h3>
+                  <h3 className="text-lg font-semibold text-primary-900">{state.stateName}</h3>
                   {getStatusIcon(state.status)}
                 </div>
-                <p className="mt-1 text-sm text-emerald-800">
+                <p className="mt-1 text-sm text-primary-800">
                   Status: <strong>{state.status === 'active' ? 'Active' : state.status === 'pending' ? 'Pending' : 'Not Available'}</strong>
                 </p>
                 {state.effectiveDate && (
-                  <p className="mt-1 text-sm text-emerald-800">
+                  <p className="mt-1 text-sm text-primary-800">
                     Effective: {new Date(state.effectiveDate).toLocaleDateString()}
                   </p>
                 )}
-                <p className="mt-1 text-sm text-emerald-800">
+                <p className="mt-1 text-sm text-primary-800">
                   Monthly Cap: <strong>${state.monthlyCap}</strong>
                 </p>
                 {state.applicationLink && (
@@ -178,7 +178,7 @@ export default function TrumpRxStateMap() {
                     href={state.applicationLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-block text-sm font-medium text-emerald-700 underline hover:no-underline"
+                    className="mt-3 inline-block text-sm font-medium text-primary-700 underline hover:no-underline"
                   >
                     Apply Now →
                   </a>
@@ -200,7 +200,7 @@ export default function TrumpRxStateMap() {
               onClick={() => setSelectedState(state.stateCode)}
               className={`rounded border p-2 text-xs font-medium transition ${
                 selectedState === state.stateCode
-                  ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
+                  ? 'border-primary-500 bg-primary-50 text-primary-700'
                   : 'border-slate-200 bg-white text-slate-700 hover:bg-slate-50'
               }`}
               title={`${state.stateName} - ${state.status}`}

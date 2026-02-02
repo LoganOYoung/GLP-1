@@ -11,7 +11,7 @@ export default function LabInspectionRecord({ inspection }: LabInspectionRecordP
   const getResultIcon = (result: InspectionResult) => {
     switch (result) {
       case 'satisfactory':
-        return <CheckCircle2 className="h-4 w-4 text-emerald-600" />;
+        return <CheckCircle2 className="h-4 w-4 text-primary-600" />;
       case 'voluntary-action-indicated':
         return <AlertTriangle className="h-4 w-4 text-amber-600" />;
       case 'official-action-indicated':
@@ -22,7 +22,7 @@ export default function LabInspectionRecord({ inspection }: LabInspectionRecordP
   const getResultColor = (result: InspectionResult) => {
     switch (result) {
       case 'satisfactory':
-        return 'border-emerald-200 bg-emerald-50';
+        return 'border-primary-200 bg-primary-50';
       case 'voluntary-action-indicated':
         return 'border-amber-200 bg-amber-50';
       case 'official-action-indicated':

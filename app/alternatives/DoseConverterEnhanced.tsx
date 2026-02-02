@@ -103,7 +103,7 @@ export default function DoseConverterEnhanced() {
             onClick={() => setSelectedDrug('semaglutide')}
             className={`flex-1 rounded-none border px-3 py-2 text-sm font-medium transition ${
               selectedDrug === 'semaglutide'
-                ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
+                ? 'border-primary-500 bg-primary-50 text-primary-700'
                 : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
@@ -114,7 +114,7 @@ export default function DoseConverterEnhanced() {
             onClick={() => setSelectedDrug('tirzepatide')}
             className={`flex-1 rounded-none border px-3 py-2 text-sm font-medium transition ${
               selectedDrug === 'tirzepatide'
-                ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
+                ? 'border-primary-500 bg-primary-50 text-primary-700'
                 : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
@@ -132,7 +132,7 @@ export default function DoseConverterEnhanced() {
             onClick={() => setConversionMode('brand-to-compounded')}
             className={`flex items-center justify-center gap-2 rounded-none border px-3 py-2 text-xs font-medium transition ${
               conversionMode === 'brand-to-compounded'
-                ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
+                ? 'border-primary-500 bg-primary-50 text-primary-700'
                 : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
@@ -144,7 +144,7 @@ export default function DoseConverterEnhanced() {
             onClick={() => setConversionMode('compounded-to-brand')}
             className={`flex items-center justify-center gap-2 rounded-none border px-3 py-2 text-xs font-medium transition ${
               conversionMode === 'compounded-to-brand'
-                ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
+                ? 'border-primary-500 bg-primary-50 text-primary-700'
                 : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
@@ -156,7 +156,7 @@ export default function DoseConverterEnhanced() {
             onClick={() => setConversionMode('brand-to-oral')}
             className={`flex items-center justify-center gap-2 rounded-none border px-3 py-2 text-xs font-medium transition ${
               conversionMode === 'brand-to-oral'
-                ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
+                ? 'border-primary-500 bg-primary-50 text-primary-700'
                 : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
@@ -168,7 +168,7 @@ export default function DoseConverterEnhanced() {
             onClick={() => setConversionMode('oral-to-brand')}
             className={`flex items-center justify-center gap-2 rounded-none border px-3 py-2 text-xs font-medium transition ${
               conversionMode === 'oral-to-brand'
-                ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
+                ? 'border-primary-500 bg-primary-50 text-primary-700'
                 : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
@@ -201,7 +201,7 @@ export default function DoseConverterEnhanced() {
                 ? 'e.g. 34'
                 : 'e.g. 14'
             }
-            className="flex-1 rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+            className="flex-1 rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
           />
         </div>
       </div>
@@ -225,12 +225,12 @@ export default function DoseConverterEnhanced() {
 
       {/* Result */}
       {result && (
-        <div className="mt-6 rounded-none border border-emerald-200 bg-emerald-50 p-4">
+        <div className="mt-6 rounded-none border border-primary-200 bg-primary-50 p-4">
           <div className="flex items-start gap-3">
-            <Calculator className="h-5 w-5 shrink-0 text-emerald-600 mt-0.5" />
+            <Calculator className="h-5 w-5 shrink-0 text-primary-600 mt-0.5" />
             <div className="flex-1">
-              <p className="text-sm font-semibold text-emerald-900">Conversion Result</p>
-              <p className="mt-1 text-sm text-emerald-800">
+              <p className="text-sm font-semibold text-primary-900">Conversion Result</p>
+              <p className="mt-1 text-sm text-primary-800">
                 {result.original} {conversionMode.includes('brand') ? 'mg' : conversionMode.includes('compounded') ? 'units' : 'mg'} ({result.drug}) ={' '}
                 <strong className="text-base">
                   {result.value} {result.type === 'compounded' ? 'units' : result.type === 'oral' ? 'mg (oral)' : 'mg'}

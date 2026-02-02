@@ -92,7 +92,7 @@ export default function TelehealthServiceAreaMap() {
           id="platform-filter"
           value={selectedPlatform || ''}
           onChange={(e) => setSelectedPlatform(e.target.value || null)}
-          className="w-full rounded-none border border-slate-300 bg-white py-2 px-4 text-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+          className="w-full rounded-none border border-slate-300 bg-white py-2 px-4 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
         >
           <option value="">All Platforms</option>
           {TELEHEALTH_PLATFORMS.map((platform) => (
@@ -121,14 +121,14 @@ export default function TelehealthServiceAreaMap() {
                 key={stateCode}
                 className={`flex flex-col items-center rounded-none border p-2 text-center transition ${
                   isAvailable
-                    ? 'border-emerald-300 bg-emerald-50 hover:bg-emerald-100'
+                    ? 'border-primary-300 bg-primary-50 hover:bg-primary-100'
                     : 'border-slate-200 bg-slate-50 hover:bg-slate-100'
                 }`}
                 title={`${stateNames[stateCode]}: ${isAvailable ? `${platformCount} platform${platformCount !== 1 ? 's' : ''} available` : 'Not available'}`}
               >
                 <span className="text-xs font-medium text-slate-900">{stateCode}</span>
                 {isAvailable && (
-                  <CheckCircle2 className="mt-1 h-3 w-3 text-emerald-600" />
+                  <CheckCircle2 className="mt-1 h-3 w-3 text-primary-600" />
                 )}
                 {!isAvailable && (
                   <XCircle className="mt-1 h-3 w-3 text-slate-400" />
@@ -142,7 +142,7 @@ export default function TelehealthServiceAreaMap() {
       {/* Legend */}
       <div className="flex items-center gap-4 text-xs text-slate-600">
         <div className="flex items-center gap-2">
-          <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+          <CheckCircle2 className="h-4 w-4 text-primary-600" />
           <span>Available</span>
         </div>
         <div className="flex items-center gap-2">
@@ -158,8 +158,8 @@ export default function TelehealthServiceAreaMap() {
       </div>
 
       {/* Summary */}
-      <div className="mt-6 rounded-none border border-emerald-200 bg-emerald-50 p-4">
-        <p className="text-sm text-emerald-900">
+      <div className="mt-6 rounded-none border border-primary-200 bg-primary-50 p-4">
+        <p className="text-sm text-primary-900">
           <strong>
             {selectedPlatform
               ? `${filteredStates.length} state${filteredStates.length !== 1 ? 's' : ''}`

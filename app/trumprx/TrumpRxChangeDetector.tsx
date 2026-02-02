@@ -49,23 +49,23 @@ export default function TrumpRxChangeDetector() {
   if (recentChanges.length === 0) return null;
 
   return (
-    <div className="mb-6 rounded-none border-2 border-emerald-500 bg-emerald-50 p-4">
+    <div className="mb-6 rounded-none border-2 border-primary-500 bg-primary-50 p-4">
       <div className="flex items-start gap-3">
-        <AlertCircle className="h-5 w-5 shrink-0 text-emerald-600 mt-0.5" />
+        <AlertCircle className="h-5 w-5 shrink-0 text-primary-600 mt-0.5" />
         <div className="flex-1">
-          <h3 className="text-sm font-semibold text-emerald-900">Recent Policy Changes</h3>
-          <p className="mt-1 text-xs text-emerald-800">
+          <h3 className="text-sm font-semibold text-primary-900">Recent Policy Changes</h3>
+          <p className="mt-1 text-xs text-primary-800">
             New states activated or status updated since last check:
           </p>
           <div className="mt-3 space-y-2">
             {recentChanges.map((change) => (
               <div
                 key={`${change.stateCode}-${change.date}`}
-                className="flex items-center justify-between rounded border border-emerald-200 bg-white p-2"
+                className="flex items-center justify-between rounded border border-primary-200 bg-white p-2"
               >
                 <div className="flex items-center gap-2">
                   {change.changeType === 'activated' ? (
-                    <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                    <CheckCircle2 className="h-4 w-4 text-primary-600" />
                   ) : (
                     <Clock className="h-4 w-4 text-amber-600" />
                   )}
@@ -86,7 +86,7 @@ export default function TrumpRxChangeDetector() {
               </div>
             ))}
           </div>
-          <p className="mt-3 text-xs text-emerald-700">
+          <p className="mt-3 text-xs text-primary-700">
             Last checked: {new Date(lastChecked).toLocaleString()}
           </p>
         </div>

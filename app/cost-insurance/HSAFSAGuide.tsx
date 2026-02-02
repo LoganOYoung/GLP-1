@@ -25,7 +25,7 @@ export default function HSAFSAGuide() {
                 <div className="flex items-center gap-2">
                   <span className="font-medium text-slate-900">{drug.name}</span>
                   {drug.eligible === true ? (
-                    <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                    <CheckCircle2 className="h-4 w-4 text-primary-600" />
                   ) : drug.eligible === 'Maybe' ? (
                     <AlertCircle className="h-4 w-4 text-amber-600" />
                   ) : null}
@@ -58,7 +58,7 @@ export default function HSAFSAGuide() {
         <ul className="space-y-2">
           {HSA_FSA_INFO.taxBenefits.map((benefit, index) => (
             <li key={index} className="flex items-start gap-2 text-sm text-slate-700">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-600" />
+              <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary-600" />
               <span>{benefit}</span>
             </li>
           ))}
@@ -79,13 +79,13 @@ export default function HSAFSAGuide() {
       </div>
 
       {/* CTA */}
-      <div className="rounded-none border border-emerald-200 bg-emerald-50 p-4">
+      <div className="rounded-none border border-primary-200 bg-primary-50 p-4">
         <p className="mb-3 text-sm font-medium text-slate-900">
           Find HSA/FSA eligible options in our Alternatives comparison
         </p>
         <Link
           href="/alternatives"
-          className="inline-flex items-center gap-2 rounded-none bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700"
+          className="inline-flex items-center gap-2 rounded-none bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-700"
         >
           View Alternatives
           <ExternalLink className="h-4 w-4" />

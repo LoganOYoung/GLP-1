@@ -33,7 +33,7 @@ export default function PharmacyLegitimacyRadar({ filter }: Props) {
             Trust-verified 503A/503B licensed pharmacies. All pharmacies are verified through state boards and LegitScript certification.
           </p>
         </div>
-        <div className="flex items-center gap-2 rounded-none bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
+        <div className="flex items-center gap-2 rounded-none bg-primary-50 px-3 py-1.5 text-xs font-medium text-primary-700">
           <Shield className="h-4 w-4" />
           <span>Trust Verified</span>
         </div>
@@ -70,15 +70,15 @@ function PharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
     <div className="flex flex-col rounded-none border border-slate-200 bg-slate-50/50 transition hover:border-slate-300">
       <div className="flex items-start justify-between gap-2 p-4">
         <div className="flex items-start gap-2">
-          <Shield className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" aria-hidden />
+          <Shield className="mt-0.5 h-5 w-5 shrink-0 text-primary-600" aria-hidden />
           <div>
             <p className="font-medium text-slate-900">{pharmacy.name}</p>
-            <p className="text-xs font-medium text-emerald-600">{pharmacy.type}</p>
+            <p className="text-xs font-medium text-primary-600">{pharmacy.type}</p>
             <p className="mt-1 text-xs text-slate-600">
               ${pharmacy.priceMin}–${pharmacy.priceMax}/mo
             </p>
             {pharmacy.hsaFsaEligible && (
-              <span className="mt-1 inline-flex items-center gap-1 rounded bg-emerald-100 px-1.5 py-0.5 text-xs font-medium text-emerald-800">
+              <span className="mt-1 inline-flex items-center gap-1 rounded bg-primary-100 px-1.5 py-0.5 text-xs font-medium text-primary-800">
                 <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
                 HSA/FSA Eligible
               </span>
@@ -106,7 +106,7 @@ function PharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
               href={pharmacy.legitScriptUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-emerald-600 hover:underline"
+              className="inline-flex items-center gap-1 text-primary-600 hover:underline"
             >
               Verify certification <ExternalLink className="h-3.5 w-3.5" />
             </a>
@@ -117,11 +117,11 @@ function PharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
               {pharmacy.fdaRegistration}
             </code>
           </p>
-          <p className="mt-2 flex items-center gap-2 text-xs text-emerald-700">
+          <p className="mt-2 flex items-center gap-2 text-xs text-primary-700">
             <BadgeCheck className="h-4 w-4 shrink-0" />
             <span>Verified by State Board of Pharmacy</span>
           </p>
-          <p className="mt-1 flex items-center gap-2 text-xs text-emerald-700">
+          <p className="mt-1 flex items-center gap-2 text-xs text-primary-700">
             <BadgeCheck className="h-4 w-4 shrink-0" />
             <span>Active License Status</span>
           </p>
@@ -132,7 +132,7 @@ function PharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
           href={eligibilityUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex w-full items-center justify-center gap-2 rounded-none bg-emerald-600 px-3 py-2.5 text-sm font-medium text-white hover:bg-emerald-700"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-none bg-primary-600 px-3 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
         >
           Check Eligibility <ExternalLink className="h-4 w-4" />
         </a>

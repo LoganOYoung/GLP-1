@@ -59,7 +59,7 @@ function buildFAQSchema() {
 function getStatusIcon(status: TrumpRxStatus) {
   switch (status) {
     case 'active':
-      return <CheckCircle2 className="h-5 w-5 text-emerald-600" />;
+      return <CheckCircle2 className="h-5 w-5 text-primary-600" />;
     case 'pending':
       return <Clock className="h-5 w-5 text-amber-600" />;
     case 'not-available':
@@ -71,7 +71,7 @@ function getStatusBadge(status: TrumpRxStatus) {
   switch (status) {
     case 'active':
       return (
-        <span className="inline-flex items-center gap-1 rounded-none bg-emerald-100 px-2 py-1 text-xs font-medium text-emerald-700">
+        <span className="inline-flex items-center gap-1 rounded-none bg-primary-100 px-2 py-1 text-xs font-medium text-primary-700">
           <CheckCircle2 className="h-3 w-3" />
           Active
         </span>
@@ -307,7 +307,7 @@ function StateCard({ state }: { state: typeof TRUMPRX_STATES[0] }) {
             <ul className="space-y-1">
               {state.eligibilityCriteria.map((criteria, index) => (
                 <li key={index} className="flex items-start gap-2 text-sm text-slate-700">
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary-600" />
                   <span>{criteria}</span>
                 </li>
               ))}
@@ -326,7 +326,7 @@ function StateCard({ state }: { state: typeof TRUMPRX_STATES[0] }) {
                 href={state.applicationLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-none bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700"
+                className="inline-flex items-center gap-2 rounded-none bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-700"
               >
                 Apply Now
                 <ExternalLink className="h-4 w-4" />

@@ -128,7 +128,7 @@ export default function PriceStockAlert() {
             onClick={handleEnableNotifications}
             className={`flex items-center gap-2 rounded-none px-3 py-2 text-sm font-medium transition ${
               notificationEnabled
-                ? 'bg-emerald-100 text-emerald-700'
+                ? 'bg-primary-100 text-primary-700'
                 : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
             }`}
           >
@@ -139,10 +139,10 @@ export default function PriceStockAlert() {
       </div>
 
       {submitted ? (
-        <div className="rounded-none border border-emerald-200 bg-emerald-50 p-4">
+        <div className="rounded-none border border-primary-200 bg-primary-50 p-4">
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="h-5 w-5 text-emerald-600" />
-            <p className="text-sm font-medium text-emerald-900">
+            <CheckCircle2 className="h-5 w-5 text-primary-600" />
+            <p className="text-sm font-medium text-primary-900">
               Alert set! We&apos;ll notify you when conditions are met.
             </p>
           </div>
@@ -157,7 +157,7 @@ export default function PriceStockAlert() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@email.com"
               required
-              className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+              className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
             />
           </div>
 
@@ -167,7 +167,7 @@ export default function PriceStockAlert() {
               value={selectedDrug}
               onChange={(e) => setSelectedDrug(e.target.value)}
               required
-              className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+              className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
             >
               <option value="">Select a drug</option>
               {DRUGS.map((drug) => (
@@ -186,7 +186,7 @@ export default function PriceStockAlert() {
                 onClick={() => setAlertType('price')}
                 className={`flex-1 rounded-none border px-3 py-2 text-sm font-medium transition ${
                   alertType === 'price'
-                    ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
+                    ? 'border-primary-500 bg-primary-50 text-primary-700'
                     : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
                 }`}
               >
@@ -197,7 +197,7 @@ export default function PriceStockAlert() {
                 onClick={() => setAlertType('stock')}
                 className={`flex-1 rounded-none border px-3 py-2 text-sm font-medium transition ${
                   alertType === 'stock'
-                    ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
+                    ? 'border-primary-500 bg-primary-50 text-primary-700'
                     : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
                 }`}
               >
@@ -213,7 +213,7 @@ export default function PriceStockAlert() {
                 <select
                   value={selectedPlatform}
                   onChange={(e) => setSelectedPlatform(e.target.value)}
-                  className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                  className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
                 >
                   <option value="">All platforms</option>
                   {TELEHEALTH_PLATFORMS.map((platform) => (
@@ -231,7 +231,7 @@ export default function PriceStockAlert() {
                     onClick={() => setPriceDirection('below')}
                     className={`flex-1 rounded-none border px-3 py-2 text-sm font-medium transition ${
                       priceDirection === 'below'
-                        ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
+                        ? 'border-primary-500 bg-primary-50 text-primary-700'
                         : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
                     }`}
                   >
@@ -242,7 +242,7 @@ export default function PriceStockAlert() {
                     onClick={() => setPriceDirection('above')}
                     className={`flex-1 rounded-none border px-3 py-2 text-sm font-medium transition ${
                       priceDirection === 'above'
-                        ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
+                        ? 'border-primary-500 bg-primary-50 text-primary-700'
                         : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
                     }`}
                   >
@@ -260,7 +260,7 @@ export default function PriceStockAlert() {
                   required
                   min="0"
                   step="0.01"
-                  className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                  className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
                 />
               </div>
             </>
@@ -271,7 +271,7 @@ export default function PriceStockAlert() {
                 value={stockTarget}
                 onChange={(e) => setStockTarget(e.target.value as 'in-stock' | 'limited' | 'severe')}
                 required
-                className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
               >
                 <option value="in-stock">In Stock</option>
                 <option value="limited">Limited</option>
@@ -282,7 +282,7 @@ export default function PriceStockAlert() {
 
           <button
             type="submit"
-            className="w-full rounded-none bg-emerald-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-emerald-700"
+            className="w-full rounded-none bg-primary-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
           >
             Set Alert
           </button>

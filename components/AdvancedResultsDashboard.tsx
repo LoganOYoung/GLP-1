@@ -110,7 +110,7 @@ export default function AdvancedResultsDashboard({ results, input }: AdvancedRes
         {results.summary.keyInsights.length > 0 && (
           <div className="mb-4 space-y-2">
             {results.summary.keyInsights.map((insight, idx) => (
-              <div key={idx} className="flex items-start gap-2 rounded-none bg-emerald-50 p-3 text-sm text-emerald-800">
+              <div key={idx} className="flex items-start gap-2 rounded-none bg-primary-50 p-3 text-sm text-primary-800">
                 <Info className="mt-0.5 h-4 w-4 shrink-0" />
                 <span>{insight}</span>
               </div>
@@ -120,19 +120,19 @@ export default function AdvancedResultsDashboard({ results, input }: AdvancedRes
 
         {/* Savings Potential */}
         {results.summary.annualSavingsPotential > 0 && (
-          <div className="rounded-none border border-emerald-200 bg-emerald-50 p-3 sm:p-4">
+          <div className="rounded-none border border-primary-200 bg-primary-50 p-3 sm:p-4">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <p className="text-sm font-medium text-emerald-900">Potential Annual Savings</p>
-                <p className="mt-1 text-xs text-emerald-700">
+                <p className="text-sm font-medium text-primary-900">Potential Annual Savings</p>
+                <p className="mt-1 text-xs text-primary-700">
                   By choosing the best option vs brand baseline
                 </p>
               </div>
               <div className="text-left sm:text-right">
-                <div className="text-lg font-bold text-emerald-700 sm:text-xl">
+                <div className="text-lg font-bold text-primary-700 sm:text-xl">
                   ${Math.round(results.summary.annualSavingsPotential).toLocaleString()}
                 </div>
-                <div className="text-xs text-emerald-600">per year</div>
+                <div className="text-xs text-primary-600">per year</div>
               </div>
             </div>
           </div>
@@ -254,7 +254,7 @@ function DetailedCostBreakdown({
                 {scenario.insuranceCoverage > 0 && (
                   <div className="flex items-center justify-between border-b border-slate-100 pb-2">
                     <div className="flex items-center gap-2">
-                      <Shield className="h-4 w-4 text-blue-500" />
+                      <Shield className="h-4 w-4 text-primary-500" />
                       <span className="text-sm font-medium text-slate-700">
                         Insurance Coverage ({Math.round(scenario.insuranceCoverage * 100)}%)
                       </span>
@@ -297,7 +297,7 @@ function DetailedCostBreakdown({
                 {scenario.trumpRxSavings > 0 && (
                   <div className="flex items-center justify-between border-b border-slate-100 pb-2">
                     <div className="flex items-center gap-2">
-                      <TrendingDown className="h-4 w-4 text-emerald-500" />
+                      <TrendingDown className="h-4 w-4 text-primary-500" />
                       <span className="text-sm font-medium text-slate-700">TrumpRx $350 Program</span>
                     </div>
                     <span className="text-sm font-semibold text-green-600">
@@ -310,7 +310,7 @@ function DetailedCostBreakdown({
                 {scenario.hsaFsaTaxBenefit > 0 && (
                   <div className="flex items-center justify-between border-b border-slate-100 pb-2">
                     <div className="flex items-center gap-2">
-                      <DollarSign className="h-4 w-4 text-emerald-500" />
+                      <DollarSign className="h-4 w-4 text-primary-500" />
                       <span className="text-sm font-medium text-slate-700">
                         HSA/FSA Tax Benefit ({Math.round((scenario.hsaFsaTaxBenefit / scenario.totalMonthlyAfterAllSavings) * 100)}%)
                       </span>
@@ -461,9 +461,9 @@ function ScenarioCard({
               {(scenario.manufacturerCardSavings > 0 ||
                 scenario.trumpRxSavings > 0 ||
                 scenario.hsaFsaTaxBenefit > 0) && (
-                <div className="rounded-none border border-emerald-200 bg-emerald-50 p-3">
-                  <p className="mb-2 text-xs font-semibold text-emerald-900">Savings Applied:</p>
-                  <div className="space-y-1 text-xs text-emerald-800">
+                <div className="rounded-none border border-primary-200 bg-primary-50 p-3">
+                  <p className="mb-2 text-xs font-semibold text-primary-900">Savings Applied:</p>
+                  <div className="space-y-1 text-xs text-primary-800">
                     {scenario.manufacturerCardSavings > 0 && (
                       <div className="flex justify-between">
                         <span>Manufacturer Card</span>
@@ -492,7 +492,7 @@ function ScenarioCard({
                 <ul className="space-y-1">
                   {scenario.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-xs text-slate-600">
-                      <CheckCircle2 className="mt-0.5 h-3 w-3 shrink-0 text-emerald-500" />
+                      <CheckCircle2 className="mt-0.5 h-3 w-3 shrink-0 text-primary-500" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -503,10 +503,10 @@ function ScenarioCard({
               <div className="grid gap-3 sm:grid-cols-2">
                 {scenario.pros.length > 0 && (
                   <div>
-                    <p className="mb-1 text-xs font-semibold text-emerald-700">Pros:</p>
+                    <p className="mb-1 text-xs font-semibold text-primary-700">Pros:</p>
                     <ul className="space-y-1">
                       {scenario.pros.map((pro, idx) => (
-                        <li key={idx} className="text-xs text-emerald-800">• {pro}</li>
+                        <li key={idx} className="text-xs text-primary-800">• {pro}</li>
                       ))}
                     </ul>
                   </div>

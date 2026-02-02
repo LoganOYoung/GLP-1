@@ -60,7 +60,7 @@ export default function MedicationComparisonInfographic() {
                 <p className="text-xs font-medium text-gray-600 mb-1">Oral</p>
                 {typeof item.oral === 'boolean' ? (
                   item.oral ? (
-                    <CheckCircle2 className="mx-auto h-5 w-5 text-accent-teal-500" />
+                    <CheckCircle2 className="mx-auto h-5 w-5 text-primary-500" />
                   ) : (
                     <AlertTriangle className="mx-auto h-5 w-5 text-gray-400" />
                   )

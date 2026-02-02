@@ -36,7 +36,7 @@ export default function IngredientDeepAnalysis() {
           onClick={() => setCompareMode(false)}
           className={`rounded-none border px-3 py-2 text-sm font-medium transition ${
             !compareMode
-              ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
+              ? 'border-primary-500 bg-primary-50 text-primary-700'
               : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
           }`}
         >
@@ -47,7 +47,7 @@ export default function IngredientDeepAnalysis() {
           onClick={() => setCompareMode(true)}
           className={`rounded-none border px-3 py-2 text-sm font-medium transition ${
             compareMode
-              ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
+              ? 'border-primary-500 bg-primary-50 text-primary-700'
               : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
           }`}
         >
@@ -62,7 +62,7 @@ export default function IngredientDeepAnalysis() {
             <select
               value={selectedFormulation}
               onChange={(e) => setSelectedFormulation(e.target.value)}
-              className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+              className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
             >
               <option value="">Choose a formulation...</option>
               {FORMULATION_ANALYSES.map((f) => (
@@ -83,7 +83,7 @@ export default function IngredientDeepAnalysis() {
               <select
                 value={compareFormulation1}
                 onChange={(e) => setCompareFormulation1(e.target.value)}
-                className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
               >
                 <option value="">Choose...</option>
                 {FORMULATION_ANALYSES.map((f) => (
@@ -98,7 +98,7 @@ export default function IngredientDeepAnalysis() {
               <select
                 value={compareFormulation2}
                 onChange={(e) => setCompareFormulation2(e.target.value)}
-                className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                className="mt-1 block w-full rounded-none border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
               >
                 <option value="">Choose...</option>
                 {FORMULATION_ANALYSES.map((f) => (
@@ -116,9 +116,9 @@ export default function IngredientDeepAnalysis() {
                 <FormulationDetail formulation={comparison.formulation1} />
                 <FormulationDetail formulation={comparison.formulation2} />
               </div>
-              <div className="rounded-none border border-blue-200 bg-blue-50 p-4">
-                <h3 className="mb-2 text-sm font-semibold text-blue-900">Key Differences</h3>
-                <ul className="space-y-1 text-xs text-blue-800">
+              <div className="rounded-none border border-primary-200 bg-primary-50 p-4">
+                <h3 className="mb-2 text-sm font-semibold text-primary-900">Key Differences</h3>
+                <ul className="space-y-1 text-xs text-primary-800">
                   {comparison.differences.activeIngredient && (
                     <li>• Different active ingredients</li>
                   )}
@@ -145,20 +145,20 @@ function FormulationDetail({ formulation }: { formulation: FormulationAnalysis }
   return (
     <div className="rounded-none border border-slate-200 bg-slate-50 p-4">
       <div className="mb-3 flex items-center gap-2">
-        <Beaker className="h-5 w-5 text-emerald-600" />
+        <Beaker className="h-5 w-5 text-primary-600" />
         <h3 className="text-base font-semibold text-slate-900">{formulation.name}</h3>
         <span className="rounded-none bg-slate-200 px-2 py-0.5 text-xs font-medium text-slate-700">
           {formulation.type}
         </span>
       </div>
 
-      <div className="mb-4 rounded-none border border-emerald-200 bg-emerald-50 p-3">
-        <p className="mb-1 text-xs font-semibold text-emerald-900">Active Ingredient</p>
-        <p className="text-sm font-medium text-emerald-800">{formulation.activeIngredient.name}</p>
-        <p className="text-xs text-emerald-700">
+      <div className="mb-4 rounded-none border border-primary-200 bg-primary-50 p-3">
+        <p className="mb-1 text-xs font-semibold text-primary-900">Active Ingredient</p>
+        <p className="text-sm font-medium text-primary-800">{formulation.activeIngredient.name}</p>
+        <p className="text-xs text-primary-700">
           Concentration: {formulation.activeIngredient.concentration}
         </p>
-        <p className="text-xs text-emerald-700">Purity: {formulation.activeIngredient.purity}</p>
+        <p className="text-xs text-primary-700">Purity: {formulation.activeIngredient.purity}</p>
       </div>
 
       {formulation.additives && formulation.additives.length > 0 && (
@@ -179,7 +179,7 @@ function FormulationDetail({ formulation }: { formulation: FormulationAnalysis }
                     )}
                   </div>
                   {additive.safety === 'safe' ? (
-                    <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600" />
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-primary-600" />
                   ) : additive.safety === 'caution' ? (
                     <AlertTriangle className="h-4 w-4 shrink-0 text-amber-600" />
                   ) : (
@@ -210,7 +210,7 @@ function FormulationDetail({ formulation }: { formulation: FormulationAnalysis }
                     )}
                   </div>
                   {preservative.safety === 'safe' ? (
-                    <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600" />
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-primary-600" />
                   ) : (
                     <AlertTriangle className="h-4 w-4 shrink-0 text-amber-600" />
                   )}
@@ -234,7 +234,7 @@ function FormulationDetail({ formulation }: { formulation: FormulationAnalysis }
                 <span className="ml-2 text-slate-600">- {ingredient.purpose}</span>
               </div>
               {ingredient.safety === 'safe' ? (
-                <CheckCircle2 className="h-3 w-3 shrink-0 text-emerald-600" />
+                <CheckCircle2 className="h-3 w-3 shrink-0 text-primary-600" />
               ) : ingredient.safety === 'caution' ? (
                 <AlertTriangle className="h-3 w-3 shrink-0 text-amber-600" />
               ) : null}

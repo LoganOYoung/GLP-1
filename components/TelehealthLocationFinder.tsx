@@ -101,7 +101,7 @@ export default function TelehealthLocationFinder() {
             id="state-select"
             value={selectedState}
             onChange={(e) => setSelectedState(e.target.value)}
-            className="w-full rounded-none border border-slate-300 bg-white py-2.5 pl-10 pr-4 text-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+            className="w-full rounded-none border border-slate-300 bg-white py-2.5 pl-10 pr-4 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
           >
             <option value="">All States</option>
             {US_STATES.map((state) => (
@@ -126,7 +126,7 @@ export default function TelehealthLocationFinder() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search by platform name..."
-            className="w-full rounded-none border border-slate-300 bg-white py-2.5 pl-10 pr-4 text-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+            className="w-full rounded-none border border-slate-300 bg-white py-2.5 pl-10 pr-4 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
           />
         </div>
       </div>
@@ -153,8 +153,8 @@ export default function TelehealthLocationFinder() {
       </div>
 
       {selectedState && (
-        <div className="mt-6 rounded-none border border-emerald-200 bg-emerald-50 p-4">
-          <p className="text-sm text-emerald-800">
+        <div className="mt-6 rounded-none border border-primary-200 bg-primary-50 p-4">
+          <p className="text-sm text-primary-800">
             <strong>Found {filteredPlatforms.length} platform{filteredPlatforms.length !== 1 ? 's' : ''}</strong>{' '}
             {selectedState && `available in ${US_STATES.find((s) => s.code === selectedState)?.name || selectedState}`}
           </p>

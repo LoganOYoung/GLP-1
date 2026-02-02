@@ -25,7 +25,7 @@ function getInspectionBadge(result: InspectionResult) {
   switch (result) {
     case 'satisfactory':
       return (
-        <span className="inline-flex items-center gap-1 rounded-none bg-emerald-100 px-2 py-1 text-xs font-medium text-emerald-700">
+        <span className="inline-flex items-center gap-1 rounded-none bg-primary-100 px-2 py-1 text-xs font-medium text-primary-700">
           <CheckCircle2 className="h-3 w-3" />
           Satisfactory
         </span>
@@ -85,9 +85,9 @@ export default function LabsPage() {
             </div>
           </div>
           <div className="mt-6 flex flex-wrap gap-4">
-            <div className="rounded-none border border-emerald-200 bg-emerald-50 px-4 py-2">
-              <p className="text-sm font-semibold text-emerald-900">{COMPOUNDING_LABS.length} Labs Listed</p>
-              <p className="text-xs text-emerald-700">
+            <div className="rounded-none border border-primary-200 bg-primary-50 px-4 py-2">
+              <p className="text-sm font-semibold text-primary-900">{COMPOUNDING_LABS.length} Labs Listed</p>
+              <p className="text-xs text-primary-700">
                 {labs503A.length} 503A · {labs503B.length} 503B
               </p>
             </div>
@@ -101,10 +101,10 @@ export default function LabsPage() {
 
       <div className="container-page section-pad">
         {/* Info Section */}
-        <section className="mb-12 rounded-none border border-blue-200 bg-blue-50 p-6">
-          <h2 className="mb-3 text-lg font-semibold text-blue-900">Understanding Lab Types</h2>
+        <section className="mb-12 rounded-none border border-primary-200 bg-primary-50 p-6">
+          <h2 className="mb-3 text-lg font-semibold text-primary-900">Understanding Lab Types</h2>
           <div className="mb-6 flex justify-center">
-            <div className="relative h-36 w-full max-w-2xl overflow-hidden rounded-none border border-blue-200 bg-white shadow-sm">
+            <div className="relative h-36 w-full max-w-2xl overflow-hidden rounded-none border border-primary-200 bg-white shadow-sm">
               <ImagePlaceholder
                 src="/images/inline/labs-transparency.webp"
                 alt="Lab transparency - FDA inspection and 503A/503B credentials"
@@ -116,15 +116,15 @@ export default function LabsPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <h3 className="mb-2 text-sm font-semibold text-blue-800">503A Compounding Pharmacy</h3>
-              <p className="text-sm text-blue-700">
+              <h3 className="mb-2 text-sm font-semibold text-primary-800">503A Compounding Pharmacy</h3>
+              <p className="text-sm text-primary-700">
                 Patient-specific compounding. Regulated by state boards of pharmacy. Requires prescription for each
                 patient.
               </p>
             </div>
             <div>
-              <h3 className="mb-2 text-sm font-semibold text-blue-800">503B Outsourcing Facility</h3>
-              <p className="text-sm text-blue-700">
+              <h3 className="mb-2 text-sm font-semibold text-primary-800">503B Outsourcing Facility</h3>
+              <p className="text-sm text-primary-700">
                 Large-scale compounding. FDA registered and inspected. Can compound without patient-specific
                 prescriptions.
               </p>
@@ -163,7 +163,7 @@ export default function LabsPage() {
         )}
 
         {/* CTA Section */}
-        <section className="rounded-none border border-emerald-200 bg-emerald-50 p-8 text-center">
+        <section className="rounded-none border border-primary-200 bg-primary-50 p-8 text-center">
           <h2 className="text-xl font-semibold text-slate-900">Find Labs by Platform</h2>
           <p className="mt-2 text-sm text-slate-700">
             View which labs are used by each Telehealth platform in our Alternatives comparison.

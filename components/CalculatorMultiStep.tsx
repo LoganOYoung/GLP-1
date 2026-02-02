@@ -292,7 +292,7 @@ export default function CalculatorMultiStep() {
                         type="checkbox"
                         checked={input.hasHsa || false}
                         onChange={(e) => updateInput({ hasHsa: e.target.checked })}
-                        className="h-4 w-4 rounded border-slate-300 text-secondary-500 focus:ring-emerald-500"
+                        className="h-4 w-4 rounded border-slate-300 text-secondary-500 focus:ring-primary-500"
                       />
                       <span className="text-sm text-slate-700">I have HSA</span>
                     </label>
@@ -301,7 +301,7 @@ export default function CalculatorMultiStep() {
                         type="checkbox"
                         checked={input.hasFsa || false}
                         onChange={(e) => updateInput({ hasFsa: e.target.checked })}
-                        className="h-4 w-4 rounded border-slate-300 text-secondary-500 focus:ring-emerald-500"
+                        className="h-4 w-4 rounded border-slate-300 text-secondary-500 focus:ring-primary-500"
                       />
                       <span className="text-sm text-slate-700">I have FSA</span>
                     </label>
@@ -490,7 +490,7 @@ function ResultsDashboard({
             const trumpRxState = input.state ? getStateByCode(input.state) : null;
             const activeStates = getActiveStates();
             return (
-              <div className="mb-6 rounded-none border-2 border-emerald-500 bg-emerald-50 p-4">
+              <div className="mb-6 rounded-none border-2 border-primary-500 bg-primary-50 p-4">
                 <div className="flex items-start gap-3">
                   <div className="rounded-none bg-secondary-500 p-1.5">
                     <span className="text-xs font-bold text-white">$</span>
@@ -807,7 +807,7 @@ function EmailLeadMagnet({
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="rounded-none border-2 border-emerald-500 bg-emerald-50 p-6 text-center"
+        className="rounded-none border-2 border-primary-500 bg-primary-50 p-6 text-center"
       >
         <Check className="mx-auto mb-2 h-12 w-12 text-secondary-500" />
         <h3 className="mb-2 text-lg font-bold text-secondary-900">Thank you!</h3>
@@ -839,7 +839,7 @@ function EmailLeadMagnet({
         />
         <button
           type="submit"
-          className="rounded-none bg-emerald-600 px-6 py-2.5 font-medium text-white hover:bg-emerald-700"
+          className="rounded-none bg-primary-600 px-6 py-2.5 font-medium text-white hover:bg-primary-700"
         >
           Get Report
         </button>

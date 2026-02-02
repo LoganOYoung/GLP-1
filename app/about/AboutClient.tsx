@@ -43,9 +43,9 @@ export default function AboutClient() {
           </div>
 
           {/* Top CTA - Email Signup */}
-          <div className="mt-8 rounded-none border-2 border-emerald-200 bg-emerald-50 p-6">
-            <h2 className="text-lg font-semibold text-emerald-900">Get Your 2026 Coverage Report</h2>
-            <p className="mt-1 text-sm text-emerald-800">
+          <div className="mt-8 rounded-none border-2 border-primary-200 bg-primary-50 p-6">
+            <h2 className="text-lg font-semibold text-primary-900">Get Your 2026 Coverage Report</h2>
+            <p className="mt-1 text-sm text-primary-800">
               Receive personalized cost breakdowns, PA success strategies, and policy updates via email.
             </p>
             <div className="mt-4">
@@ -187,9 +187,9 @@ export default function AboutClient() {
           </div>
 
           {/* Independence Statement */}
-          <div className="mt-8 rounded-none border border-emerald-200 bg-emerald-50 p-6">
-            <h3 className="font-semibold text-emerald-900">Independence & Transparency</h3>
-            <ul className="mt-3 space-y-2 text-sm text-emerald-800">
+          <div className="mt-8 rounded-none border border-primary-200 bg-primary-50 p-6">
+            <h3 className="font-semibold text-primary-900">Independence & Transparency</h3>
+            <ul className="mt-3 space-y-2 text-sm text-primary-800">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" />
                 <span>We are not affiliated with any pharmaceutical company or Telehealth platform.</span>
@@ -240,13 +240,13 @@ export default function AboutClient() {
                   'User engagement metrics',
                 ]}
               />
-              <div className="rounded-none border-2 border-emerald-500 bg-emerald-50 p-6">
-                <h4 className="font-semibold text-emerald-900">Valuation</h4>
-                <p className="mt-2 text-sm text-emerald-800">
+              <div className="rounded-none border-2 border-primary-500 bg-primary-50 p-6">
+                <h4 className="font-semibold text-primary-900">Valuation</h4>
+                <p className="mt-2 text-sm text-primary-800">
                   In 2026, vertical tool sites like this typically value at <strong>36x - 45x monthly net profit</strong>.
                 </p>
-                <p className="mt-3 text-sm font-medium text-emerald-900">Potential Buyers:</p>
-                <ul className="mt-2 space-y-1 text-sm text-emerald-800">
+                <p className="mt-3 text-sm font-medium text-primary-900">Potential Buyers:</p>
+                <ul className="mt-2 space-y-1 text-sm text-primary-800">
                   <li>• Large Telehealth companies seeking to reduce CAC</li>
                   <li>• Private equity funds looking for high-growth healthcare assets</li>
                   <li>• Traditional pharmacy chains transitioning to digital services</li>
@@ -327,7 +327,7 @@ export default function AboutClient() {
                 href="https://www.fda.gov/safety/report-problem-fda"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-emerald-600 underline hover:no-underline"
+                className="font-medium text-primary-600 underline hover:no-underline"
               >
                 FDA MedWatch
               </a>{' '}
@@ -336,7 +336,7 @@ export default function AboutClient() {
                 href="https://reportfraud.ftc.gov/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-emerald-600 underline hover:no-underline"
+                className="font-medium text-primary-600 underline hover:no-underline"
               >
                 FTC
               </a>.
@@ -356,15 +356,15 @@ export default function AboutClient() {
 
           <div className="mt-8 border-t border-slate-200 pt-8">
             <p className="text-sm text-slate-600">
-              <Link href="/" className="font-medium text-emerald-600 hover:underline">
+              <Link href="/" className="font-medium text-primary-600 hover:underline">
                 Back to home
               </Link>
               {' · '}
-              <Link href="/faq" className="font-medium text-emerald-600 hover:underline">
+              <Link href="/faq" className="font-medium text-primary-600 hover:underline">
                 FAQ
               </Link>
               {' · '}
-              <Link href="/calculator" className="font-medium text-emerald-600 hover:underline">
+              <Link href="/calculator" className="font-medium text-primary-600 hover:underline">
                 Calculator
               </Link>
             </p>
@@ -377,9 +377,9 @@ export default function AboutClient() {
 
 function MetricCard({ icon, value, label }: { icon: React.ReactNode; value: string; label: string }) {
   return (
-    <div className="rounded-none border border-slate-200 bg-white p-4 shadow-sm transition hover:border-emerald-300 hover:shadow">
+    <div className="rounded-none border border-slate-200 bg-white p-4 shadow-sm transition hover:border-primary-300 hover:shadow">
       <div className="flex items-center gap-3">
-        <div className="rounded-none bg-emerald-100 p-2 text-emerald-600">{icon}</div>
+        <div className="rounded-none bg-primary-100 p-2 text-primary-600">{icon}</div>
         <div>
           <p className="text-2xl font-bold text-slate-900">{value}</p>
           <p className="text-xs text-slate-600">{label}</p>
@@ -402,13 +402,13 @@ function MissionCard({
 }) {
   return (
     <div className="rounded-none border border-slate-200 bg-white p-6 shadow-sm">
-      <div className="mb-4 rounded-none bg-emerald-100 p-3 text-emerald-600 w-fit">{icon}</div>
+      <div className="mb-4 rounded-none bg-primary-100 p-3 text-primary-600 w-fit">{icon}</div>
       <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
       <p className="mt-2 text-sm text-slate-600">{description}</p>
       <ul className="mt-4 space-y-2">
         {features.map((feature, i) => (
           <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
-            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary-600" />
             {feature}
           </li>
         ))}
@@ -438,7 +438,7 @@ function TechCard({
       <ul className="mt-4 space-y-2">
         {highlights.map((highlight, i) => (
           <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
-            <span className="mt-1 text-emerald-600">▸</span>
+            <span className="mt-1 text-primary-600">▸</span>
             {highlight}
           </li>
         ))}
@@ -458,7 +458,7 @@ function TrustBadge({
 }) {
   return (
     <div className="rounded-none border border-slate-200 bg-white p-4">
-      <div className="mb-2 rounded-none bg-emerald-100 p-2 text-emerald-600 w-fit">{icon}</div>
+      <div className="mb-2 rounded-none bg-primary-100 p-2 text-primary-600 w-fit">{icon}</div>
       <h4 className="font-semibold text-slate-900">{title}</h4>
       <p className="mt-1 text-xs text-slate-600">{description}</p>
     </div>
@@ -469,7 +469,7 @@ function UpdateFrequencyItem({ label, frequency }: { label: string; frequency: s
   return (
     <div className="flex items-center justify-between border-b border-slate-200 pb-2 last:border-0 last:pb-0">
       <span className="text-sm font-medium text-slate-700">{label}</span>
-      <span className="rounded-none bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">{frequency}</span>
+      <span className="rounded-none bg-primary-100 px-3 py-1 text-xs font-medium text-primary-700">{frequency}</span>
     </div>
   );
 }
@@ -481,7 +481,7 @@ function AssetCard({ title, items }: { title: string; items: string[] }) {
       <ul className="mt-3 space-y-2">
         {items.map((item, i) => (
           <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
-            <TrendingUp className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+            <TrendingUp className="mt-0.5 h-4 w-4 shrink-0 text-primary-600" />
             {item}
           </li>
         ))}
@@ -494,11 +494,11 @@ function ToolCTA({ title, description, href }: { title: string; description: str
   return (
     <Link
       href={href}
-      className="flex flex-col rounded-none border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow"
+      className="flex flex-col rounded-none border border-slate-200 bg-white p-5 shadow-sm transition hover:border-primary-300 hover:shadow"
     >
       <h3 className="font-semibold text-slate-900">{title}</h3>
       <p className="mt-2 flex-1 text-sm text-slate-600">{description}</p>
-      <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-600">
+      <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary-600">
         Try it now <ExternalLink className="h-4 w-4" />
       </span>
     </Link>
