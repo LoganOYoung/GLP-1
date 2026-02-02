@@ -24,12 +24,11 @@ export interface NavGroup {
   links: NavLink[];
 }
 
-/** 1. Get Started — 按情境分流：有保险/无保险/不确定 → 对应计算器/替代/测验 */
+/** 1. Get Started — 只保留测验入口；按情境分流在首页 + Footer，减少导航「回首页」出口以留住用户 */
 export const GET_STARTED_GROUP: NavGroup = {
   id: 'getStarted',
   label: 'Get Started',
   links: [
-    { href: '/#start-by-situation', label: 'By your situation', icon: 'Compass' },
     { href: '/quiz', label: 'Find Your Option (Quiz)', icon: 'HelpCircle' },
   ],
 };
