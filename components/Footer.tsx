@@ -63,39 +63,6 @@ export default function Footer() {
       />
       <footer className="border-t-2 border-primary-100 bg-gradient-to-b from-gray-50 to-white">
         <div className="container-page section-pad">
-          {/* 全站迷你分流 */}
-          <div className="mb-8 rounded-none border border-primary-200 bg-primary-50/50 px-4 py-3">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Start by your situation
-            </p>
-            <ul className="flex flex-wrap gap-2">
-              <li>
-                <Link
-                  href="/calculator"
-                  className="inline-flex items-center min-h-[44px] rounded-none border-2 border-primary-500 bg-white px-4 py-2.5 text-sm font-medium text-primary-600 transition-colors hover:bg-primary-500 hover:text-white md:min-h-0 md:py-1.5 md:px-3"
-                >
-                  I have insurance → Calculator
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/alternatives"
-                  className="inline-flex items-center min-h-[44px] rounded-none border-2 border-secondary-500 bg-white px-4 py-2.5 text-sm font-medium text-secondary-600 transition-colors hover:bg-secondary-500 hover:text-white md:min-h-0 md:py-1.5 md:px-3"
-                >
-                  Uninsured / paying cash → Alternatives
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/quiz"
-                  className="inline-flex items-center min-h-[44px] rounded-none border-2 border-primary-500 bg-white px-4 py-2.5 text-sm font-medium text-primary-600 transition-colors hover:bg-primary-500 hover:text-white md:min-h-0 md:py-1.5 md:px-3"
-                >
-                  Not sure → Find your option
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {/* Quick links：平铺，多列流动 */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="sm:col-span-2">
