@@ -24,7 +24,7 @@ export default function AboutClient() {
               <div className="relative h-64 w-full rounded-none overflow-hidden shadow-lg">
                 <ImagePlaceholder
                   src="/images/banners/about-hero-banner.webp"
-                  alt="About GLP-1 Guide"
+                  alt="About Rx Likewise"
                   width={600}
                   height={256}
                   className="h-full w-full object-cover"

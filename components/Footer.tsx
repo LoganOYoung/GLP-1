@@ -1,14 +1,16 @@
 import Link from 'next/link';
 
+const SITE_URL = 'https://www.rxlikewise.com';
+
 function buildOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'GLP-1 Guide',
+    name: 'Rx Likewise',
     description:
-      'Independent decision-support platform for GLP-1 medications. Real-time pricing, verified pharmacies, 2026 policy engine.',
-    url: 'https://glp1guide.com',
-    logo: 'https://glp1guide.com/images/logos/logo.webp',
+      'Same results, smarter choices. Independent decision-support platform for GLP-1 medications. Real-time pricing, verified pharmacies, 2026 policy engine.',
+    url: SITE_URL,
+    logo: `${SITE_URL}/images/logos/logo.webp`,
     sameAs: [],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -182,7 +184,7 @@ export default function Footer() {
           </div>
           <div className="mt-8 flex flex-col items-center justify-center gap-2 border-t border-primary-100 pt-6 text-center">
             <p className="text-xs text-gray-500">
-              © {new Date().getFullYear()} GLP-1 Guide. US audience. Not medical advice.
+              © {new Date().getFullYear()} Rx Likewise. Same results, smarter choices. US audience. Not medical advice.
             </p>
             <p className="text-xs text-gray-400">
               Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}

@@ -85,7 +85,7 @@ function buildServiceSchema() {
       'Comprehensive guide to saving on GLP-1 medications through discount cards, insurance appeals, TrumpRx $350 program, and HSA/FSA eligibility.',
     provider: {
       '@type': 'Organization',
-      name: 'GLP-1 Guide',
+      name: 'Rx Likewise',
     },
     areaServed: {
       '@type': 'Country',

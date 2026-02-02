@@ -14,11 +14,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'GLP-1 Guide | Real Cost, Alternatives & Legitimacy',
-    template: '%s | GLP-1 Guide',
+    default: 'Rx Likewise | Same results, smarter choices',
+    template: '%s | Rx Likewise',
   },
   description:
-    'Decision engine for GLP-1 medications in the US: real out-of-pocket cost, alternatives, insurance appeal templates, pharmacy legitimacy, and shortage updates.',
+    'Same results, smarter choices. Decision engine for GLP-1 medications in the US: real out-of-pocket cost, alternatives, insurance appeal templates, pharmacy legitimacy, and shortage updates.',
   keywords: 'GLP-1, Ozempic, Wegovy, Mounjaro, semaglutide, cost, insurance, shortage, compounded, legitimacy',
   openGraph: {
     type: 'website',

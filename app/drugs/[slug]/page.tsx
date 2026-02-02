@@ -52,6 +52,8 @@ function buildDrugSchema(drug: typeof DRUGS[keyof typeof DRUGS]) {
   };
 }
 
+const SITE_URL = 'https://www.rxlikewise.com';
+
 function buildBreadcrumbSchema(drug: typeof DRUGS[keyof typeof DRUGS]) {
   return {
     '@context': 'https://schema.org',
@@ -61,19 +63,19 @@ function buildBreadcrumbSchema(drug: typeof DRUGS[keyof typeof DRUGS]) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://glp1guide.com',
+        item: SITE_URL,
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Alternatives',
-        item: 'https://glp1guide.com/alternatives',
+        item: `${SITE_URL}/alternatives`,
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: drug.name,
-        item: `https://glp1guide.com/drugs/${drug.id}`,
+        item: `${SITE_URL}/drugs/${drug.id}`,
       },
     ],
   };

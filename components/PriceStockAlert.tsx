@@ -58,7 +58,7 @@ export default function PriceStockAlert() {
     setNotificationEnabled(granted);
     if (granted) {
       sendBrowserNotification(
-        'GLP-1 Guide Alerts Enabled',
+        'Rx Likewise Alerts Enabled',
         'You will receive notifications for price and stock changes.',
         '/favicon.ico'
       );

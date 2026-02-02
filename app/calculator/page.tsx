@@ -33,7 +33,7 @@ export default function CalculatorPage() {
         ]}
         offers={{ price: '0', priceCurrency: 'USD' }}
         dateModified="2026-01-30"
-        url="https://glp1guide.com/calculator"
+        url="https://www.rxlikewise.com/calculator"
       />
       <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6 lg:pt-12">
         <Breadcrumbs items={[{ label: 'Calculator' }]} />

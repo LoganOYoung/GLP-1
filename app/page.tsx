@@ -20,7 +20,7 @@ export default function Home() {
             <div>
               <span className="text-sm font-medium text-primary-700">Trusted Healthcare Resource</span>
               <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                GLP-1 Guide: Real Cost, Alternatives & Legitimacy
+                Rx Likewise: Same results, smarter choices
               </h1>
               <p className="mt-4 max-w-2xl text-lg leading-relaxed text-gray-600 sm:text-xl">
                 We help you navigate GLP-1 medications in the US—high prices, insurance denials, shortages, and information overload. Get real out-of-pocket estimates, compare options, and avoid scams.
@@ -47,7 +47,7 @@ export default function Home() {
               <div className="relative h-full min-h-[400px] w-full overflow-hidden shadow-xl">
                 <ImagePlaceholder
                   src="/images/banners/home-hero-banner.webp"
-                  alt="GLP-1 cost calculator and medication guide - real cost, alternatives, and legitimacy"
+                  alt="Rx Likewise - GLP-1 cost calculator and medication guide: real cost, alternatives, and legitimacy"
                   width={600}
                   height={400}
                   className="object-cover"

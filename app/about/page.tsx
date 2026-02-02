@@ -7,26 +7,28 @@ import { getRelatedPagesFor } from '@/lib/related-pages-data';
 import AboutClient from './AboutClient';
 
 export const metadata: Metadata = {
-  title: 'About Us | GLP-1 Guide - Trust Oasis, Real-Time Data, 2026 Policy Engine',
+  title: 'About Us | Rx Likewise - Trust Oasis, Real-Time Data, 2026 Policy Engine',
   description:
-    'Learn how GLP-1 Guide helps 50K+ users navigate GLP-1 medications with real-time pricing, verified pharmacies, and 2026 policy data. LegitScript certified, independent, transparent.',
+    'Same results, smarter choices. Learn how Rx Likewise helps 50K+ users navigate GLP-1 medications with real-time pricing, verified pharmacies, and 2026 policy data. LegitScript certified, independent, transparent.',
   keywords:
-    'GLP-1 guide about, trusted GLP-1 information, LegitScript verified, 2026 policy engine, real-time drug prices, independent GLP-1 research',
+    'Rx Likewise about, trusted GLP-1 information, LegitScript verified, 2026 policy engine, real-time drug prices, independent GLP-1 research',
   openGraph: {
-    title: 'About GLP-1 Guide | Trust Oasis for GLP-1 Information',
-    description: 'Independent, transparent, real-time GLP-1 medication guidance. LegitScript verified sources, 2026 policy engine, trusted by 50K+ users.',
+    title: 'About Rx Likewise | Trust Oasis for GLP-1 Information',
+    description: 'Same results, smarter choices. Independent, transparent, real-time GLP-1 medication guidance. LegitScript verified sources, 2026 policy engine, trusted by 50K+ users.',
   },
 };
+
+const SITE_URL = 'https://www.rxlikewise.com';
 
 function buildOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'GLP-1 Guide',
+    name: 'Rx Likewise',
     description:
-      'Independent decision-support platform for GLP-1 medications. Real-time pricing, verified pharmacies, 2026 policy engine.',
-    url: 'https://glp1guide.com',
-    logo: 'https://glp1guide.com/logo.png',
+      'Same results, smarter choices. Independent decision-support platform for GLP-1 medications. Real-time pricing, verified pharmacies, 2026 policy engine.',
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
     sameAs: [],
     contactPoint: {
       '@type': 'ContactPoint',

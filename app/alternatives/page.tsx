@@ -30,7 +30,7 @@ function buildServiceSchema() {
       'Compare brand, compounded, and oral GLP-1 medications with real-time pricing from major Telehealth platforms. Includes pharmacy legitimacy verification and switching guides.',
     provider: {
       '@type': 'Organization',
-      name: 'GLP-1 Guide',
+      name: 'Rx Likewise',
     },
     areaServed: {
       '@type': 'Country',

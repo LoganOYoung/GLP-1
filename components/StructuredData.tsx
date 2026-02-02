@@ -8,7 +8,7 @@
  * - Multiple schemas: <StructuredData type="multiple" schemas={[faqSchema, breadcrumbSchema]} />
  */
 
-const SITE_URL = 'https://glp1guide.com';
+const SITE_URL = 'https://www.rxlikewise.com';
 
 /** Minimal FAQ item for schema (question + answer). */
 export interface FAQSchemaItem {

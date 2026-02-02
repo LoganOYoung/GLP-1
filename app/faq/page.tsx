@@ -25,7 +25,7 @@ export default function FAQPage() {
         type="faq"
         items={faqItems}
         dateModified="2026-01-30"
-        url="https://glp1guide.com/faq"
+        url="https://www.rxlikewise.com/faq"
       />
       <div className="bg-white">
         {/* Hero Banner */}

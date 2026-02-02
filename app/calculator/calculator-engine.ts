@@ -1,5 +1,5 @@
 /**
- * 2026 Policy Logic Engine - Property of GLP-1 Guide
+ * 2026 Policy Logic Engine - Property of Rx Likewise
  * 
  * This engine calculates GLP-1 medication costs based on:
  * - 2026 TrumpRx subsidies

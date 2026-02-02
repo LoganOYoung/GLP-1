@@ -14,14 +14,14 @@ export default function Header() {
           <div className="relative h-8 w-8 shrink-0">
             <ImagePlaceholder
               src="/images/logos/logo.webp"
-              alt="GLP-1 Guide Logo"
+              alt="Rx Likewise Logo"
               width={32}
               height={32}
               className="object-contain"
               fallback="icon"
             />
           </div>
-          <span className="hidden sm:inline">GLP-1 Guide</span>
+          <span className="hidden sm:inline">Rx Likewise</span>
         </Link>
         <nav id="navigation" className="hidden flex-1 justify-end overflow-hidden sm:flex md:min-w-0">
           <NavDesktop />

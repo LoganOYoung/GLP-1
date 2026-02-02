@@ -2,19 +2,21 @@ import Link from 'next/link';
 
 type Crumb = { label: string; href?: string };
 
+const SITE_URL = 'https://www.rxlikewise.com';
+
 function buildBreadcrumbSchema(items: Crumb[]) {
   const breadcrumbItems = [
     {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://glp1guide.com',
+      item: SITE_URL,
     },
     ...items.map((item, i) => ({
       '@type': 'ListItem',
       position: i + 2,
       name: item.label,
-      item: item.href ? `https://glp1guide.com${item.href}` : undefined,
+      item: item.href ? `${SITE_URL}${item.href}` : undefined,
     })),
   ];
 
