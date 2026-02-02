@@ -53,7 +53,7 @@ function PharmacyLogo({ name, domain }: { name: string; domain: string }) {
 export default function PopularPharmaciesBanner() {
   return (
     <section className="border-b border-gray-200 bg-[#fafaf9]">
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
+      <div className="container-page section-pad-tight">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-center sm:gap-8">
           <div>
             <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">

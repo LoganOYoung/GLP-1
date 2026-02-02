@@ -17,7 +17,7 @@ export default function VerifiedPharmaciesSection() {
       className="scroll-mt-24 border-t border-gray-200 bg-gray-50/50"
       aria-labelledby="verified-pharmacies-heading"
     >
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+      <div className="container-page section-pad">
         <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
           <div>
             <h2 id="verified-pharmacies-heading" className="text-xl font-semibold text-gray-900">

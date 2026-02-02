@@ -144,7 +144,7 @@ export default function CalculatorMultiStep() {
         />
       </div>
 
-      <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
+      <div className="container-page max-w-4xl section-pad-tight">
         {/* Hero Banner */}
         <div className="mb-8 relative overflow-hidden rounded-none border-2 border-primary-100 shadow-lg">
           <div className="relative h-64 w-full">

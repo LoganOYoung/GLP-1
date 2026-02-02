@@ -22,7 +22,7 @@ export default function DoseConverterPage() {
   return (
     <div className="bg-white">
       <section className="border-b border-gray-200 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
+        <div className="container-page section-pad">
           <Breadcrumbs items={[{ label: 'Tools' }, { label: 'Dose Converter' }]} />
           <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Dose Converter
@@ -36,12 +36,12 @@ export default function DoseConverterPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <div className="container-page section-pad-tight">
         <DoseConverterEnhanced />
       </div>
 
       <section className="border-t border-gray-200 bg-gray-50">
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <div className="container-page section-pad">
           <RelatedPages pages={getRelatedPagesFor('doseConverter')} />
         </div>
       </section>

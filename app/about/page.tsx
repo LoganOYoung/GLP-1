@@ -52,7 +52,7 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6 lg:pt-12">
+        <div className="container-page pt-8 sm:pt-12 lg:pt-12">
           <Breadcrumbs items={[{ label: 'About' }]} />
           <div className="mb-4">
             <LastUpdated date={new Date('2026-01-30')} />

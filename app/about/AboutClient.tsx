@@ -10,7 +10,7 @@ export default function AboutClient() {
     <div className="bg-gradient-to-b from-slate-50 to-white">
       {/* Hero + Value Proposition */}
       <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+        <div className="container-page section-pad">
           <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
             <div>
               <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
@@ -57,7 +57,7 @@ export default function AboutClient() {
 
       {/* Mission: 消除信息不对称 + 信任绿洲 */}
       <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="container-page section-pad-tight">
           <h2 className="text-2xl font-bold text-slate-900">Our Mission</h2>
           <div className="mt-8 grid gap-8 md:grid-cols-2">
             <MissionCard
@@ -89,7 +89,7 @@ export default function AboutClient() {
 
       {/* Technology & Data Assets */}
       <section className="border-b border-slate-200 bg-slate-50">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="container-page section-pad-tight">
           <h2 className="text-2xl font-bold text-slate-900">Technology & Data</h2>
           <p className="mt-2 text-slate-600">
             Our core IP and technical advantages that power accurate, real-time guidance.
@@ -151,7 +151,7 @@ export default function AboutClient() {
 
       {/* Trust & Credibility */}
       <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="container-page section-pad-tight">
           <h2 className="text-2xl font-bold text-slate-900">Trust & Credibility</h2>
           <p className="mt-2 text-slate-600">
             How we verify sources and maintain transparency.
@@ -209,7 +209,7 @@ export default function AboutClient() {
 
       {/* Asset Value (for potential buyers) - Collapsible */}
       <section className="border-b border-slate-200 bg-slate-50">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="container-page section-pad-tight">
           <details className="group">
             <summary className="cursor-pointer text-xl font-semibold text-slate-900">
               Asset Value & Exit Strategy
@@ -259,7 +259,7 @@ export default function AboutClient() {
 
       {/* Tools CTA */}
       <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="container-page section-pad-tight">
           <h2 className="text-xl font-semibold text-slate-900">Try Our Tools</h2>
           <p className="mt-2 text-slate-600">
             Get personalized estimates and recommendations.
@@ -286,7 +286,7 @@ export default function AboutClient() {
 
       {/* Disclaimer, Privacy, Terms & Contact */}
       <section className="scroll-mt-24 bg-slate-50" id="disclaimer">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="container-page section-pad-tight">
           <h2 className="text-xl font-semibold text-slate-900">Disclaimer</h2>
           <ul className="mt-4 space-y-2 text-sm text-slate-600">
             <li className="flex items-start gap-2">

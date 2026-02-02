@@ -84,7 +84,7 @@ export default function LegitimacyPage() {
         </div>
       </div>
       
-      <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+      <div className="container-page max-w-4xl section-pad">
 
       <section className="mt-10">
         <h2 className="text-lg font-semibold text-gray-900">Pharmacy & clinic red flags</h2>
@@ -173,7 +173,7 @@ export default function LegitimacyPage() {
       </div>
 
       {/* 验证药房名单：规则 + 名单 同页，信任中心统一 */}
-      <p className="mx-auto max-w-6xl px-4 pb-2 text-xs text-slate-500 sm:px-6" role="note" id="verified-pharmacies-disclosure">
+      <p className="container-page pb-2 text-xs text-slate-500" role="note" id="verified-pharmacies-disclosure">
         We may earn a commission if you use certain links below. This does not change our editorial content.
       </p>
       <VerifiedPharmaciesSection />

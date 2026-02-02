@@ -87,7 +87,7 @@ export default function ComparisonClient() {
   }, [viewMode]);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+    <div className="container-page section-pad-tight">
       {/* View Toggle */}
       <div className="mb-6 flex flex-wrap items-center gap-2">
         <span className="text-sm font-medium text-gray-600">Compare by:</span>

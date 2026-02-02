@@ -30,7 +30,7 @@ export default function FAQPage() {
       <div className="bg-white">
         {/* Hero Banner */}
         <section className="border-b border-slate-200 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <div className="container-page section-pad">
             <Breadcrumbs items={[{ label: 'FAQ' }]} />
             <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
               <div>
@@ -58,7 +58,7 @@ export default function FAQPage() {
         </section>
         {/* Quick links: flat structure */}
         <section className="border-b border-slate-200 bg-slate-50">
-          <div className="mx-auto max-w-4xl px-4 py-4 sm:px-6 lg:px-8">
+          <div className="container-page max-w-4xl section-pad-tight">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Quick links</p>
             <ul className="flex flex-wrap gap-2">
               <li><Link href="/calculator" className="rounded-md border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">Calculator</Link></li>
@@ -71,7 +71,7 @@ export default function FAQPage() {
         </section>
         {/* 按情境跳转到相关 FAQ */}
         <section className="border-b border-slate-200 bg-slate-50">
-          <div className="mx-auto max-w-4xl px-4 py-4 sm:px-6 lg:px-8">
+          <div className="container-page max-w-4xl section-pad-tight">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Start by your situation</p>
             <ul className="flex flex-wrap gap-2">
               <li><Link href="/faq#cost-overview" className="rounded-md border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">I have insurance → Cost & appeal</Link></li>
@@ -81,7 +81,7 @@ export default function FAQPage() {
           </div>
         </section>
         <section className="border-b border-slate-200 bg-slate-50">
-          <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
+          <div className="container-page max-w-4xl py-8 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center">
               <div className="relative h-36 w-48 shrink-0 overflow-hidden rounded-none border border-slate-200 bg-white shadow-sm">
                 <ImagePlaceholder
@@ -101,7 +101,7 @@ export default function FAQPage() {
             </div>
           </div>
         </section>
-        <Suspense fallback={<div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8" aria-hidden>Loading FAQ…</div>}>
+        <Suspense fallback={<div className="container-page py-8 sm:px-6 lg:px-8" aria-hidden>Loading FAQ…</div>}>
           <FAQClientWrapper />
         </Suspense>
         <RelatedPages pages={getRelatedPagesFor('faq')} />

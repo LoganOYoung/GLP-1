@@ -35,7 +35,7 @@ export default function CalculatorPage() {
         dateModified="2026-01-30"
         url="https://www.rxlikewise.com/calculator"
       />
-      <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6 lg:pt-12">
+      <div className="container-page section-pad-tight">
         <Breadcrumbs items={[{ label: 'Calculator' }]} />
         <p className="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Calculator</p>
         <div className="mt-4 mb-6 rounded-lg border border-gray-200 bg-gray-50 p-4 sm:p-5">

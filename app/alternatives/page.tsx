@@ -144,7 +144,7 @@ export default function AlternativesPage() {
       <AlternativesClient />
 
       {/* FAQ teasers: 2–3 questions, link to full FAQ */}
-      <section className="mx-auto max-w-6xl px-4 py-8 sm:px-6" aria-label="Common questions">
+      <section className="container-page section-pad-tight" aria-label="Common questions">
         <h2 className="text-lg font-semibold text-gray-900">Common questions</h2>
         <p className="mt-1 text-sm text-gray-600">
           Full list on our <Link href="/faq" className="font-medium text-primary-600 underline hover:no-underline">FAQ</Link> page.

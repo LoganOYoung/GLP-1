@@ -109,7 +109,7 @@ export default function TrumpRxPage() {
           <div className="absolute inset-0 opacity-5">
             <div className="absolute top-0 left-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-none bg-secondary-500 blur-3xl" />
           </div>
-          <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
+          <div className="container-page section-pad relative">
             <Breadcrumbs items={[{ label: 'TrumpRx $350 Program' }]} />
             <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
               <div>
@@ -168,7 +168,7 @@ export default function TrumpRxPage() {
         </section>
 
         {/* Quick links: flat structure */}
-        <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
+        <div className="container-page py-4">
           <div className="rounded-lg border border-primary-200 bg-primary-50/50 px-4 py-3">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Quick links</p>
             <ul className="flex flex-wrap gap-2">
@@ -180,7 +180,7 @@ export default function TrumpRxPage() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <div className="container-page section-pad">
           {/* Policy Change Detector */}
           <TrumpRxChangeDetector />
 

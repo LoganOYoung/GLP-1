@@ -48,7 +48,7 @@ export default function PathComparisonCards() {
 
   return (
     <div className="py-12 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-page">
         <div className="mb-8 text-center">
           <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
             Three Paths: Brand vs Compounded vs Oral

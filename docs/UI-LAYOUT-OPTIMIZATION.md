@@ -58,6 +58,14 @@
 - **Alternatives**：主内容区 `container-page section-pad-tight`
 - **Legitimacy**：Hero `container-page section-pad`，Quick links 区 `container-page py-4`
 - **Comparison**：Hero 与底部 Related 区 `container-page section-pad` / `section-pad-tight`
+- **About**：AboutClient 与 about/page 全部区块 `container-page` + `section-pad` / `section-pad-tight`
+- **Calculator**：CalculatorMultiStep 使用 `container-page max-w-4xl section-pad-tight`
+- **FAQ**：FAQClient 使用 `container-page section-pad-tight`
+- **Quiz**、**Not-found**、**Error**：`container-page max-w-2xl section-pad`
+- **Dose Converter**、**Shortage**、**Labs**、**TrumpRx**、**Appeals**：主内容区统一 `container-page` + `section-pad` / `section-pad-tight`
+- **Legitimacy**：VerifiedPharmaciesSection、disclosure 段落 `container-page`；Alternatives 常见问题区 `container-page section-pad-tight`
+- **DrugInfoClient**：Hero、Quick Facts、主内容区 `container-page` + `section-pad-tight` / `py-6`
+- **组件**：HomeComparisonSection、PopularPharmaciesBanner、PolicyStatusTicker、ComparisonClient、AlternativesClient、RelatedPages、PathComparisonCards 均已使用 `container-page`（及 `section-pad` / `section-pad-tight` 按需）
 
 其他页面可逐步把 `mx-auto max-w-6xl px-4 sm:px-6` 换成 `container-page`，把 `py-10 sm:py-12 lg:py-16` 换成 `section-pad` 或 `section-pad-tight`，以保持全站一致。
 

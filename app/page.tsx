@@ -132,7 +132,7 @@ export default function Home() {
 
       {/* Single "Explore" section: 4 hubs (merged from We help + Content & Tools) */}
       <section id="explore" className="border-b border-gray-200 bg-gray-50">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:py-14">
+        <div className="container-page section-pad">
           <h2 className="text-xl font-semibold text-gray-900">Explore</h2>
           <p className="mt-1 text-sm text-gray-600">Guides on alternatives, cost & insurance, legitimacy, and tools.</p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -174,7 +174,7 @@ export default function Home() {
 
       {/* FAQ preview: short list + link to full FAQ */}
       <section id="faq-preview" className="border-b border-gray-200 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <div className="container-page section-pad-tight">
           <h2 className="text-lg font-semibold text-gray-900">Frequently asked</h2>
           <p className="mt-1 text-sm text-gray-600">
             Full list on our <Link href="/faq" className="font-medium text-gray-900 underline hover:no-underline">FAQ</Link> page.
@@ -206,7 +206,7 @@ export default function Home() {
 
       {/* Newsletter + CTA before global Footer (Quick links live in Footer) */}
       <section className="border-b border-gray-200 bg-gray-50">
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <div className="container-page section-pad-tight">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div className="lg:max-w-sm">
               <h2 className="text-lg font-semibold text-gray-900">Get updates</h2>

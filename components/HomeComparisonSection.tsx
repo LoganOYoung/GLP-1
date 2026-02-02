@@ -90,7 +90,7 @@ function StockPill({ label, pulse }: { label: string; pulse: 'green' | 'amber' }
 export default function HomeComparisonSection() {
   return (
     <section id="comparison" className="border-b border-gray-200 bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+      <div className="container-page section-pad">
         <h2 className="text-center text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
           Find the Right Path to Your Goal (2026 Updated)
         </h2>

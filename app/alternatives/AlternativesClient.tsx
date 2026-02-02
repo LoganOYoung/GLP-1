@@ -26,7 +26,7 @@ export default function AlternativesClient() {
             : null;
 
   return (
-    <div className="mx-auto max-w-6xl space-y-10 px-4 py-8 sm:px-6">
+    <div className="container-page section-pad-tight space-y-10">
       {/* 1. Smart Filter Bar */}
       <section aria-label="Filter options">
         <SmartFilterBar filter={filter} onFilterChange={setFilter} />

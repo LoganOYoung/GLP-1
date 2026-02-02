@@ -149,7 +149,7 @@ export default function FAQClient({ initialQuery }: { initialQuery?: string }) {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <div className="container-page section-pad-tight">
       <div className="lg:grid lg:grid-cols-[240px_1fr_200px] lg:gap-8">
         {/* Sidebar */}
         <aside className="mb-8 lg:mb-0 lg:block">

@@ -56,7 +56,7 @@ export default function LabsPage() {
       <div className="bg-white">
         {/* Hero Section */}
         <section className="border-b border-slate-200 bg-slate-50">
-          <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+          <div className="container-page section-pad">
             <Breadcrumbs items={[{ label: 'Lab Transparency' }]} />
             <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
               <div>
@@ -99,7 +99,7 @@ export default function LabsPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+      <div className="container-page section-pad">
         {/* Info Section */}
         <section className="mb-12 rounded-none border border-blue-200 bg-blue-50 p-6">
           <h2 className="mb-3 text-lg font-semibold text-blue-900">Understanding Lab Types</h2>

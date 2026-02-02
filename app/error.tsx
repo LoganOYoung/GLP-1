@@ -15,7 +15,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-16 text-center">
+    <div className="container-page max-w-2xl section-pad text-center">
       <h1 className="text-2xl font-bold text-gray-900">Something went wrong</h1>
       <p className="mt-2 text-gray-600">
         We couldn’t load this page. Try again or go back home.

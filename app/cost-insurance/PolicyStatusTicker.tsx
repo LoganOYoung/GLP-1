@@ -10,7 +10,7 @@ export default function PolicyStatusTicker() {
 
   return (
     <div className="border-b border-gray-200 bg-white px-4 py-3">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-1 text-sm text-gray-600">
+      <div className="container-page flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-sm text-gray-600">
         <span className="font-medium text-gray-900">
           TrumpRx: <span className="text-primary-600">{active.length} states active</span>
           {pending.length > 0 && (

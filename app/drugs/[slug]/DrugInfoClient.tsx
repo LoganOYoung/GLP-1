@@ -31,7 +31,7 @@ export default function DrugInfoClient({ drug }: DrugInfoClientProps) {
     <div className="bg-gradient-to-b from-slate-50 to-white">
       {/* Hero */}
       <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+        <div className="container-page section-pad-tight">
           <Breadcrumbs items={[{ label: 'Alternatives', href: '/alternatives' }, { label: drug.name }]} />
           <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
             <div>
@@ -89,7 +89,7 @@ export default function DrugInfoClient({ drug }: DrugInfoClientProps) {
 
       {/* Quick Facts */}
       <section className="border-b border-slate-200 bg-slate-50">
-        <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6">
+        <div className="container-page py-6">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <QuickFactCard
               icon={<DollarSign className="h-5 w-5" />}
@@ -118,7 +118,7 @@ export default function DrugInfoClient({ drug }: DrugInfoClientProps) {
       </section>
 
       {/* Main Content */}
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <div className="container-page section-pad-tight">
         <div className="grid gap-8 lg:grid-cols-3">
           {/* Main Column */}
           <div className="lg:col-span-2 space-y-8">
