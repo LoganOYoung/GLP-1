@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CalculatorMultiStep from '@/components/CalculatorMultiStep';
 import StructuredData from '@/components/StructuredData';
+import ImagePlaceholder from '@/components/ImagePlaceholder';
 
 export const metadata: Metadata = {
   title: '2026 GLP-1 Cost Calculator | Out-of-Pocket Estimate for Insured & Uninsured',
@@ -35,17 +37,45 @@ export default function CalculatorPage() {
         dateModified="2026-01-30"
         url="https://www.rxlikewise.com/calculator"
       />
-      <div className="container-page section-pad-tight">
-        <Breadcrumbs items={[{ label: 'Calculator' }]} />
-        <p className="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Calculator</p>
-        <div className="mt-4 mb-6 rounded-none border border-gray-200 bg-gray-50 p-4 sm:p-5">
-          <h2 className="text-lg font-semibold text-gray-900">Get a personalized cost estimate</h2>
-          <p className="mt-2 text-sm text-gray-600">
-            Use our calculator to get a personalized GLP-1 out-of-pocket estimate in under a minute—Rx Likewise. For people with or without insurance: enter your situation to see range and PA success probability. Discount cards and appeal templates are on our <a href="/cost-insurance" className="font-medium text-primary-600 underline hover:no-underline">Cost & Insurance</a> page.
-          </p>
-        </div>
+      <div className="bg-white">
+        {/* Hero Banner */}
+        <section className="border-b border-slate-200 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+          <div className="container-page section-pad">
+            <Breadcrumbs items={[{ label: 'Calculator' }]} />
+            <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
+              <div>
+                <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                  2026 GLP-1 Cost Calculator
+                </h1>
+                <p className="mt-4 text-lg text-slate-600">
+                  Get a personalized out-of-pocket estimate in under a minute. Insured or uninsured—enter your situation to see range and PA success probability.
+                </p>
+              </div>
+              <div className="hidden lg:block">
+                <div className="relative h-64 w-full overflow-hidden rounded-none shadow-lg">
+                  <ImagePlaceholder
+                    src="/images/banners/calculator-hero-banner.webp"
+                    alt="GLP-1 Cost Calculator"
+                    width={600}
+                    height={256}
+                    className="h-full w-full object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Intro */}
+        <section className="border-b border-slate-200 bg-white">
+          <div className="container-page max-w-4xl section-pad-tight">
+            <p className="text-sm text-slate-600">
+              Discount cards and appeal templates are on our <Link href="/cost-insurance" className="font-medium text-primary-600 underline hover:no-underline">Cost & Insurance</Link> page.
+            </p>
+          </div>
+        </section>
+        <CalculatorMultiStep />
       </div>
-      <CalculatorMultiStep />
     </>
   );
 }
