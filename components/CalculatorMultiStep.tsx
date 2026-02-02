@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, Check, CheckCircle2 } from 'lucide-react';
-import ImagePlaceholder from './ImagePlaceholder';
 import type { CalculatorInput, InsuranceProvider, Comorbidity } from '@/app/calculator/calculator-engine';
 import { calculateScenarios, calculatePASuccess } from '@/app/calculator/calculator-engine';
 import { calculateAdvancedScenarios, type AdvancedCalculatorResult } from '@/app/calculator/advanced-calculator-engine';
@@ -144,41 +143,16 @@ export default function CalculatorMultiStep() {
         />
       </div>
 
-      <div className="container-page max-w-4xl section-pad-tight">
-        {/* Hero Banner */}
-        <div className="mb-8 relative overflow-hidden rounded-none border-2 border-primary-100 shadow-lg">
-          <div className="relative h-64 w-full">
-            <ImagePlaceholder
-              src="/images/banners/calculator-hero-banner.webp"
-              alt="2026 GLP-1 Cost Calculator"
-              width={1200}
-              height={256}
-              className="h-full w-full object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent" />
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 p-8">
-            <div className="text-center">
-              <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-                2026 GLP-1 Cost Calculator
-              </h1>
-              <p className="mt-2 text-slate-600">
-                Get your personalized cost estimate in 3 simple steps. Powered by 2026 policy data and AI-driven recommendations.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="mb-8 text-center">
-          {personalizedRec && personalizedRec.recommendedPage && (
-            <div className="mt-4 mx-auto max-w-md rounded-none border border-secondary-200 bg-secondary-50 p-3">
+      <div className="container-page max-w-4xl py-6 sm:py-8">
+        {personalizedRec?.recommendedPage && (
+          <div className="mb-6 text-center">
+            <div className="mx-auto max-w-md rounded-none border border-secondary-200 bg-secondary-50 p-3">
               <p className="text-xs text-secondary-800">
                 <strong>💡 Personalized Tip:</strong> {personalizedRec.reasoning[0]}
               </p>
             </div>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* Multi-Step Form */}
         <div className="mb-8 rounded-none border border-slate-200 bg-white p-6 shadow-lg sm:p-8">

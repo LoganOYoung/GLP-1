@@ -48,7 +48,7 @@ export default function CalculatorPage() {
                   2026 GLP-1 Cost Calculator
                 </h1>
                 <p className="mt-4 text-lg text-slate-600">
-                  Get a personalized out-of-pocket estimate in under a minute. Insured or uninsured—enter your situation to see range and PA success probability.
+                  Personalized out-of-pocket estimate in under a minute—insured or uninsured, with PA success probability.
                 </p>
               </div>
               <div className="hidden lg:block">
@@ -68,9 +68,9 @@ export default function CalculatorPage() {
         </section>
         {/* Intro */}
         <section className="border-b border-slate-200 bg-white">
-          <div className="container-page max-w-4xl section-pad-tight">
+          <div className="container-page max-w-4xl py-4 sm:py-5">
             <p className="text-sm text-slate-600">
-              Discount cards and appeal templates are on our <Link href="/cost-insurance" className="font-medium text-primary-600 underline hover:no-underline">Cost & Insurance</Link> page.
+              Discount cards and appeal templates: <Link href="/cost-insurance" className="font-medium text-primary-600 underline hover:no-underline">Cost & Insurance</Link>.
             </p>
           </div>
         </section>
