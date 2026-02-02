@@ -1,54 +1,19 @@
 'use client';
 
-import { useState } from 'react';
-import Image from 'next/image';
-
-const PHARMACIES: { name: string; domain: string }[] = [
-  { name: 'Kroger', domain: 'kroger.com' },
-  { name: 'Walgreens', domain: 'walgreens.com' },
-  { name: 'Hy-Vee', domain: 'hy-vee.com' },
-  { name: 'Albertsons', domain: 'albertsons.com' },
-  { name: 'Walmart', domain: 'walmart.com' },
-  { name: 'H-E-B', domain: 'heb.com' },
-  { name: 'Publix', domain: 'publix.com' },
-  { name: 'Meijer', domain: 'meijer.com' },
-  { name: 'Ralphs', domain: 'ralphs.com' },
+const PHARMACIES: { name: string; url: string }[] = [
+  { name: 'Kroger', url: 'https://www.kroger.com' },
+  { name: 'Walgreens', url: 'https://www.walgreens.com' },
+  { name: 'Hy-Vee', url: 'https://www.hy-vee.com' },
+  { name: 'Albertsons', url: 'https://www.albertsons.com' },
+  { name: 'Walmart', url: 'https://www.walmart.com' },
+  { name: 'H-E-B', url: 'https://www.heb.com' },
+  { name: 'Publix', url: 'https://www.publix.com' },
+  { name: 'Meijer', url: 'https://www.meijer.com' },
+  { name: 'Ralphs', url: 'https://www.ralphs.com' },
 ];
 
-function PharmacyLogo({ name, domain }: { name: string; domain: string }) {
-  const [error, setError] = useState(false);
-  const src = `https://logo.clearbit.com/${domain}`;
-
-  if (error) {
-    return (
-      <div
-        className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-gray-200 text-xs font-semibold text-gray-600 sm:h-14 sm:w-14 sm:text-sm"
-        title={name}
-      >
-        {name.charAt(0)}
-      </div>
-    );
-  }
-
-  return (
-    <div
-      className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full bg-white shadow ring-1 ring-gray-200 sm:h-14 sm:w-14"
-      title={name}
-    >
-      <Image
-        src={src}
-        alt={name}
-        fill
-        className="object-contain p-1.5"
-        sizes="56px"
-        onError={() => setError(true)}
-      />
-    </div>
-  );
-}
-
 /**
- * Long horizontal banner: "Make the best decision" + tagline + row of real pharmacy logos (Clearbit).
+ * Banner: "Make the best decision" + tagline + row of pharmacy names as outbound links.
  */
 export default function PopularPharmaciesBanner() {
   return (
@@ -63,9 +28,17 @@ export default function PopularPharmaciesBanner() {
               Among most popular pharmacy brands
             </p>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-x-6">
             {PHARMACIES.map((pharmacy) => (
-              <PharmacyLogo key={pharmacy.name} name={pharmacy.name} domain={pharmacy.domain} />
+              <a
+                key={pharmacy.name}
+                href={pharmacy.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-primary-600 underline hover:no-underline sm:text-base"
+              >
+                {pharmacy.name}
+              </a>
             ))}
           </div>
         </div>
