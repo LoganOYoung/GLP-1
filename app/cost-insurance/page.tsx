@@ -164,36 +164,36 @@ export default function CostInsurancePage() {
 
         <div className="container-page section-pad-tight">
           {/* Quick links: actions + where to go (single strip) */}
-          <div className="mb-8 rounded-lg border border-primary-200 bg-primary-50/50 px-4 py-3">
+          <div className="mb-8 rounded-none border border-primary-200 bg-primary-50/50 px-4 py-3">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Quick links</p>
             <ul className="flex flex-wrap gap-2">
               <li>
-                <Link href="/calculator" className="rounded-md border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">
+                <Link href="/calculator" className="rounded-none border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">
                   Calculator
                 </Link>
               </li>
               <li>
-                <Link href="#discount-cards" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">
+                <Link href="#discount-cards" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">
                   Discount cards
                 </Link>
               </li>
               <li>
-                <Link href="#trumprx" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">
+                <Link href="#trumprx" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">
                   TrumpRx $350
                 </Link>
               </li>
               <li>
-                <Link href="#hsafsa" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">
+                <Link href="#hsafsa" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">
                   HSA/FSA
                 </Link>
               </li>
               <li>
-                <Link href="#appeal" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">
+                <Link href="#appeal" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">
                   Appeal template
                 </Link>
               </li>
               <li>
-                <Link href="/cost-insurance/appeals" className="rounded-md border border-primary-400 bg-white px-3 py-1.5 text-sm font-medium text-primary-600 hover:bg-primary-50">
+                <Link href="/cost-insurance/appeals" className="rounded-none border border-primary-400 bg-white px-3 py-1.5 text-sm font-medium text-primary-600 hover:bg-primary-50">
                   Appeal Center →
                 </Link>
               </li>
@@ -278,7 +278,7 @@ export default function CostInsurancePage() {
               <h2 className="text-xl font-semibold text-slate-900">Appeal Letter Template</h2>
               <Link
                 href="/cost-insurance/appeals"
-                className="rounded-md border-2 border-primary-500 bg-white px-3 py-1.5 text-sm font-semibold text-primary-600 hover:bg-primary-50"
+                className="rounded-none border-2 border-primary-500 bg-white px-3 py-1.5 text-sm font-semibold text-primary-600 hover:bg-primary-50"
               >
                 Appeal Center (by insurer) →
               </Link>

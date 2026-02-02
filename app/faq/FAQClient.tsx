@@ -66,7 +66,7 @@ function FaqAccordionItem({
               type="button"
               onClick={() => handleHelpful(true)}
               disabled={feedback != null}
-              className={`rounded p-1.5 transition ${
+              className={`rounded-none p-1.5 transition ${
                 feedback === 'up'
                   ? 'bg-primary-100 text-primary-600'
                   : 'text-slate-400 hover:bg-slate-100 hover:text-primary-600'
@@ -81,7 +81,7 @@ function FaqAccordionItem({
               type="button"
               onClick={() => handleHelpful(false)}
               disabled={feedback != null}
-              className={`rounded p-1.5 transition ${
+              className={`rounded-none p-1.5 transition ${
                 feedback === 'down'
                   ? 'bg-slate-200 text-slate-600'
                   : 'text-slate-400 hover:bg-slate-100 hover:text-slate-600'

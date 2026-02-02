@@ -72,14 +72,14 @@ export default function LegitimacyPage() {
 
       {/* Quick links: flat structure */}
       <div className="container-page py-4">
-        <div className="rounded-lg border border-primary-200 bg-primary-50/50 px-4 py-3">
+        <div className="rounded-none border border-primary-200 bg-primary-50/50 px-4 py-3">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Quick links</p>
           <ul className="flex flex-wrap gap-2">
-            <li><Link href="#verified-pharmacies" className="rounded-md border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">Verified pharmacies</Link></li>
-            <li><Link href="/legitimacy/shortage" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">FDA Shortage</Link></li>
-            <li><Link href="/labs" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Lab Transparency</Link></li>
-            <li><Link href="/cost-insurance" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Cost & Insurance</Link></li>
-            <li><Link href="/calculator" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Calculator</Link></li>
+            <li><Link href="#verified-pharmacies" className="rounded-none border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">Verified pharmacies</Link></li>
+            <li><Link href="/legitimacy/shortage" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">FDA Shortage</Link></li>
+            <li><Link href="/labs" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Lab Transparency</Link></li>
+            <li><Link href="/cost-insurance" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Cost & Insurance</Link></li>
+            <li><Link href="/calculator" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Calculator</Link></li>
           </ul>
         </div>
       </div>

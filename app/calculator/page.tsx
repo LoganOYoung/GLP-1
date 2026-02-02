@@ -38,7 +38,7 @@ export default function CalculatorPage() {
       <div className="container-page section-pad-tight">
         <Breadcrumbs items={[{ label: 'Calculator' }]} />
         <p className="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Calculator</p>
-        <div className="mt-4 mb-6 rounded-lg border border-gray-200 bg-gray-50 p-4 sm:p-5">
+        <div className="mt-4 mb-6 rounded-none border border-gray-200 bg-gray-50 p-4 sm:p-5">
           <h2 className="text-lg font-semibold text-gray-900">Get a personalized cost estimate</h2>
           <p className="mt-2 text-sm text-gray-600">
             This tool estimates your out-of-pocket cost and PA success probability in under a minute. For people with or without insurance: enter your situation to see range and savings. Discount cards and appeal templates are on our <a href="/cost-insurance" className="font-medium text-primary-600 underline hover:no-underline">Cost & Insurance</a> page.

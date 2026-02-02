@@ -80,22 +80,22 @@ export default function MobileMenu() {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex h-11 w-11 min-h-[44px] min-w-[44px] flex-col items-center justify-center gap-1.5 rounded-md p-2 lg:hidden touch-manipulation transition-colors hover:bg-gray-100 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+        className="flex h-11 w-11 min-h-[44px] min-w-[44px] flex-col items-center justify-center gap-1.5 rounded-none p-2 lg:hidden touch-manipulation transition-colors hover:bg-gray-100 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
         aria-expanded={isOpen}
       >
         <span
-          className={`block h-0.5 w-5 rounded-full bg-gray-700 transition-all duration-200 ease-out ${
+          className={`block h-0.5 w-5 rounded-none bg-gray-700 transition-all duration-200 ease-out ${
             isOpen ? 'translate-y-2 rotate-45' : ''
           }`}
         />
         <span
-          className={`block h-0.5 w-5 rounded-full bg-gray-700 transition-all duration-200 ease-out ${
+          className={`block h-0.5 w-5 rounded-none bg-gray-700 transition-all duration-200 ease-out ${
             isOpen ? 'scale-x-0 opacity-0' : ''
           }`}
         />
         <span
-          className={`block h-0.5 w-5 rounded-full bg-gray-700 transition-all duration-200 ease-out ${
+          className={`block h-0.5 w-5 rounded-none bg-gray-700 transition-all duration-200 ease-out ${
             isOpen ? '-translate-y-2 -rotate-45' : ''
           }`}
         />
@@ -117,7 +117,7 @@ export default function MobileMenu() {
               <span className="text-base font-semibold text-gray-900">Menu</span>
               <button
                 onClick={close}
-                className="flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-md transition-colors hover:bg-gray-100 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-400"
+                className="flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-none transition-colors hover:bg-gray-100 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-400"
                 aria-label="Close menu"
               >
                 <svg className="h-5 w-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -131,14 +131,14 @@ export default function MobileMenu() {
                 <Link
                   href="/"
                   onClick={close}
-                  className="block rounded-lg px-3 py-3 min-h-[44px] flex items-center text-sm font-medium text-gray-700 transition-colors hover:bg-primary-50 hover:text-primary-600 focus-visible:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-400"
+                  className="block rounded-none px-3 py-3 min-h-[44px] flex items-center text-sm font-medium text-gray-700 transition-colors hover:bg-primary-50 hover:text-primary-600 focus-visible:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-400"
                 >
                   Home
                 </Link>
                 <Link
                   href="/faq"
                   onClick={close}
-                  className="mt-0.5 flex items-center gap-2 rounded-lg px-3 py-3 min-h-[44px] text-sm font-medium text-primary-600 transition-colors hover:bg-primary-50 focus-visible:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-400"
+                  className="mt-0.5 flex items-center gap-2 rounded-none px-3 py-3 min-h-[44px] text-sm font-medium text-primary-600 transition-colors hover:bg-primary-50 focus-visible:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-400"
                 >
                   <Search className="h-4 w-4 shrink-0" aria-hidden />
                   Search (FAQ)
@@ -174,7 +174,7 @@ export default function MobileMenu() {
                             key={`${link.href}-${link.label}`}
                             href={link.href}
                             onClick={close}
-                            className="flex items-center gap-2 rounded-lg px-3 py-3 min-h-[44px] text-sm text-gray-700 transition-colors hover:bg-primary-50 hover:text-primary-600 focus-visible:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-400"
+                            className="flex items-center gap-2 rounded-none px-3 py-3 min-h-[44px] text-sm text-gray-700 transition-colors hover:bg-primary-50 hover:text-primary-600 focus-visible:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-400"
                           >
                             <NavIcon name={link.icon} />
                             {link.label}
@@ -191,7 +191,7 @@ export default function MobileMenu() {
                 <Link
                   href={CTA_HREF}
                   onClick={close}
-                  className="block rounded-lg bg-primary-500 px-4 py-3 min-h-[44px] flex items-center justify-center text-center text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+                  className="block rounded-none bg-primary-500 px-4 py-3 min-h-[44px] flex items-center justify-center text-center text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
                 >
                   {CTA_LABEL}
                 </Link>

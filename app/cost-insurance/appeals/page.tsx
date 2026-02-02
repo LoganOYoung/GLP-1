@@ -71,7 +71,7 @@ export default function AppealsPage() {
           </p>
           <div className="mt-6 space-y-6">
             {INSURER_TIPS.map((insurer) => (
-              <div key={insurer.name} className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+              <div key={insurer.name} className="rounded-none border border-gray-200 bg-gray-50 p-4">
                 <h3 className="font-semibold text-gray-900">{insurer.name}</h3>
                 <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-gray-700">
                   {insurer.tips.map((tip, i) => (

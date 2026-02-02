@@ -33,13 +33,13 @@ export default function ComparisonPage() {
           <div className="mt-4">
             <LastUpdated date={new Date('2026-01-30')} />
           </div>
-          <div className="mt-6 rounded-lg border border-primary-200 bg-primary-50/50 px-4 py-3">
+          <div className="mt-6 rounded-none border border-primary-200 bg-primary-50/50 px-4 py-3">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Quick links</p>
             <ul className="flex flex-wrap gap-2">
-              <li><Link href="/alternatives" className="rounded-md border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">Alternatives</Link></li>
-              <li><Link href="/calculator" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Calculator</Link></li>
-              <li><Link href="/cost-insurance" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Cost & Insurance</Link></li>
-              <li><Link href="/tools/dose-converter" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Dose Converter</Link></li>
+              <li><Link href="/alternatives" className="rounded-none border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">Alternatives</Link></li>
+              <li><Link href="/calculator" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Calculator</Link></li>
+              <li><Link href="/cost-insurance" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Cost & Insurance</Link></li>
+              <li><Link href="/tools/dose-converter" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Dose Converter</Link></li>
             </ul>
           </div>
         </div>

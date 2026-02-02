@@ -9,7 +9,7 @@ export default function Header() {
       <div className="container-page flex h-14 min-h-[56px] items-center justify-between gap-2 sm:gap-4">
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-2 text-lg font-bold text-gray-900 transition-colors hover:text-primary-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-md py-2 min-h-[44px] min-w-[44px] lg:min-w-0 lg:min-h-0"
+          className="flex shrink-0 items-center gap-2 text-lg font-bold text-gray-900 transition-colors hover:text-primary-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-none py-2 min-h-[44px] min-w-[44px] lg:min-w-0 lg:min-h-0"
         >
           <div className="relative h-8 w-8 shrink-0">
             <ImagePlaceholder

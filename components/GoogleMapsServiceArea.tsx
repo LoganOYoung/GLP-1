@@ -166,7 +166,7 @@ export default function GoogleMapsServiceArea({ selectedPlatform }: GoogleMapsSe
           <strong>Google Maps API Key Required</strong>
         </p>
         <p className="mt-1 text-xs text-amber-800">
-          To enable interactive maps, add <code className="rounded bg-amber-100 px-1 py-0.5">NEXT_PUBLIC_GOOGLE_MAPS_API_KEY</code> to your <code className="rounded bg-amber-100 px-1 py-0.5">.env.local</code> file.
+          To enable interactive maps, add <code className="rounded-none bg-amber-100 px-1 py-0.5">NEXT_PUBLIC_GOOGLE_MAPS_API_KEY</code> to your <code className="rounded-none bg-amber-100 px-1 py-0.5">.env.local</code> file.
         </p>
         <p className="mt-2 text-xs text-amber-700">
           Currently showing static state grid above. Interactive map will appear once API key is configured.
@@ -184,7 +184,7 @@ export default function GoogleMapsServiceArea({ selectedPlatform }: GoogleMapsSe
         <p className="mt-1 text-xs text-amber-800">
           To enable interactive maps, install the Google Maps library:
         </p>
-        <code className="mt-2 block rounded bg-amber-100 px-2 py-1 text-xs">
+        <code className="mt-2 block rounded-none bg-amber-100 px-2 py-1 text-xs">
           npm install @react-google-maps/api
         </code>
       </div>

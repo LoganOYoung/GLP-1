@@ -27,7 +27,7 @@ export default function VerifiedPharmaciesSection() {
               Trust-verified 503A/503B licensed pharmacies. All are verified through state boards and LegitScript certification. We do not endorse any single pharmacy—use the checklist above and verify yourself.
             </p>
           </div>
-          <div className="flex items-center gap-2 rounded-lg bg-primary-50 px-3 py-1.5 text-xs font-medium text-primary-700">
+          <div className="flex items-center gap-2 rounded-none bg-primary-50 px-3 py-1.5 text-xs font-medium text-primary-700">
             <Shield className="h-4 w-4" aria-hidden />
             <span>Trust Verified</span>
           </div>
@@ -47,7 +47,7 @@ function VerifiedPharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
   const eligibilityUrl = `${pharmacy.eligibilityUrl}${pharmacy.eligibilityUrl.includes('?') ? '&' : '?'}ref=${AFFILIATE_REF}&utm_source=${UTM_SOURCE_LEGITIMACY}`;
 
   return (
-    <div className="flex flex-col rounded-lg border border-slate-200 bg-white shadow-sm transition hover:border-slate-300">
+    <div className="flex flex-col rounded-none border border-slate-200 bg-white shadow-sm transition hover:border-slate-300">
       <div className="flex items-start justify-between gap-2 p-4">
         <div className="flex items-start gap-2">
           <Shield className="mt-0.5 h-5 w-5 shrink-0 text-primary-600" aria-hidden />
@@ -58,7 +58,7 @@ function VerifiedPharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
               ${pharmacy.priceMin}–${pharmacy.priceMax}/mo
             </p>
             {pharmacy.hsaFsaEligible && (
-              <span className="mt-1 inline-flex items-center gap-1 rounded bg-primary-100 px-1.5 py-0.5 text-xs font-medium text-primary-800">
+              <span className="mt-1 inline-flex items-center gap-1 rounded-none bg-primary-100 px-1.5 py-0.5 text-xs font-medium text-primary-800">
                 <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
                 HSA/FSA Eligible
               </span>
@@ -68,7 +68,7 @@ function VerifiedPharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
         <button
           type="button"
           onClick={() => setOpen((o) => !o)}
-          className="rounded p-1 text-slate-500 hover:bg-slate-200 hover:text-slate-700"
+          className="rounded-none p-1 text-slate-500 hover:bg-slate-200 hover:text-slate-700"
           aria-expanded={open}
         >
           {open ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
@@ -93,7 +93,7 @@ function VerifiedPharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
           </p>
           <p className="mt-1">
             <span className="font-medium text-slate-700">FDA registration:</span>{' '}
-            <code className="rounded bg-slate-200 px-1.5 py-0.5 text-xs">
+            <code className="rounded-none bg-slate-200 px-1.5 py-0.5 text-xs">
               {pharmacy.fdaRegistration}
             </code>
           </p>
@@ -112,7 +112,7 @@ function VerifiedPharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
           href={eligibilityUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary-600 px-3 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-none bg-primary-600 px-3 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
         >
           Check Eligibility <ExternalLink className="h-4 w-4" />
         </a>

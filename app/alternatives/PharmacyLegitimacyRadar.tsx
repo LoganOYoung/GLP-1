@@ -78,7 +78,7 @@ function PharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
               ${pharmacy.priceMin}–${pharmacy.priceMax}/mo
             </p>
             {pharmacy.hsaFsaEligible && (
-              <span className="mt-1 inline-flex items-center gap-1 rounded bg-primary-100 px-1.5 py-0.5 text-xs font-medium text-primary-800">
+              <span className="mt-1 inline-flex items-center gap-1 rounded-none bg-primary-100 px-1.5 py-0.5 text-xs font-medium text-primary-800">
                 <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
                 HSA/FSA Eligible
               </span>
@@ -88,7 +88,7 @@ function PharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
         <button
           type="button"
           onClick={() => setOpen((o) => !o)}
-          className="rounded p-1 text-slate-500 hover:bg-slate-200 hover:text-slate-700"
+          className="rounded-none p-1 text-slate-500 hover:bg-slate-200 hover:text-slate-700"
           aria-expanded={open}
         >
           {open ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
@@ -113,7 +113,7 @@ function PharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
           </p>
           <p className="mt-1">
             <span className="font-medium text-slate-700">FDA registration:</span>{' '}
-            <code className="rounded bg-slate-200 px-1.5 py-0.5 text-xs">
+            <code className="rounded-none bg-slate-200 px-1.5 py-0.5 text-xs">
               {pharmacy.fdaRegistration}
             </code>
           </p>

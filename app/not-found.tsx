@@ -10,7 +10,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
-          className="mt-6 inline-block rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-700"
+          className="mt-6 inline-block rounded-none bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-700"
         >
           Back to home
         </Link>
@@ -28,7 +28,7 @@ export default function NotFound() {
           <li>
             <Link
               href="/calculator"
-              className="inline-block rounded-lg border-2 border-primary-200 bg-primary-50 px-4 py-2 text-sm font-medium text-primary-700 hover:bg-primary-100"
+              className="inline-block rounded-none border-2 border-primary-200 bg-primary-50 px-4 py-2 text-sm font-medium text-primary-700 hover:bg-primary-100"
             >
               I have insurance → Check my cost
             </Link>
@@ -36,7 +36,7 @@ export default function NotFound() {
           <li>
             <Link
               href="/alternatives"
-              className="inline-block rounded-lg border-2 border-secondary-200 bg-secondary-50 px-4 py-2 text-sm font-medium text-secondary-700 hover:bg-secondary-100"
+              className="inline-block rounded-none border-2 border-secondary-200 bg-secondary-50 px-4 py-2 text-sm font-medium text-secondary-700 hover:bg-secondary-100"
             >
               Uninsured / paying cash → Compare options
             </Link>
@@ -44,7 +44,7 @@ export default function NotFound() {
           <li>
             <Link
               href="/quiz"
-              className="inline-block rounded-lg border-2 border-gray-200 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
+              className="inline-block rounded-none border-2 border-gray-200 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
             >
               Not sure → Find my option
             </Link>

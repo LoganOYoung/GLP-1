@@ -61,7 +61,7 @@ export default function TrumpRxChangeDetector() {
             {recentChanges.map((change) => (
               <div
                 key={`${change.stateCode}-${change.date}`}
-                className="flex items-center justify-between rounded border border-primary-200 bg-white p-2"
+                className="flex items-center justify-between rounded-none border border-primary-200 bg-white p-2"
               >
                 <div className="flex items-center gap-2">
                   {change.changeType === 'activated' ? (

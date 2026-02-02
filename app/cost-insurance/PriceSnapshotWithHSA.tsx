@@ -12,7 +12,7 @@ export default function PriceSnapshotWithHSA() {
   const [showAfterTax, setShowAfterTax] = useState(false);
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+    <div className="rounded-none border border-gray-200 bg-gray-50 p-4">
       <p className="text-sm font-semibold text-gray-900">Typical monthly cost (cash)</p>
       <div className="mt-2 flex flex-wrap items-baseline gap-x-4 gap-y-1 text-sm text-gray-700">
         <span>Brand: {PRICE_SNAPSHOT.brandRange}</span>
@@ -23,7 +23,7 @@ export default function PriceSnapshotWithHSA() {
           type="checkbox"
           checked={showAfterTax}
           onChange={(e) => setShowAfterTax(e.target.checked)}
-          className="rounded border-gray-300"
+          className="rounded-none border-gray-300"
         />
         <span>Show compounded after HSA/FSA tax savings (~30%)</span>
       </label>

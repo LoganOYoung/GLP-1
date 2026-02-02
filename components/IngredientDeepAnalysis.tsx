@@ -166,7 +166,7 @@ function FormulationDetail({ formulation }: { formulation: FormulationAnalysis }
           <p className="mb-2 text-xs font-semibold text-slate-900">Additives</p>
           <div className="space-y-2">
             {formulation.additives.map((additive, idx) => (
-              <div key={idx} className="rounded border border-slate-200 bg-white p-2">
+              <div key={idx} className="rounded-none border border-slate-200 bg-white p-2">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <p className="text-sm font-medium text-slate-900">{additive.name}</p>
@@ -197,7 +197,7 @@ function FormulationDetail({ formulation }: { formulation: FormulationAnalysis }
           <p className="mb-2 text-xs font-semibold text-slate-900">Preservatives</p>
           <div className="space-y-2">
             {formulation.preservatives.map((preservative, idx) => (
-              <div key={idx} className="rounded border border-slate-200 bg-white p-2">
+              <div key={idx} className="rounded-none border border-slate-200 bg-white p-2">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <p className="text-sm font-medium text-slate-900">{preservative.name}</p>
@@ -250,7 +250,7 @@ function FormulationDetail({ formulation }: { formulation: FormulationAnalysis }
       )}
 
       {formulation.notes && (
-        <div className="mt-3 rounded border border-amber-200 bg-amber-50 p-2">
+        <div className="mt-3 rounded-none border border-amber-200 bg-amber-50 p-2">
           <p className="text-xs text-amber-900">
             <strong>Note:</strong> {formulation.notes}
           </p>

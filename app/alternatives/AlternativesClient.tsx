@@ -56,13 +56,13 @@ export default function AlternativesClient() {
         </p>
 
         {/* Explicit path strip: where to go next */}
-        <div className="mt-6 rounded-lg border border-primary-200 bg-primary-50/50 p-4">
+        <div className="mt-6 rounded-none border border-primary-200 bg-primary-50/50 p-4">
           <p className="text-sm font-semibold text-slate-900">Where to go next</p>
           <ul className="mt-3 flex flex-wrap gap-3">
             <li>
               <Link
                 href="/tools/dose-converter"
-                className="inline-flex items-center rounded-md border border-primary-300 bg-white px-3 py-2 text-sm font-medium text-primary-700 hover:bg-primary-50"
+                className="inline-flex items-center rounded-none border border-primary-300 bg-white px-3 py-2 text-sm font-medium text-primary-700 hover:bg-primary-50"
               >
                 Already have meds? Dose & conversion →
               </Link>
@@ -70,7 +70,7 @@ export default function AlternativesClient() {
             <li>
               <Link
                 href="/legitimacy"
-                className="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-gray-50"
+                className="inline-flex items-center rounded-none border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-gray-50"
               >
                 Not sure about a pharmacy? Legitimacy & Labs →
               </Link>
@@ -78,7 +78,7 @@ export default function AlternativesClient() {
             <li>
               <Link
                 href="/calculator"
-                className="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-gray-50"
+                className="inline-flex items-center rounded-none border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-gray-50"
               >
                 Check cost? Calculator & Cost & Insurance →
               </Link>
@@ -143,14 +143,14 @@ export default function AlternativesClient() {
       {/* 5. Stock tracker + dose converter teaser */}
       <section aria-label="Stock and dosing">
         <StockTrackerWidget />
-        <div className="mt-6 rounded-lg border border-secondary-200 bg-secondary-50/50 p-4">
+        <div className="mt-6 rounded-none border border-secondary-200 bg-secondary-50/50 p-4">
           <p className="text-sm font-semibold text-slate-900">Already have medication?</p>
           <p className="mt-1 text-sm text-slate-600">
             Convert brand doses to compounded units (Wegovy, Ozempic, Zepbound, Mounjaro) and match syringe markings.
           </p>
           <Link
             href="/tools/dose-converter"
-            className="mt-3 inline-flex items-center rounded-md bg-secondary-500 px-4 py-2 text-sm font-semibold text-white hover:bg-secondary-600"
+            className="mt-3 inline-flex items-center rounded-none bg-secondary-500 px-4 py-2 text-sm font-semibold text-white hover:bg-secondary-600"
           >
             Open Dose Converter →
           </Link>

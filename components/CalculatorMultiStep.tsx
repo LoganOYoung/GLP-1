@@ -292,7 +292,7 @@ export default function CalculatorMultiStep() {
                         type="checkbox"
                         checked={input.hasHsa || false}
                         onChange={(e) => updateInput({ hasHsa: e.target.checked })}
-                        className="h-4 w-4 rounded border-slate-300 text-secondary-500 focus:ring-primary-500"
+                        className="h-4 w-4 rounded-none border-slate-300 text-secondary-500 focus:ring-primary-500"
                       />
                       <span className="text-sm text-slate-700">I have HSA</span>
                     </label>
@@ -301,7 +301,7 @@ export default function CalculatorMultiStep() {
                         type="checkbox"
                         checked={input.hasFsa || false}
                         onChange={(e) => updateInput({ hasFsa: e.target.checked })}
-                        className="h-4 w-4 rounded border-slate-300 text-secondary-500 focus:ring-primary-500"
+                        className="h-4 w-4 rounded-none border-slate-300 text-secondary-500 focus:ring-primary-500"
                       />
                       <span className="text-sm text-slate-700">I have FSA</span>
                     </label>
@@ -593,13 +593,13 @@ function ResultsDashboard({
               <div className="mt-4 flex flex-wrap gap-3">
                 <Link
                   href="/alternatives"
-                  className="inline-flex items-center justify-center rounded-md bg-secondary-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-secondary-700"
+                  className="inline-flex items-center justify-center rounded-none bg-secondary-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-secondary-700"
                 >
                   Compare alternatives
                 </Link>
                 <Link
                   href="/cost-insurance"
-                  className="inline-flex items-center justify-center rounded-md border-2 border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  className="inline-flex items-center justify-center rounded-none border-2 border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
                 >
                   Discount cards & TrumpRx
                 </Link>
@@ -613,13 +613,13 @@ function ResultsDashboard({
               <div className="mt-4 flex flex-wrap gap-3">
                 <Link
                   href="/cost-insurance"
-                  className="inline-flex items-center justify-center rounded-md bg-primary-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
+                  className="inline-flex items-center justify-center rounded-none bg-primary-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
                 >
                   Discount cards & appeals
                 </Link>
                 <Link
                   href="/alternatives"
-                  className="inline-flex items-center justify-center rounded-md border-2 border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  className="inline-flex items-center justify-center rounded-none border-2 border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
                 >
                   Compare alternatives
                 </Link>

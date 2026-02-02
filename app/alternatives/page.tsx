@@ -96,14 +96,14 @@ export default function AlternativesPage() {
         </div>
 
         {/* Quick links: flat structure, more pages, more jump */}
-        <div className="mt-6 rounded-lg border border-primary-200 bg-primary-50/50 px-4 py-3">
+        <div className="mt-6 rounded-none border border-primary-200 bg-primary-50/50 px-4 py-3">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Quick links</p>
           <ul className="flex flex-wrap gap-2">
-            <li><Link href="/calculator" className="rounded-md border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">Calculator</Link></li>
-            <li><Link href="/comparison" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Compare Drugs</Link></li>
-            <li><Link href="/tools/dose-converter" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Dose Converter</Link></li>
-            <li><Link href="/cost-insurance" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Cost & Insurance</Link></li>
-            <li><Link href="/legitimacy" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Legitimacy</Link></li>
+            <li><Link href="/calculator" className="rounded-none border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">Calculator</Link></li>
+            <li><Link href="/comparison" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Compare Drugs</Link></li>
+            <li><Link href="/tools/dose-converter" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Dose Converter</Link></li>
+            <li><Link href="/cost-insurance" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Cost & Insurance</Link></li>
+            <li><Link href="/legitimacy" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Legitimacy</Link></li>
           </ul>
         </div>
 
@@ -120,7 +120,7 @@ export default function AlternativesPage() {
         </div>
 
         {/* Why consider alternatives (short) */}
-        <div className="mt-8 rounded-lg border border-gray-200 bg-gray-50 px-4 py-4">
+        <div className="mt-8 rounded-none border border-gray-200 bg-gray-50 px-4 py-4">
           <h2 className="text-sm font-semibold text-gray-900">Why consider alternatives?</h2>
           <p className="mt-1 text-sm text-gray-600">
             People switch when brand is out of stock, too expensive, or insurance denies. Compounded and oral options can fill the gap—often at lower out-of-pocket cost and with better availability.
@@ -128,7 +128,7 @@ export default function AlternativesPage() {
         </div>
 
         {/* What is (short + FAQ link) */}
-        <div className="mt-4 rounded-lg border border-gray-200 bg-white px-4 py-4">
+        <div className="mt-4 rounded-none border border-gray-200 bg-white px-4 py-4">
           <h2 className="text-sm font-semibold text-gray-900">What is a GLP-1 alternative?</h2>
           <p className="mt-1 text-sm text-gray-600">
             Alternatives include other brand-name GLP-1s (e.g. Wegovy vs Zepbound), compounded semaglutide or tirzepatide from licensed pharmacies, and oral options like Rybelsus. All require a prescription.
@@ -151,17 +151,17 @@ export default function AlternativesPage() {
         </p>
         <ul className="mt-4 space-y-2">
           <li>
-            <Link href="/faq#compounded-safe" className="block rounded border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100">
+            <Link href="/faq#compounded-safe" className="block rounded-none border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100">
               Is compounded semaglutide safe?
             </Link>
           </li>
           <li>
-            <Link href="/faq#compounded-legal-2026" className="block rounded border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100">
+            <Link href="/faq#compounded-legal-2026" className="block rounded-none border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100">
               Are compounded GLP-1s still legal in 2026?
             </Link>
           </li>
           <li>
-            <Link href="/faq#cost-overview" className="block rounded border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100">
+            <Link href="/faq#cost-overview" className="block rounded-none border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100">
               How much do GLP-1 medications cost?
             </Link>
           </li>

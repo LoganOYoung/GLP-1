@@ -129,13 +129,13 @@ function TelehealthCard({ platform }: { platform: TelehealthPlatform }) {
         </div>
         <div className="flex flex-wrap gap-1.5">
           {platform.legitScriptCertified && (
-            <span className="inline-flex items-center gap-1 rounded bg-primary-100 px-1.5 py-0.5 text-xs font-medium text-secondary-600">
+            <span className="inline-flex items-center gap-1 rounded-none bg-primary-100 px-1.5 py-0.5 text-xs font-medium text-secondary-600">
               <Shield className="h-3 w-3" />
               LegitScript
             </span>
           )}
           {platform.hsaFsaEligible && (
-            <span className="inline-flex items-center gap-1 rounded bg-primary-100 px-1.5 py-0.5 text-xs font-medium text-primary-600">
+            <span className="inline-flex items-center gap-1 rounded-none bg-primary-100 px-1.5 py-0.5 text-xs font-medium text-primary-600">
               <CheckCircle2 className="h-3 w-3" />
               HSA/FSA
             </span>

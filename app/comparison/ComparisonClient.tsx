@@ -27,7 +27,7 @@ function Tooltip({ label, content }: { label: string; content: string }) {
         <HelpCircle className="h-4 w-4" />
       </button>
       {show && (
-        <span className="absolute left-0 top-full z-10 mt-1 max-w-xs rounded border border-gray-200 bg-white px-2 py-1.5 text-xs text-gray-700 shadow-lg">
+        <span className="absolute left-0 top-full z-10 mt-1 max-w-xs rounded-none border border-gray-200 bg-white px-2 py-1.5 text-xs text-gray-700 shadow-lg">
           {content}
         </span>
       )}
@@ -100,7 +100,7 @@ export default function ComparisonClient() {
             key={id}
             type="button"
             onClick={() => setViewMode(id)}
-            className={`rounded-md border px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`rounded-none border px-3 py-1.5 text-sm font-medium transition-colors ${
               viewMode === id
                 ? 'border-primary-500 bg-primary-500 text-white'
                 : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
@@ -112,7 +112,7 @@ export default function ComparisonClient() {
       </div>
 
       {/* Personalized filter */}
-      <div className="mb-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+      <div className="mb-6 rounded-none border border-gray-200 bg-gray-50 p-4">
         <p className="text-sm font-semibold text-gray-900">Personalized recommendation</p>
         <p className="mt-0.5 text-xs text-gray-600">
           Enter your monthly budget and BMI to highlight the best-matching option.
@@ -127,7 +127,7 @@ export default function ComparisonClient() {
               placeholder="e.g. 300"
               value={budgetInput}
               onChange={(e) => setBudgetInput(e.target.value)}
-              className="w-24 rounded border border-gray-300 px-2 py-1 text-sm"
+              className="w-24 rounded-none border border-gray-300 px-2 py-1 text-sm"
             />
           </label>
           <label className="flex items-center gap-2">
@@ -140,14 +140,14 @@ export default function ComparisonClient() {
               placeholder="e.g. 32"
               value={bmiInput}
               onChange={(e) => setBmiInput(e.target.value)}
-              className="w-20 rounded border border-gray-300 px-2 py-1 text-sm"
+              className="w-20 rounded-none border border-gray-300 px-2 py-1 text-sm"
             />
           </label>
         </div>
       </div>
 
       {/* Comparison table (sticky header) */}
-      <div className="overflow-x-auto rounded-lg border-2 border-gray-200 shadow-md">
+      <div className="overflow-x-auto rounded-none border-2 border-gray-200 shadow-md">
         <table className="min-w-full text-left text-sm">
           <thead className="sticky top-0 z-10 border-b-2 border-gray-200 bg-gray-100">
             <tr>

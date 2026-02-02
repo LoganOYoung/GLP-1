@@ -70,10 +70,10 @@ export default function HomeFlowByRole() {
             return (
               <div
                 key={route.id}
-                className="flex flex-col rounded-lg border-2 border-gray-200 bg-gray-50/50 p-5 shadow-sm transition hover:border-gray-300 hover:shadow"
+                className="flex flex-col rounded-none border-2 border-gray-200 bg-gray-50/50 p-5 shadow-sm transition hover:border-gray-300 hover:shadow"
               >
                 <div
-                  className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${
+                  className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-none ${
                     isPrimary
                       ? 'bg-primary-100 text-primary-600'
                       : isSecondary
@@ -93,13 +93,13 @@ export default function HomeFlowByRole() {
                 <div className="mt-4 flex flex-col gap-2">
                   <Link
                     href={route.primaryHref}
-                    className={`inline-flex items-center justify-center rounded-md px-4 py-2.5 text-sm font-semibold transition ${primaryBtnClass}`}
+                    className={`inline-flex items-center justify-center rounded-none px-4 py-2.5 text-sm font-semibold transition ${primaryBtnClass}`}
                   >
                     {route.primaryLabel}
                   </Link>
                   <Link
                     href={route.secondaryHref}
-                    className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50"
+                    className="inline-flex items-center justify-center rounded-none border border-gray-300 bg-white px-4 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50"
                   >
                     {route.secondaryLabel}
                   </Link>

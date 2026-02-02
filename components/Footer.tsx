@@ -64,7 +64,7 @@ export default function Footer() {
       <footer className="border-t-2 border-primary-100 bg-gradient-to-b from-gray-50 to-white">
         <div className="container-page section-pad">
           {/* 全站迷你分流 */}
-          <div className="mb-8 rounded-lg border border-primary-200 bg-primary-50/50 px-4 py-3">
+          <div className="mb-8 rounded-none border border-primary-200 bg-primary-50/50 px-4 py-3">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
               Start by your situation
             </p>
@@ -72,7 +72,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/calculator"
-                  className="inline-flex items-center min-h-[44px] rounded-md border border-primary-300 bg-white px-4 py-2.5 text-sm font-medium text-primary-700 hover:bg-primary-50 md:min-h-0 md:py-1.5 md:px-3"
+                  className="inline-flex items-center min-h-[44px] rounded-none border border-primary-300 bg-white px-4 py-2.5 text-sm font-medium text-primary-700 hover:bg-primary-50 md:min-h-0 md:py-1.5 md:px-3"
                 >
                   I have insurance → Calculator
                 </Link>
@@ -80,7 +80,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/alternatives"
-                  className="inline-flex items-center min-h-[44px] rounded-md border border-secondary-300 bg-white px-4 py-2.5 text-sm font-medium text-secondary-700 hover:bg-secondary-50 md:min-h-0 md:py-1.5 md:px-3"
+                  className="inline-flex items-center min-h-[44px] rounded-none border border-secondary-300 bg-white px-4 py-2.5 text-sm font-medium text-secondary-700 hover:bg-secondary-50 md:min-h-0 md:py-1.5 md:px-3"
                 >
                   Uninsured / paying cash → Alternatives
                 </Link>
@@ -88,7 +88,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/quiz"
-                  className="inline-flex items-center min-h-[44px] rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 md:min-h-0 md:py-1.5 md:px-3"
+                  className="inline-flex items-center min-h-[44px] rounded-none border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 md:min-h-0 md:py-1.5 md:px-3"
                 >
                   Not sure → Find your option
                 </Link>

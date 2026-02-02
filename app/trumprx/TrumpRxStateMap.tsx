@@ -96,15 +96,15 @@ export default function TrumpRxStateMap() {
       {/* Legend */}
       <div className="mb-6 flex flex-wrap items-center gap-4 text-xs">
         <div className="flex items-center gap-2">
-          <div className="h-4 w-4 rounded bg-primary-500" />
+          <div className="h-4 w-4 rounded-none bg-primary-500" />
           <span className="text-slate-700">Active</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="h-4 w-4 rounded bg-amber-500" />
+          <div className="h-4 w-4 rounded-none bg-amber-500" />
           <span className="text-slate-700">Pending</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="h-4 w-4 rounded bg-slate-300" />
+          <div className="h-4 w-4 rounded-none bg-slate-300" />
           <span className="text-slate-700">Not Available</span>
         </div>
       </div>
@@ -198,7 +198,7 @@ export default function TrumpRxStateMap() {
               key={state.stateCode}
               type="button"
               onClick={() => setSelectedState(state.stateCode)}
-              className={`rounded border p-2 text-xs font-medium transition ${
+              className={`rounded-none border p-2 text-xs font-medium transition ${
                 selectedState === state.stateCode
                   ? 'border-primary-500 bg-primary-50 text-primary-700'
                   : 'border-slate-200 bg-white text-slate-700 hover:bg-slate-50'

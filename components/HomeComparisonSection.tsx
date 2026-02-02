@@ -62,8 +62,8 @@ function PriceGauge({ price, status }: { price: string; status: 'high' | 'good' 
     <div>
       <p className="text-lg font-bold text-gray-900">{price}</p>
       <p className="mt-0.5 text-xs font-medium text-gray-500">Monthly cost</p>
-      <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-gray-200">
-        <div className={`h-full rounded-full transition-all ${barWidth} ${barColor}`} />
+      <div className="mt-2 h-1.5 w-full overflow-hidden rounded-none bg-gray-200">
+        <div className={`h-full rounded-none transition-all ${barWidth} ${barColor}`} />
       </div>
     </div>
   );
@@ -73,7 +73,7 @@ function StockPill({ label, pulse }: { label: string; pulse: 'green' | 'amber' }
   return (
     <div className="flex items-center gap-2">
       <span
-        className={`inline-block h-2 w-2 flex-shrink-0 rounded-full ${
+        className={`inline-block h-2 w-2 flex-shrink-0 rounded-none ${
           pulse === 'green' ? 'bg-primary-500' : 'bg-amber-500'
         } animate-pulse`}
         aria-hidden
@@ -102,14 +102,14 @@ export default function HomeComparisonSection() {
           {CARDS.map((card) => (
             <div
               key={card.id}
-              className={`flex flex-col rounded-lg border-2 bg-white p-6 shadow-md transition-shadow hover:shadow-lg ${
+              className={`flex flex-col rounded-none border-2 bg-white p-6 shadow-md transition-shadow hover:shadow-lg ${
                 card.highlighted
                   ? 'border-primary-400 ring-2 ring-primary-200 ring-offset-2 sm:-mt-1 sm:scale-[1.02]'
                   : 'border-gray-200'
               }`}
             >
               {'saveBadge' in card && card.saveBadge && (
-                <div className="mb-3 inline-flex w-fit animate-pulse rounded-full bg-primary-100 px-3 py-1 text-xs font-bold text-primary-800">
+                <div className="mb-3 inline-flex w-fit animate-pulse rounded-none bg-primary-100 px-3 py-1 text-xs font-bold text-primary-800">
                   {card.saveBadge}
                 </div>
               )}
@@ -131,13 +131,13 @@ export default function HomeComparisonSection() {
                 <span className="font-medium">Time to access:</span> {card.timeToAccess}
               </div>
 
-              <div className="mt-4 rounded bg-gray-50 px-2 py-1.5 text-center text-xs font-medium text-gray-600">
+              <div className="mt-4 rounded-none bg-gray-50 px-2 py-1.5 text-center text-xs font-medium text-gray-600">
                 {card.updateTag}
               </div>
 
               <Link
                 href={card.href}
-                className="mt-6 inline-flex items-center justify-center rounded-md border-2 border-primary-500 bg-white px-4 py-2.5 text-sm font-semibold text-primary-600 transition-colors hover:bg-primary-50"
+                className="mt-6 inline-flex items-center justify-center rounded-none border-2 border-primary-500 bg-white px-4 py-2.5 text-sm font-semibold text-primary-600 transition-colors hover:bg-primary-50"
               >
                 {card.ctaLabel}
               </Link>
