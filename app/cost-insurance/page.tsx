@@ -16,7 +16,7 @@ import InsuranceAppealFlowchart from '@/components/InsuranceAppealFlowchart';
 export const metadata: Metadata = {
   title: 'Cost & Insurance | GLP-1 Savings, Discount Cards, Appeals & TrumpRx $350 Program',
   description:
-    'For anyone with or without insurance: save on GLP-1 medications with manufacturer savings cards, insurance appeals, TrumpRx $350 program, and HSA/FSA. Appeal templates and step-by-step guides.',
+    'GLP-1 cost: $0–$50/mo with insurance and savings cards; $150–$350/mo compounded. Save with discount cards, appeals, TrumpRx $350, HSA/FSA. Rx Likewise.',
   keywords:
     'GLP-1 savings card, insurance appeal, TrumpRx $350, HSA FSA GLP-1, manufacturer coupon, prior authorization, copay assistance, GLP-1 discount',
   openGraph: {
@@ -126,7 +126,7 @@ export default function CostInsurancePage() {
                   Cost & Insurance
                 </h1>
                 <p className="mt-2 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
-                  You can lower your GLP-1 cost with manufacturer discount cards, insurance appeals, the TrumpRx $350 program, and HSA/FSA—this page shows how. Always verify current terms on each program&apos;s official website.
+                  With insurance and savings cards, many people pay $0–$50/month for GLP-1s; without insurance, compounded semaglutide is often $150–$350/month. You can lower cost with manufacturer discount cards, insurance appeals, the TrumpRx $350 program, and HSA/FSA—this page shows how. Always verify current terms on each program&apos;s official website.
                 </p>
                 <p className="mt-2 text-sm font-medium text-slate-500">
                   For anyone with or without insurance who wants to pay less or appeal a denial.

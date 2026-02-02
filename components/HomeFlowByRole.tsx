@@ -65,7 +65,7 @@ export default function HomeFlowByRole() {
               ? 'bg-primary-500 text-white hover:bg-primary-600'
               : isSecondary
                 ? 'bg-secondary-500 text-white hover:bg-secondary-600'
-                : 'border-2 border-gray-700 bg-white text-gray-800 hover:bg-gray-50';
+                : 'border-2 border-primary-500 bg-white text-primary-600 hover:bg-primary-500 hover:text-white';
 
             return (
               <div

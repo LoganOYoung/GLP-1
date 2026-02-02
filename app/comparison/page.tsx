@@ -9,7 +9,7 @@ import ComparisonClient from './ComparisonClient';
 export const metadata: Metadata = {
   title: 'Drug Comparison | Tirzepatide vs Semaglutide, Brand vs Compounded 2026',
   description:
-    'Compare GLP-1 weight loss drugs: Tirzepatide vs Semaglutide, brand vs compounded. 2026 cost, efficacy, side effects. Weight loss %, monthly cost, and patient experience.',
+    'Tirzepatide (Zepbound, Mounjaro) vs semaglutide (Wegovy, Ozempic): cost, weight loss %, side effects. Brand and compounded 2026. Rx Likewise.',
   keywords:
     'Tirzepatide vs Semaglutide 2026, brand vs compounded weight loss drugs, GLP-1 comparison, Wegovy vs Zepbound, cost comparison, side effect comparison',
   openGraph: {
@@ -28,7 +28,7 @@ export default function ComparisonPage() {
             Drug Comparison
           </h1>
           <p className="mt-2 max-w-2xl text-base text-gray-600">
-            Tirzepatide (Zepbound/Mounjaro) and semaglutide (Wegovy/Ozempic) are the two main GLP-1 types—the table below compares cost, weight loss %, and side effects by brand and compounded option. Use the filters to see the option that best fits your budget and goals.
+            Tirzepatide (Zepbound, Mounjaro) and semaglutide (Wegovy, Ozempic) are the two main GLP-1 types; both can produce significant weight loss with different cost and side-effect profiles. The table below compares cost, weight loss %, and side effects by brand and compounded option—use the filters to see the option that best fits your budget and goals.
           </p>
           <div className="mt-4">
             <LastUpdated date={new Date('2026-01-30')} />

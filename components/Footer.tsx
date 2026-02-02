@@ -72,7 +72,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/calculator"
-                  className="inline-flex items-center min-h-[44px] rounded-none border border-primary-300 bg-white px-4 py-2.5 text-sm font-medium text-primary-700 hover:bg-primary-50 md:min-h-0 md:py-1.5 md:px-3"
+                  className="inline-flex items-center min-h-[44px] rounded-none border-2 border-primary-500 bg-white px-4 py-2.5 text-sm font-medium text-primary-600 transition-colors hover:bg-primary-500 hover:text-white md:min-h-0 md:py-1.5 md:px-3"
                 >
                   I have insurance → Calculator
                 </Link>
@@ -80,7 +80,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/alternatives"
-                  className="inline-flex items-center min-h-[44px] rounded-none border border-secondary-300 bg-white px-4 py-2.5 text-sm font-medium text-secondary-700 hover:bg-secondary-50 md:min-h-0 md:py-1.5 md:px-3"
+                  className="inline-flex items-center min-h-[44px] rounded-none border-2 border-secondary-500 bg-white px-4 py-2.5 text-sm font-medium text-secondary-600 transition-colors hover:bg-secondary-500 hover:text-white md:min-h-0 md:py-1.5 md:px-3"
                 >
                   Uninsured / paying cash → Alternatives
                 </Link>
@@ -88,7 +88,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/quiz"
-                  className="inline-flex items-center min-h-[44px] rounded-none border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 md:min-h-0 md:py-1.5 md:px-3"
+                  className="inline-flex items-center min-h-[44px] rounded-none border-2 border-primary-500 bg-white px-4 py-2.5 text-sm font-medium text-primary-600 transition-colors hover:bg-primary-500 hover:text-white md:min-h-0 md:py-1.5 md:px-3"
                 >
                   Not sure → Find your option
                 </Link>

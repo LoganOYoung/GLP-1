@@ -11,7 +11,7 @@ import VerifiedPharmaciesSection from './VerifiedPharmaciesSection';
 export const metadata: Metadata = {
   title: 'Legitimacy Tracker',
   description:
-    'Pharmacy red flags, FDA GLP-1 shortage status, and how to avoid scams when buying Ozempic, Wegovy, or compounded semaglutide.',
+    'Legitimate GLP-1: US-licensed pharmacy + prescription required. Scams skip RX, use overseas shipping, or crypto. Red flags and FDA shortage. Rx Likewise.',
 };
 
 const redFlags = [
@@ -48,7 +48,7 @@ export default function LegitimacyPage() {
                 Legitimacy Tracker
               </h1>
               <p className="mt-4 text-lg text-gray-600">
-                Legitimate GLP-1 sources are US-licensed pharmacies that require a prescription; scams often skip the prescription, use overseas shipping, or pressure you to pay by crypto or wire. Use the checklist below and the verified pharmacy list—we do not endorse any single pharmacy; verify yourself.
+                Legitimate GLP-1 sources are US-licensed pharmacies that require a prescription; scams skip the prescription, use overseas shipping, or pressure payment by crypto or wire. Use the checklist below and the verified pharmacy list—we do not endorse any single pharmacy; verify yourself with your state board of pharmacy.
               </p>
               <p className="mt-2 text-sm font-medium text-slate-500">
                 For anyone checking a pharmacy or shortage before buying.

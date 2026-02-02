@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: '%s | Rx Likewise',
   },
   description:
-    'Same results, smarter choices. Decision engine for GLP-1 medications in the US: real out-of-pocket cost, alternatives, insurance appeal templates, pharmacy legitimacy, and shortage updates.',
+    'GLP-1 cost: $0–$50/mo with insurance; $150–$350 compounded. Compare Ozempic, Wegovy, Mounjaro; check legitimacy & shortage. Rx Likewise.',
   keywords: 'GLP-1, Ozempic, Wegovy, Mounjaro, semaglutide, cost, insurance, shortage, compounded, legitimacy',
   openGraph: {
     type: 'website',

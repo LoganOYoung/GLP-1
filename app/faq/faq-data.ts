@@ -27,6 +27,14 @@ export const FAQ_ITEMS: FAQItem[] = [
     tags: ['#Cost', '#Insurance', '#Savings'],
   },
   {
+    id: 'ozempic-cost',
+    category: 'Pricing & TrumpRx',
+    question: 'How much does Ozempic cost?',
+    answer:
+      'With insurance and a manufacturer savings card, many people pay $0–$50/month for Ozempic. Without insurance, list price is often $900–$1,400+/month. Compounded semaglutide from a licensed pharmacy is typically $150–$350/month. Use our Cost Calculator for a personalized estimate.',
+    tags: ['#Ozempic', '#Cost', '#Insurance'],
+  },
+  {
     id: 'trumprx-what',
     category: 'Pricing & TrumpRx',
     question: 'What is TrumpRx and how does it affect pricing?',
@@ -126,7 +134,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: 'compounded-legal-2026',
     category: 'Legality & Safety',
-    question: 'Are compounded GLP-1s still legal after the 2026 shortage updates?',
+    question: 'Are compounded GLP-1s legal in 2026?',
     answer:
       'Yes. Compounded GLP-1 medications remain legal under FDA guidelines when: (1) There is an FDA-reported shortage of the approved product, (2) The compounding pharmacy is licensed (503A or 503B), (3) A valid prescription is required, and (4) The pharmacy follows state board regulations. The 2026 shortage updates did not change these rules—compounding is still permitted during shortages. However, always verify pharmacy legitimacy through your state board of pharmacy and look for LegitScript certification. See our Legitimacy Tracker for red flags and verification steps.',
     tags: ['#Legality', '#Compounding', '#FDA', '#2026', '#Shortage'],

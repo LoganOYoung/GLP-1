@@ -12,7 +12,7 @@ import LabInspectionRecord from '@/components/LabInspectionRecord';
 export const metadata: Metadata = {
   title: 'Compounding Lab Transparency Database | 503A/503B FDA Inspection Records',
   description:
-    'Transparency database of compounding laboratories used by Telehealth platforms. View FDA inspection records, 503A/503B status, and lab credentials.',
+    'Compounding lab transparency: 503A/503B FDA inspection records and credentials for GLP-1 compounding. Rx Likewise.',
   keywords:
     'compounding lab transparency, 503A pharmacy, 503B pharmacy, FDA inspection records, semaglutide compounding lab',
   openGraph: {

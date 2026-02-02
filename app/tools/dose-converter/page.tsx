@@ -9,7 +9,7 @@ import DoseConverterEnhanced from '@/app/alternatives/DoseConverterEnhanced';
 export const metadata: Metadata = {
   title: 'Dose Converter | Wegovy to Compounded Units, Tirzepatide Dose Chart 2026',
   description:
-    'Convert GLP-1 doses: brand to compounded units, Wegovy/Ozempic/Zepbound/Mounjaro dose chart. Semaglutide and tirzepatide unit conversion for vials and pens.',
+    'Convert GLP-1 doses: brand (mg) to compounded units. Wegovy, Ozempic, Zepbound, Mounjaro dose chart. Rx Likewise.',
   keywords:
     'Wegovy to compounded dose chart, semaglutide units conversion, tirzepatide dose conversion, Ozempic compounded units, dose calculator GLP-1',
   openGraph: {
@@ -28,7 +28,7 @@ export default function DoseConverterPage() {
             Dose Converter
           </h1>
           <p className="mt-2 max-w-2xl text-base text-gray-600">
-            Convert between brand-name doses (mg) and compounded vial units for semaglutide and tirzepatide. Use when switching from Wegovy/Ozempic/Zepbound/Mounjaro to compounded, or to match syringe markings.
+            Convert between brand-name doses (mg) and compounded vial units for semaglutide and tirzepatide—Rx Likewise. Use when switching from Wegovy/Ozempic/Zepbound/Mounjaro to compounded, or to match syringe markings.
           </p>
           <div className="mt-4">
             <LastUpdated date={new Date('2026-01-30')} />

@@ -14,7 +14,7 @@ import TrumpRxChangeDetector from './TrumpRxChangeDetector';
 export const metadata: Metadata = {
   title: 'TrumpRx $350 Program 2026 | State-by-State Guide & Eligibility',
   description:
-    'Complete guide to TrumpRx $350 program by state. Check if your state offers $350/month GLP-1 medication cap. Eligibility requirements, application links, and status updates.',
+    'TrumpRx $350: eligible people may get GLP-1s capped ~$350/mo by state. State-by-state guide, eligibility, application. Rx Likewise.',
   keywords:
     'TrumpRx $350, TrumpRx program 2026, GLP-1 $350 cap, state drug pricing program, affordable GLP-1 medications',
   openGraph: {

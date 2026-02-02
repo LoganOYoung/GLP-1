@@ -12,7 +12,7 @@ import AlternativesClient from './AlternativesClient';
 export const metadata: Metadata = {
   title: 'Alternatives | Zepbound Shortage, Compounded Tirzepatide, GLP-1 Telehealth 2026',
   description:
-    'For people comparing options with or without insurance: brand vs compounded vs oral GLP-1, shortage alternatives, telehealth 2026. Switching guide, stock tracker, pharmacy legitimacy.',
+    'GLP-1 options: brand (Ozempic, Wegovy, Mounjaro, Zepbound), compounded $150–$350/mo, or oral Rybelsus. Compare shortage alternatives and pharmacy legitimacy. Rx Likewise.',
   keywords:
     'Compounded Tirzepatide near me 2026, Zepbound shortage alternatives, Cheapest GLP-1 telehealth 2026, GLP-1 alternatives, compounded semaglutide, Wegovy alternatives',
   openGraph: {
@@ -66,7 +66,7 @@ export default function AlternativesPage() {
                 GLP-1 Alternatives
               </h1>
               <p className="mt-2 text-base leading-relaxed text-slate-600 sm:text-lg">
-                Your main options are brand, compounded, or oral GLP-1—each differs in cost, access, and efficacy. Compare and find a path that fits when you&apos;re out of stock, priced out, or insurance denied.
+                Your main options are brand (Ozempic, Wegovy, Mounjaro, Zepbound), compounded semaglutide or tirzepatide from licensed pharmacies ($150–$350/mo), or oral Rybelsus—each differs in cost, access, and efficacy. Compare and find a path that fits when you&apos;re out of stock, priced out, or insurance denied.
               </p>
               <p className="mt-2 text-sm font-medium text-slate-500">
                 For people comparing options—with or without insurance.

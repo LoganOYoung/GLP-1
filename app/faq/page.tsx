@@ -13,7 +13,7 @@ import { FAQClientWrapper } from './FAQClient';
 export const metadata: Metadata = {
   title: 'FAQ',
   description:
-    'Frequently asked questions about GLP-1 cost, TrumpRx, legality, side effects, oral pills, and logistics. Pricing, insurance, compounded semaglutide, shortage, and legitimacy.',
+    'GLP-1 FAQ: cost ($0–$50 with insurance; $150–$350 compounded), TrumpRx, legality, side effects, oral pills. Rx Likewise.',
 };
 
 export default function FAQPage() {
