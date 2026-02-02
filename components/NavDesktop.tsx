@@ -3,52 +3,8 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import {
-  Calculator,
-  Wallet,
-  MapPin,
-  FileText,
-  Shield,
-  Activity,
-  FlaskConical,
-  Scale,
-  GitCompare,
-  LayoutList,
-  ChevronDown,
-  HelpCircle,
-  Compass,
-  Pill,
-  Bell,
-  BookOpen,
-  BookMarked,
-  Search,
-} from 'lucide-react';
+import { ChevronDown, Search } from 'lucide-react';
 import { NAV_GROUPS, CTA_LABEL, CTA_HREF, type NavGroup } from '@/lib/nav-config';
-
-const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
-  Calculator,
-  Wallet,
-  MapPin,
-  FileText,
-  Shield,
-  Activity,
-  FlaskConical,
-  Scale,
-  GitCompare,
-  LayoutList,
-  HelpCircle,
-  Compass,
-  Pill,
-  Bell,
-  BookOpen,
-  BookMarked,
-};
-
-function NavIcon({ name }: { name?: string }) {
-  const Icon = name ? ICON_MAP[name] : null;
-  if (!Icon) return null;
-  return <Icon className="h-4 w-4 shrink-0 text-gray-500" aria-hidden />;
-}
 
 export default function NavDesktop() {
   const [activeDropdown, setActiveDropdown] = useState<NavGroup['id'] | null>(null);
@@ -158,10 +114,9 @@ export default function NavDesktop() {
                   key={`${link.href}-${link.label}`}
                   href={link.href}
                   role="menuitem"
-                  className="flex items-center gap-2 px-4 py-2.5 text-sm leading-tight text-gray-700 transition-colors hover:bg-primary-50 hover:text-primary-700 focus-visible:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-400"
+                  className="block px-4 py-2.5 text-sm leading-tight text-gray-700 transition-colors hover:bg-primary-50 hover:text-primary-700 focus-visible:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-400"
                   onClick={() => setActiveDropdown(null)}
                 >
-                  <NavIcon name={link.icon} />
                   {link.label}
                 </Link>
               ))}

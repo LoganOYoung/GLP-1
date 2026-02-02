@@ -2,52 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import {
-  Calculator,
-  Wallet,
-  MapPin,
-  FileText,
-  Shield,
-  Activity,
-  FlaskConical,
-  Scale,
-  GitCompare,
-  LayoutList,
-  ChevronDown,
-  HelpCircle,
-  Compass,
-  Pill,
-  Bell,
-  BookOpen,
-  BookMarked,
-  Search,
-} from 'lucide-react';
+import { ChevronDown, Search } from 'lucide-react';
 import { NAV_GROUPS, CTA_LABEL, CTA_HREF } from '@/lib/nav-config';
-
-const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
-  Calculator,
-  Wallet,
-  MapPin,
-  FileText,
-  Shield,
-  Activity,
-  FlaskConical,
-  Scale,
-  GitCompare,
-  LayoutList,
-  HelpCircle,
-  Compass,
-  Pill,
-  Bell,
-  BookOpen,
-  BookMarked,
-};
-
-function NavIcon({ name }: { name?: string }) {
-  const Icon = name ? ICON_MAP[name] : null;
-  if (!Icon) return null;
-  return <Icon className="h-4 w-4 shrink-0 text-gray-500" />;
-}
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -174,9 +130,8 @@ export default function MobileMenu() {
                             key={`${link.href}-${link.label}`}
                             href={link.href}
                             onClick={close}
-                            className="flex items-center gap-2 rounded-none px-3 py-3 min-h-[44px] text-sm text-gray-700 transition-colors hover:bg-primary-50 hover:text-primary-600 focus-visible:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-400"
+                            className="block rounded-none px-3 py-3 min-h-[44px] text-sm text-gray-700 transition-colors hover:bg-primary-50 hover:text-primary-600 focus-visible:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-400"
                           >
-                            <NavIcon name={link.icon} />
                             {link.label}
                           </Link>
                         ))}
