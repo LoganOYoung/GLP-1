@@ -110,7 +110,7 @@ export default function MobileMenu() {
           />
           <nav
             className="fixed right-0 top-0 z-50 flex h-full w-full max-w-sm flex-col bg-white shadow-2xl lg:hidden"
-            id="navigation"
+            id="navigation-drawer"
             aria-label="Main navigation"
           >
             <div className="flex h-14 shrink-0 items-center justify-between border-b border-gray-200 px-4">

@@ -23,7 +23,7 @@ export default function Header() {
           </div>
           <span className="hidden lg:inline">Rx Likewise</span>
         </Link>
-        <nav id="navigation" className="hidden flex-1 justify-end overflow-hidden lg:flex min-w-0">
+        <nav id="navigation" className="hidden flex-1 justify-end overflow-visible lg:flex min-w-0" aria-label="Main navigation">
           <NavDesktop />
         </nav>
         <MobileMenu />
