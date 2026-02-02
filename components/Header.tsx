@@ -9,19 +9,17 @@ export default function Header() {
       <div className="container-page flex h-14 min-h-[56px] items-center justify-between gap-2 sm:gap-4">
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-2 text-lg font-bold text-gray-900 transition-colors hover:text-primary-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-none py-2 min-h-[44px] min-w-[44px] lg:min-w-0 lg:min-h-0"
+          className="flex shrink-0 items-center py-2 min-h-[44px] min-w-[44px] transition-opacity hover:opacity-90 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-none"
+          aria-label="Rx Likewise – Home"
         >
-          <div className="relative h-8 w-auto max-w-[120px] shrink-0">
-            <ImagePlaceholder
-              src="/images/logos/logo.png"
-              alt="Rx Likewise Logo"
-              width={120}
-              height={32}
-              className="h-8 w-auto object-contain object-left"
-              fallback="icon"
-            />
-          </div>
-          <span className="hidden lg:inline">Rx Likewise</span>
+          <ImagePlaceholder
+            src="/images/logos/logo.png"
+            alt=""
+            width={120}
+            height={32}
+            className="h-8 w-auto max-w-[120px] object-contain object-left"
+            fallback="icon"
+          />
         </Link>
         <nav id="navigation" className="hidden flex-1 justify-end overflow-visible lg:flex min-w-0" aria-label="Main navigation">
           <NavDesktop />
