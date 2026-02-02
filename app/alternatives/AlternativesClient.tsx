@@ -37,8 +37,8 @@ export default function AlternativesClient() {
         )}
       </section>
 
-      {/* 2. Path Comparison Matrix (summary only; full table on /comparison) */}
-      <section aria-labelledby="path-comparison-heading">
+      {/* 2. Path Comparison Matrix (summary only; full table on /comparison). #compounded / #oral 供导航锚点跳转 */}
+      <section id="compounded" aria-labelledby="path-comparison-heading">
         <h2 id="path-comparison-heading" className="text-xl font-semibold text-slate-900">
           Three paths: Brand vs Compounded vs Oral
         </h2>
@@ -48,6 +48,7 @@ export default function AlternativesClient() {
         <div className="mt-4">
           <PathComparisonTable />
         </div>
+        <span id="oral" className="block" aria-hidden="true" />
         <p className="mt-4 text-sm text-slate-600">
           <Link href="/comparison" className="font-medium text-primary-600 underline hover:no-underline">
             Full comparison (cost, efficacy, side effects) →

@@ -23,25 +23,24 @@ export interface NavGroup {
   links: NavLink[];
 }
 
-/** 1. Get Started — 转化漏斗入口，给新手明确起点 */
+/** 1. Get Started — 转化漏斗入口，给新手明确起点（Home 由 Logo 承担，不重复） */
 export const GET_STARTED_GROUP: NavGroup = {
   id: 'getStarted',
   label: 'Get Started',
   links: [
     { href: '/#start-by-situation', label: 'Start here', icon: 'Compass' },
     { href: '/quiz', label: 'Find Your Option (Quiz)', icon: 'HelpCircle' },
-    { href: '/', label: 'Home', icon: 'Compass' },
   ],
 };
 
-/** 2. Alternatives — 核心对比，按药物类型拆分，SEO 权重高 */
+/** 2. Alternatives — 核心对比（同页两条，用锚点区分复配 / 口服） */
 export const ALTERNATIVES_GROUP: NavGroup = {
   id: 'alternatives',
   label: 'Alternatives',
   links: [
     { href: '/comparison', label: 'Tirzepatide vs Semaglutide', icon: 'GitCompare' },
-    { href: '/alternatives', label: 'Compounded Guide', icon: 'LayoutList' },
-    { href: '/alternatives', label: 'Oral Pills 2026', icon: 'Pill' },
+    { href: '/alternatives#compounded', label: 'Compounded Guide', icon: 'LayoutList' },
+    { href: '/alternatives#oral', label: 'Oral Pills 2026', icon: 'Pill' },
   ],
 };
 
@@ -68,25 +67,24 @@ export const SAFETY_TRUST_GROUP: NavGroup = {
   ],
 };
 
-/** 5. Tools — 高频工具，提高回访率 */
+/** 5. Tools — 高频工具（Calculator 主功能为费用估算，统一称 Cost Calculator） */
 export const TOOLS_GROUP: NavGroup = {
   id: 'tools',
   label: 'Tools',
   links: [
     { href: '/tools/dose-converter', label: 'Dose-to-Units Converter', icon: 'Scale' },
-    { href: '/calculator', label: 'BMI Tracker', icon: 'Calculator' },
+    { href: '/calculator', label: 'Cost Calculator', icon: 'Calculator' },
     { href: '/alternatives', label: 'Stock Alert', icon: 'Bell' },
   ],
 };
 
-/** 6. Resources — 长尾内容，辅助信息 */
+/** 6. Resources — 长尾内容（FAQ 与 Glossary 同页，合并为一条） */
 export const RESOURCES_GROUP: NavGroup = {
   id: 'resources',
   label: 'Resources',
   links: [
-    { href: '/faq', label: 'FAQ Center', icon: 'HelpCircle' },
+    { href: '/faq', label: 'FAQ', icon: 'HelpCircle' },
     { href: '/about', label: 'About', icon: 'BookOpen' },
-    { href: '/faq', label: 'Glossary', icon: 'BookMarked' },
   ],
 };
 
