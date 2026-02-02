@@ -34,7 +34,7 @@ export default function Footer() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <footer className="border-t-2 border-primary-100 bg-gradient-to-b from-gray-50 to-white">
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:py-12">
+        <div className="container-page section-pad">
           {/* 全站迷你分流：任意页底部都可按角色再选入口 */}
           <div className="mb-8 rounded-lg border border-primary-200 bg-primary-50/50 px-4 py-3">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
@@ -42,54 +42,54 @@ export default function Footer() {
             </p>
             <ul className="flex flex-wrap gap-2">
               <li>
-                <Link href="/calculator" className="rounded-md border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">
+                <Link href="/calculator" className="inline-flex items-center min-h-[44px] rounded-md border border-primary-300 bg-white px-4 py-2.5 text-sm font-medium text-primary-700 hover:bg-primary-50 md:min-h-0 md:py-1.5 md:px-3">
                   I have insurance → Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/alternatives" className="rounded-md border border-secondary-300 bg-white px-3 py-1.5 text-sm font-medium text-secondary-700 hover:bg-secondary-50">
+                <Link href="/alternatives" className="inline-flex items-center min-h-[44px] rounded-md border border-secondary-300 bg-white px-4 py-2.5 text-sm font-medium text-secondary-700 hover:bg-secondary-50 md:min-h-0 md:py-1.5 md:px-3">
                   Uninsured / paying cash → Alternatives
                 </Link>
               </li>
               <li>
-                <Link href="/quiz" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50">
+                <Link href="/quiz" className="inline-flex items-center min-h-[44px] rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 md:min-h-0 md:py-1.5 md:px-3">
                   Not sure → Find your option
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
+          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
             <div>
               <h3 className="mb-3 text-sm font-bold text-gray-900">Content</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className="space-y-1 text-sm text-gray-600">
                 <li>
-                  <Link href="/alternatives" className="transition-colors hover:text-primary-500">
+                  <Link href="/alternatives" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Alternatives
                   </Link>
                 </li>
                 <li>
-                  <Link href="/comparison" className="transition-colors hover:text-primary-500">
+                  <Link href="/comparison" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Compare Drugs
                   </Link>
                 </li>
                 <li>
-                  <Link href="/cost-insurance" className="transition-colors hover:text-primary-500">
+                  <Link href="/cost-insurance" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Cost & Insurance
                   </Link>
                 </li>
                 <li>
-                  <Link href="/legitimacy" className="transition-colors hover:text-primary-500">
+                  <Link href="/legitimacy" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Legitimacy
                   </Link>
                 </li>
                 <li>
-                  <Link href="/legitimacy/shortage" className="transition-colors hover:text-primary-500">
+                  <Link href="/legitimacy/shortage" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     FDA Shortage Status
                   </Link>
                 </li>
                 <li>
-                  <Link href="/drugs/wegovy" className="transition-colors hover:text-primary-500">
+                  <Link href="/drugs/wegovy" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Drug Information
                   </Link>
                 </li>
@@ -97,29 +97,29 @@ export default function Footer() {
             </div>
             <div>
               <h3 className="mb-3 text-sm font-bold text-gray-900">Tools</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className="space-y-1 text-sm text-gray-600">
                 <li>
-                  <Link href="/calculator" className="transition-colors hover:text-primary-500">
+                  <Link href="/calculator" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Cost Calculator
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tools/dose-converter" className="transition-colors hover:text-primary-500">
+                  <Link href="/tools/dose-converter" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Dose Converter
                   </Link>
                 </li>
                 <li>
-                  <Link href="/quiz" className="transition-colors hover:text-primary-500">
+                  <Link href="/quiz" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Find Your Option
                   </Link>
                 </li>
                 <li>
-                  <Link href="/labs" className="transition-colors hover:text-primary-500">
+                  <Link href="/labs" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Lab Transparency
                   </Link>
                 </li>
                 <li>
-                  <Link href="/trumprx" className="transition-colors hover:text-primary-500">
+                  <Link href="/trumprx" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     TrumpRx $350 Program
                   </Link>
                 </li>
@@ -127,24 +127,24 @@ export default function Footer() {
             </div>
             <div>
               <h3 className="mb-3 text-sm font-bold text-gray-900">Resources</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className="space-y-1 text-sm text-gray-600">
                 <li>
-                  <Link href="/faq" className="transition-colors hover:text-primary-500">
+                  <Link href="/faq" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     FAQ
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="transition-colors hover:text-primary-500">
+                  <Link href="/about" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="/cost-insurance/appeals" className="transition-colors hover:text-primary-500">
+                  <Link href="/cost-insurance/appeals" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Appeal Center
                   </Link>
                 </li>
                 <li>
-                  <Link href="/cost-insurance#discount-cards" className="transition-colors hover:text-primary-500">
+                  <Link href="/cost-insurance#discount-cards" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Discount Cards
                   </Link>
                 </li>
@@ -152,19 +152,19 @@ export default function Footer() {
             </div>
             <div>
               <h3 className="mb-3 text-sm font-bold text-gray-900">Legal</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className="space-y-1 text-sm text-gray-600">
                 <li>
-                  <Link href="/about#disclaimer" className="transition-colors hover:text-primary-500">
+                  <Link href="/about#disclaimer" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Disclaimer
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about#privacy" className="transition-colors hover:text-primary-500">
+                  <Link href="/about#privacy" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about#terms" className="transition-colors hover:text-primary-500">
+                  <Link href="/about#terms" className="block py-2 transition-colors hover:text-primary-500 md:py-0">
                     Terms of Use
                   </Link>
                 </li>

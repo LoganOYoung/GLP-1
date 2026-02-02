@@ -658,7 +658,7 @@ function ScenarioCard({ scenario }: { scenario: ReturnType<typeof calculateScena
           value={scenario.totalMonthly}
           prefix="$"
           className={`text-4xl font-extrabold ${
-            isCompounded ? 'text-secondary-600' : 'text-medical-blue-600'
+            isCompounded ? 'text-secondary-600' : 'text-primary-600'
           }`}
         />
         <p className="mt-1 text-xs font-medium text-slate-600">per month (total cost)</p>

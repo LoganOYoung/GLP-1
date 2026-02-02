@@ -55,7 +55,7 @@ export default function AlternativesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <div className="bg-gradient-to-b from-white to-primary-50/20">
-      <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6 lg:pt-12">
+      <div className="container-page section-pad-tight">
         <Breadcrumbs items={[{ label: 'Alternatives' }]} />
         <p className="text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Alternatives</p>
         {/* Hero Banner Section */}

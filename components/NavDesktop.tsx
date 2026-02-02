@@ -99,7 +99,7 @@ export default function NavDesktop() {
       className="flex flex-wrap items-center justify-end gap-0.5 sm:gap-1"
     >
       {/* 全局搜索：提交后跳 FAQ 并带 q 参数 */}
-      <form onSubmit={handleSearch} className="hidden items-center sm:flex">
+      <form onSubmit={handleSearch} className="hidden items-center md:flex">
         <label htmlFor="nav-search" className="sr-only">Search FAQ</label>
         <div className="relative">
           <Search className="pointer-events-none absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" aria-hidden />

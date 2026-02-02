@@ -22,7 +22,7 @@ export default function ComparisonPage() {
   return (
     <div className="bg-white">
       <section className="border-b border-gray-200 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
+        <div className="container-page section-pad">
           <Breadcrumbs items={[{ label: 'Compare' }]} />
           <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Drug Comparison
@@ -48,7 +48,7 @@ export default function ComparisonPage() {
       <ComparisonClient />
 
       <div className="border-t border-gray-200 bg-gray-50">
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <div className="container-page section-pad-tight">
           <RelatedPages pages={getRelatedPagesFor('comparison')} />
         </div>
       </div>

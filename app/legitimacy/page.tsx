@@ -39,7 +39,7 @@ export default function LegitimacyPage() {
     <div className="bg-white">
       {/* Hero Banner */}
       <section className="border-b border-gray-200 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+        <div className="container-page section-pad">
           <Breadcrumbs items={[{ label: 'Legitimacy' }]} />
           <p className="text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Legitimacy</p>
           <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
@@ -71,7 +71,7 @@ export default function LegitimacyPage() {
       </section>
 
       {/* Quick links: flat structure */}
-      <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
+      <div className="container-page py-4">
         <div className="rounded-lg border border-primary-200 bg-primary-50/50 px-4 py-3">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Quick links</p>
           <ul className="flex flex-wrap gap-2">

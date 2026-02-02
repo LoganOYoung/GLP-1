@@ -15,7 +15,7 @@ export default function Home() {
           <div className="absolute top-0 right-0 h-96 w-96 translate-x-1/2 -translate-y-1/2 rounded-none bg-primary-500 blur-3xl" />
           <div className="absolute bottom-0 left-0 h-96 w-96 -translate-x-1/2 translate-y-1/2 rounded-none bg-secondary-500 blur-3xl" />
         </div>
-        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
+        <div className="container-page relative section-pad">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div>
               <span className="text-sm font-medium text-primary-700">Trusted Healthcare Resource</span>
@@ -66,7 +66,7 @@ export default function Home() {
 
       {/* Banner: Estimate your cost */}
       <section id="tools" className="border-b border-gray-200 bg-gradient-to-br from-primary-50 via-white to-primary-50/50">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
+        <div className="container-page section-pad">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div>
               <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
@@ -97,7 +97,7 @@ export default function Home() {
 
       {/* Banner: Find your option */}
       <section className="border-b border-gray-200 bg-gradient-to-br from-secondary-50/50 via-white to-secondary-50">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
+        <div className="container-page section-pad">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div className="order-2 lg:order-1">
               <div className="relative h-56 w-full overflow-hidden rounded-none border border-secondary-200 shadow-lg sm:h-64 lg:h-72">

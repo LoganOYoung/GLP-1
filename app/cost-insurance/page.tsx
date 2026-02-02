@@ -111,13 +111,13 @@ export default function CostInsurancePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
-      <div className="bg-gradient-to-b from-white to-medical-blue-50/20">
+      <div className="bg-gradient-to-b from-white to-primary-50/20">
         {/* Hero Section */}
         <section className="relative overflow-hidden border-b-2 border-primary-100 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
           <div className="absolute inset-0 opacity-5">
             <div className="absolute top-0 right-0 h-96 w-96 translate-x-1/2 -translate-y-1/2 rounded-none bg-primary-500 blur-3xl" />
           </div>
-          <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
+          <div className="container-page relative section-pad">
             <Breadcrumbs items={[{ label: 'Cost & Insurance' }]} />
             <p className="text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Cost & Insurance</p>
             <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
@@ -162,7 +162,7 @@ export default function CostInsurancePage() {
 
         <PolicyStatusTicker />
 
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <div className="container-page section-pad-tight">
           {/* Quick links: actions + where to go (single strip) */}
           <div className="mb-8 rounded-lg border border-primary-200 bg-primary-50/50 px-4 py-3">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Quick links</p>
