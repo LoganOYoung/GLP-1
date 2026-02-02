@@ -1,0 +1,51 @@
+import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import CalculatorMultiStep from '@/components/CalculatorMultiStep';
+import StructuredData from '@/components/StructuredData';
+
+export const metadata: Metadata = {
+  title: '2026 GLP-1 Cost Calculator | Out-of-Pocket Estimate for Insured & Uninsured',
+  description:
+    'For people with or without insurance: calculate personalized GLP-1 cost with 2026 policy engine, PA success probability, and annual savings. Discount cards and appeals on Cost & Insurance.',
+  keywords:
+    'GLP-1 calculator, cost calculator, insurance calculator, prior authorization, PA success, 2026 policy, TrumpRx, Medicare Part D',
+  openGraph: {
+    title: '2026 GLP-1 Cost Calculator | Personalized Estimate Tool',
+    description: 'Calculate your GLP-1 medication cost with 2026 policy data. For insured and uninsured. PA success probability and hidden costs breakdown.',
+  },
+};
+
+export default function CalculatorPage() {
+  return (
+    <>
+      <StructuredData
+        type="software-application"
+        name="2026 GLP-1 Cost Calculator"
+        description="Interactive calculator to estimate GLP-1 medication costs based on insurance, comorbidities, and 2026 policy data."
+        applicationCategory="HealthApplication"
+        operatingSystem="Web Browser"
+        featureList={[
+          'Multi-step questionnaire',
+          'Prior Authorization success probability',
+          'Hidden costs breakdown',
+          'Annual savings calculation',
+          '2026 policy engine integration',
+        ]}
+        offers={{ price: '0', priceCurrency: 'USD' }}
+        dateModified="2026-01-30"
+        url="https://glp1guide.com/calculator"
+      />
+      <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6 lg:pt-12">
+        <Breadcrumbs items={[{ label: 'Calculator' }]} />
+        <p className="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Calculator</p>
+        <div className="mt-4 mb-6 rounded-lg border border-gray-200 bg-gray-50 p-4 sm:p-5">
+          <h2 className="text-lg font-semibold text-gray-900">Get a personalized cost estimate</h2>
+          <p className="mt-2 text-sm text-gray-600">
+            This tool estimates your out-of-pocket cost and PA success probability in under a minute. For people with or without insurance: enter your situation to see range and savings. Discount cards and appeal templates are on our <a href="/cost-insurance" className="font-medium text-primary-600 underline hover:no-underline">Cost & Insurance</a> page.
+          </p>
+        </div>
+      </div>
+      <CalculatorMultiStep />
+    </>
+  );
+}

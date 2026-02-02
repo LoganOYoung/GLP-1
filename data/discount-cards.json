@@ -1,0 +1,84 @@
+{
+  "_comment": "Update monthly. See docs/DATA-UPDATE-PROCESS.md",
+  "lastUpdated": "2026-01-30",
+  "cards": [
+    {
+      "id": "ozempic",
+      "name": "Ozempic Savings Card",
+      "drug": [
+        "Ozempic"
+      ],
+      "who": "Commercial insurance, not Medicare/Medicaid",
+      "maxSavings": "$100/month",
+      "validUntil": "2026-12-31",
+      "officialLink": "https://www.ozempic.com/savings-and-resources/save-on-ozempic.html",
+      "hsaFsaEligible": true,
+      "note": "Pay as little as $25/month with commercial insurance. Maximum savings $100/month. Visit ozempic.com for current terms."
+    },
+    {
+      "id": "wegovy",
+      "name": "Wegovy Savings Card",
+      "drug": [
+        "Wegovy"
+      ],
+      "who": "Commercial insurance",
+      "maxSavings": "$100/month",
+      "validUntil": "2026-12-31",
+      "officialLink": "https://www.wegovy.com/coverage-and-savings/save-on-wegovy.html",
+      "hsaFsaEligible": true,
+      "note": "Pay as little as $25/month with commercial insurance. Maximum savings $100/month. Visit wegovy.com for current terms."
+    },
+    {
+      "id": "mounjaro",
+      "name": "Mounjaro Savings Card",
+      "drug": [
+        "Mounjaro"
+      ],
+      "who": "Commercial insurance",
+      "maxSavings": "$150/month",
+      "validUntil": "2026-12-31",
+      "officialLink": "https://www.mounjaro.com/savings",
+      "hsaFsaEligible": true,
+      "note": "Visit mounjaro.com and look for \"Savings\" or \"Patient Support\" section. Eligibility and cap; check manufacturer site for current terms."
+    },
+    {
+      "id": "zepbound",
+      "name": "Zepbound Savings Card",
+      "drug": [
+        "Zepbound"
+      ],
+      "who": "Commercial insurance",
+      "maxSavings": "$150/month",
+      "validUntil": "2026-12-31",
+      "officialLink": "https://www.zepbound.com/savings",
+      "hsaFsaEligible": true,
+      "note": "Visit zepbound.com and look for \"Savings\" or \"Patient Support\" section. Eligibility and cap; check manufacturer site for current terms."
+    },
+    {
+      "id": "rybelsus",
+      "name": "Rybelsus Savings",
+      "drug": [
+        "Rybelsus"
+      ],
+      "who": "Commercial insurance",
+      "maxSavings": "$150/month",
+      "validUntil": "2026-12-31",
+      "officialLink": "https://www.rybelsus.com",
+      "hsaFsaEligible": true,
+      "note": "Visit rybelsus.com and look for \"Savings\" or \"Patient Support\" section. Check manufacturer site for current offer."
+    },
+    {
+      "id": "pharmacy-discount",
+      "name": "Pharmacy Discount Programs",
+      "drug": [
+        "All GLP-1 medications"
+      ],
+      "who": "Varies (e.g. GoodRx, SingleCare)",
+      "maxSavings": "Varies by pharmacy",
+      "validUntil": "Ongoing",
+      "officialLink": "https://www.goodrx.com",
+      "hsaFsaEligible": false,
+      "note": "May lower cash price; compare at your pharmacy. Not eligible for HSA/FSA reimbursement."
+    }
+  ]
+}

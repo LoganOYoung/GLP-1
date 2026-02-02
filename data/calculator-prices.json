@@ -1,0 +1,68 @@
+{
+  "_comment": "Update monthly. See docs/DATA-UPDATE-PROCESS.md",
+  "lastUpdated": "2026-01-30",
+  "medicationBaseCosts": {
+    "wegovy": 1349,
+    "ozempic": 968,
+    "mounjaro": 1023,
+    "zepbound": 1059,
+    "rybelsus": 892,
+    "compounded": 299,
+    "oral": 450
+  },
+  "manufacturerCardSavings": {
+    "wegovy": {
+      "maxMonthly": 100,
+      "maxAnnual": 1200
+    },
+    "ozempic": {
+      "maxMonthly": 100,
+      "maxAnnual": 1200
+    },
+    "mounjaro": {
+      "maxMonthly": 150,
+      "maxAnnual": 1800
+    },
+    "zepbound": {
+      "maxMonthly": 150,
+      "maxAnnual": 1800
+    },
+    "rybelsus": {
+      "maxMonthly": 150,
+      "maxAnnual": 1800
+    }
+  },
+  "insuranceTierCopays": {
+    "tier1": {
+      "copay": 10,
+      "coinsurance": 0
+    },
+    "tier2": {
+      "copay": 25,
+      "coinsurance": 0
+    },
+    "tier3": {
+      "copay": 50,
+      "coinsurance": 0.2
+    },
+    "tier4": {
+      "copay": 100,
+      "coinsurance": 0.3
+    },
+    "specialty": {
+      "copay": 0,
+      "coinsurance": 0.3
+    }
+  },
+  "medicarePartDCoverage": {
+    "diabetes": 0.85,
+    "weightLoss": 0.75,
+    "default": 0.7
+  },
+  "taxBenefitRate": 0.25,
+  "legacy": {
+    "brandBaseCost": 1349,
+    "compoundedBaseCost": 299,
+    "oralBaseCost": 400
+  }
+}

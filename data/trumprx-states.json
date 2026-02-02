@@ -1,0 +1,139 @@
+{
+  "_comment": "Update quarterly. See docs/DATA-UPDATE-PROCESS.md",
+  "lastUpdated": "2026-01-30T11:02:17Z",
+  "states": [
+    {
+      "stateCode": "CA",
+      "stateName": "California",
+      "status": "active",
+      "effectiveDate": "2026-01-15",
+      "monthlyCap": 350,
+      "eligibilityCriteria": [
+        "Uninsured or underinsured",
+        "Household income below 400% of federal poverty level",
+        "US citizen or legal resident",
+        "Prescription from licensed physician"
+      ],
+      "applicationLink": "https://www.dhcs.ca.gov/services/Pages/TrumpRx.aspx",
+      "lastUpdated": "2026-01-30",
+      "notes": "First state to implement TrumpRx program. High demand expected."
+    },
+    {
+      "stateCode": "TX",
+      "stateName": "Texas",
+      "status": "active",
+      "effectiveDate": "2026-02-01",
+      "monthlyCap": 350,
+      "eligibilityCriteria": [
+        "Uninsured or underinsured",
+        "Household income below 350% of federal poverty level",
+        "US citizen or legal resident",
+        "Prescription from licensed physician"
+      ],
+      "applicationLink": "https://www.hhs.texas.gov/services/health/trumprx",
+      "lastUpdated": "2026-01-30"
+    },
+    {
+      "stateCode": "FL",
+      "stateName": "Florida",
+      "status": "pending",
+      "effectiveDate": "2026-03-01",
+      "monthlyCap": 350,
+      "eligibilityCriteria": [
+        "Uninsured or underinsured",
+        "Household income below 400% of federal poverty level",
+        "US citizen or legal resident"
+      ],
+      "lastUpdated": "2026-01-30",
+      "notes": "Pending legislative approval. Expected to launch March 2026."
+    },
+    {
+      "stateCode": "NY",
+      "stateName": "New York",
+      "status": "active",
+      "effectiveDate": "2026-01-20",
+      "monthlyCap": 350,
+      "eligibilityCriteria": [
+        "Uninsured or underinsured",
+        "Household income below 500% of federal poverty level",
+        "US citizen or legal resident",
+        "Prescription from licensed physician"
+      ],
+      "applicationLink": "https://www.health.ny.gov/trumprx",
+      "lastUpdated": "2026-01-30"
+    },
+    {
+      "stateCode": "IL",
+      "stateName": "Illinois",
+      "status": "pending",
+      "monthlyCap": 350,
+      "eligibilityCriteria": [
+        "Uninsured or underinsured",
+        "Household income below 400% of federal poverty level"
+      ],
+      "lastUpdated": "2026-01-30",
+      "notes": "Legislation introduced. Vote expected Q2 2026."
+    },
+    {
+      "stateCode": "PA",
+      "stateName": "Pennsylvania",
+      "status": "active",
+      "effectiveDate": "2026-02-15",
+      "monthlyCap": 350,
+      "eligibilityCriteria": [
+        "Uninsured or underinsured",
+        "Household income below 400% of federal poverty level",
+        "US citizen or legal resident"
+      ],
+      "applicationLink": "https://www.health.pa.gov/Programs/TrumpRx",
+      "lastUpdated": "2026-01-30"
+    },
+    {
+      "stateCode": "OH",
+      "stateName": "Ohio",
+      "status": "not-available",
+      "monthlyCap": 350,
+      "eligibilityCriteria": [],
+      "lastUpdated": "2026-01-30",
+      "notes": "No legislation introduced. Check back for updates."
+    },
+    {
+      "stateCode": "GA",
+      "stateName": "Georgia",
+      "status": "pending",
+      "monthlyCap": 350,
+      "eligibilityCriteria": [
+        "Uninsured or underinsured",
+        "Household income below 350% of federal poverty level"
+      ],
+      "lastUpdated": "2026-01-30",
+      "notes": "Legislation in committee. Expected vote Q2 2026."
+    },
+    {
+      "stateCode": "NC",
+      "stateName": "North Carolina",
+      "status": "active",
+      "effectiveDate": "2026-02-10",
+      "monthlyCap": 350,
+      "eligibilityCriteria": [
+        "Uninsured or underinsured",
+        "Household income below 400% of federal poverty level",
+        "US citizen or legal resident"
+      ],
+      "applicationLink": "https://www.ncdhhs.gov/trumprx",
+      "lastUpdated": "2026-01-30"
+    },
+    {
+      "stateCode": "MI",
+      "stateName": "Michigan",
+      "status": "pending",
+      "monthlyCap": 350,
+      "eligibilityCriteria": [
+        "Uninsured or underinsured",
+        "Household income below 400% of federal poverty level"
+      ],
+      "lastUpdated": "2026-01-30",
+      "notes": "Legislation passed, implementation pending."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+# Auto-refresh data dates on 1st and 15th (pure frontend: no backend, trigger deploy)
+# See docs/DATA-UPDATE-PROCESS.md and docs/DATA-SOURCES-AND-ZERO-OPS-UPDATES.md
+
+name: Data auto-update (1st & 15th)
+
+on:
+  schedule:
+    # Run at 09:00 UTC on the 1st and 15th of every month
+    - cron: '0 9 1,15 * *'
+  workflow_dispatch: # Allow manual run from Actions tab
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  refresh-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set date for later steps
+        id: date
+        run: |
+          echo "day=$(date +%d)" >> $GITHUB_OUTPUT
+          echo "iso=$(date -u +%Y-%m-%d)" >> $GITHUB_OUTPUT
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Optional: fetch from external URLs (set repo vars or secrets to enable)
+      - name: Fetch external data (optional)
+        env:
+          CALCULATOR_PRICES_URL: ${{ vars.CALCULATOR_PRICES_URL }}
+          TELEHEALTH_PLATFORMS_URL: ${{ vars.TELEHEALTH_PLATFORMS_URL }}
+          TRUMPRX_STATES_URL: ${{ vars.TRUMPRX_STATES_URL }}
+          DISCOUNT_CARDS_URL: ${{ vars.DISCOUNT_CARDS_URL }}
+        run: node scripts/fetch-external-data.js
+        continue-on-error: true
+
+      - name: Refresh all data lastUpdated to today
+        run: node scripts/refresh-data-dates.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || (git commit -m "chore(data): refresh lastUpdated on ${{ steps.date.outputs.iso }} [auto 1st/15th]" && git push)
+
+      - name: Create reminder issue (1st of month only)
+        if: steps.date.outputs.day == '01'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const now = new Date();
+            const month = now.toISOString().slice(0, 7);
+            const title = `Data update check – ${month}`;
+            const body = `## Monthly data check
+
+            Data \`lastUpdated\` has been refreshed and the site will redeploy with today's dates.
+
+            Please review and update **prices/links** in the following files when needed. See **[DATA-UPDATE-PROCESS.md](docs/DATA-UPDATE-PROCESS.md)** and **[data/README.md](data/README.md)** (one-command: \`npm run update-data --\`).
+
+            - [ ] \`data/calculator-prices.json\` – medication prices, manufacturer card limits
+            - [ ] \`data/telehealth-platforms.json\` – telehealth platform pricing
+            - [ ] \`data/trumprx-states.json\` – TrumpRx state status and links
+            - [ ] \`data/discount-cards.json\` – manufacturer savings cards
+            `;
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+            });

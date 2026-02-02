@@ -1,0 +1,37 @@
+{
+  "name": "glp-1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "rm -rf .next && next dev -p 3000",
+    "dev:fast": "next dev -p 3000",
+    "build": "next build && node scripts/inject-root-redirect.js",
+    "start": "node scripts/serve-static.js",
+    "lint": "next lint",
+    "check": "next lint && next build",
+    "update-data": "node scripts/update-data.js",
+    "refresh-data-dates": "node scripts/refresh-data-dates.js",
+    "fetch-external-data": "node scripts/fetch-external-data.js"
+  },
+  "dependencies": {
+    "@react-google-maps/api": "^2.20.8",
+    "framer-motion": "^12.29.2",
+    "lucide-react": "^0.563.0",
+    "next": "^14.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^3.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.0",
+    "postcss": "^8.4.32",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.0"
+  }
+}

@@ -1,0 +1,35 @@
+path,page_or_component,alt_text,width_px,height_px,format,priority,notes
+/images/logos/logo.webp,Header,GLP-1 Guide Logo,32,32,webp,,站标
+/images/banners/home-hero-banner.webp,首页 Hero,GLP-1 Guide - Healthcare Resource,600,400,webp,priority,LCP首屏
+/images/inline/trust-people.webp,首页 Trust,People making informed healthcare choices together,640,128,webp,lazy,信任区横图
+/images/inline/we-help-cost.webp,首页 We help,Real cost estimate - calculator and insurance,400,112,webp,lazy,卡片图
+/images/inline/we-help-insurance.webp,首页 We help,Insurance and savings - discount cards and appeals,400,112,webp,lazy,卡片图
+/images/inline/we-help-shortage.webp,首页 We help,FDA shortage status for GLP-1 products,400,112,webp,lazy,卡片图
+/images/inline/we-help-legitimacy.webp,首页 We help,Legitimacy and how to verify pharmacies,400,112,webp,lazy,卡片图
+/images/banners/calculator-tool-banner.webp,首页 Tools,Out-of-Pocket Calculator,600,192,webp,lazy,工具卡片
+/images/banners/quiz-tool-banner.webp,首页 Tools,Find Your Option Quiz,600,192,webp,lazy,工具卡片
+/images/banners/calculator-hero-banner.webp,Calculator Hero,2026 GLP-1 Cost Calculator,1200,256,webp,priority,计算器首屏
+/images/banners/about-hero-banner.webp,About Hero,About GLP-1 Guide,600,256,webp,priority,关于首屏
+/images/inline/about-trust-oasis.webp,About Mission,Trust and verification - LegitScript and state board verified,600,160,webp,lazy,信任绿洲
+/images/inline/about-data-engine.webp,About Technology,Technology and data - 2026 policy engine and real-time data,640,176,webp,lazy,数据引擎
+/images/banners/cost-insurance-hero-banner.webp,Cost & Insurance Hero,Cost & Insurance Savings Guide,600,256,webp,priority,成本与保险首屏
+/images/inline/savings-success.webp,Cost & Insurance,Savings success - person with discount card and lower pharmacy cost,800,176,webp,lazy,储蓄成功
+/images/banners/faq-hero-banner.webp,FAQ Hero,FAQ,600,256,webp,priority,FAQ首屏
+/images/inline/faq-support.webp,FAQ,Friendly support - we're here to answer your questions,192,144,webp,lazy,友好支持
+/images/banners/legitimacy-hero-banner.webp,Legitimacy Hero,Legitimacy Tracker,600,256,webp,priority,合法首屏
+/images/inline/verify-pharmacy.webp,Legitimacy,How to verify a pharmacy - state board lookup and LegitScript,600,160,webp,lazy,药房核验
+/images/banners/alternatives-hero-banner.webp,Alternatives Hero,GLP-1 Alternatives Comparison,600,256,webp,priority,替代方案首屏
+/images/inline/alternatives-paths.webp,Alternatives,Your path - brand compounded or oral GLP-1 options,700,160,webp,lazy,路径图
+/images/banners/quiz-hero-banner.webp,Quiz Hero,Find your option - personalized next steps for GLP-1,800,176,webp,priority,Quiz首屏
+/images/banners/trumprx-hero-banner.webp,TrumpRx Hero,TrumpRx $350 Program,600,256,webp,priority,TrumpRx首屏
+/images/inline/trumprx-apply.webp,TrumpRx,How to apply for TrumpRx $350 - eligibility and application,600,144,webp,lazy,申请指引
+/images/banners/labs-hero-banner.webp,Labs Hero,Compounding Lab Transparency Database,600,256,webp,priority,实验室首屏
+/images/inline/labs-transparency.webp,Labs,Lab transparency - FDA inspection and 503A/503B credentials,700,144,webp,lazy,实验室透明
+/images/drugs/wegovy-hero.webp,药品 Wegovy,Wegovy medication,600,256,webp,priority,药品Hero
+/images/drugs/ozempic-hero.webp,药品 Ozempic,Ozempic medication,600,256,webp,priority,药品Hero
+/images/drugs/mounjaro-hero.webp,药品 Mounjaro,Mounjaro medication,600,256,webp,priority,药品Hero
+/images/drugs/zepbound-hero.webp,药品 Zepbound,Zepbound medication,600,256,webp,priority,药品Hero
+/images/inline/drug-lifestyle.webp,药品页,Living well with GLP-1 - lifestyle and outcomes,600,160,webp,lazy,生活与结果
+/images/infographics/brand-medication-card.webp,PathComparisonCards,Brand Name medication,400,128,webp,lazy,品牌药卡片
+/images/infographics/compounded-medication-card.webp,PathComparisonCards,Compounded medication,400,128,webp,lazy,复方药卡片
+/images/infographics/oral-medication-card.webp,PathComparisonCards,Oral Pill medication,400,128,webp,lazy,口服药卡片

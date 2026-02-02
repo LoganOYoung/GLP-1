@@ -1,0 +1,111 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Suspense } from 'react';
+import ImagePlaceholder from '@/components/ImagePlaceholder';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import LastUpdated from '@/components/LastUpdated';
+import RelatedPages from '@/components/RelatedPages';
+import StructuredData from '@/components/StructuredData';
+import { getRelatedPagesFor } from '@/lib/related-pages-data';
+import { FAQ_ITEMS } from './faq-data';
+import { FAQClientWrapper } from './FAQClient';
+
+export const metadata: Metadata = {
+  title: 'FAQ',
+  description:
+    'Frequently asked questions about GLP-1 cost, TrumpRx, legality, side effects, oral pills, and logistics. Pricing, insurance, compounded semaglutide, shortage, and legitimacy.',
+};
+
+export default function FAQPage() {
+  const faqItems = FAQ_ITEMS.map(({ question, answer }) => ({ question, answer }));
+
+  return (
+    <>
+      <StructuredData
+        type="faq"
+        items={faqItems}
+        dateModified="2026-01-30"
+        url="https://glp1guide.com/faq"
+      />
+      <div className="bg-white">
+        {/* Hero Banner */}
+        <section className="border-b border-slate-200 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+            <Breadcrumbs items={[{ label: 'FAQ' }]} />
+            <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
+              <div>
+                <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                  Frequently Asked Questions
+                </h1>
+                <p className="mt-4 text-lg text-slate-600">
+                  Quick answers on pricing, TrumpRx, legality, side effects, new oral pills, and logistics.
+                </p>
+              </div>
+              <div className="hidden lg:block">
+                <div className="relative h-64 w-full rounded-none overflow-hidden shadow-lg">
+                  <ImagePlaceholder
+                    src="/images/banners/faq-hero-banner.webp"
+                    alt="FAQ"
+                    width={600}
+                    height={256}
+                    className="h-full w-full object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Quick links: flat structure */}
+        <section className="border-b border-slate-200 bg-slate-50">
+          <div className="mx-auto max-w-4xl px-4 py-4 sm:px-6 lg:px-8">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Quick links</p>
+            <ul className="flex flex-wrap gap-2">
+              <li><Link href="/calculator" className="rounded-md border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">Calculator</Link></li>
+              <li><Link href="/alternatives" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Alternatives</Link></li>
+              <li><Link href="/cost-insurance" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Cost & Insurance</Link></li>
+              <li><Link href="/comparison" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Compare Drugs</Link></li>
+              <li><Link href="/legitimacy" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Legitimacy</Link></li>
+            </ul>
+          </div>
+        </section>
+        {/* 按情境跳转到相关 FAQ */}
+        <section className="border-b border-slate-200 bg-slate-50">
+          <div className="mx-auto max-w-4xl px-4 py-4 sm:px-6 lg:px-8">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Start by your situation</p>
+            <ul className="flex flex-wrap gap-2">
+              <li><Link href="/faq#cost-overview" className="rounded-md border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">I have insurance → Cost & appeal</Link></li>
+              <li><Link href="/faq#trumprx-350" className="rounded-md border border-secondary-300 bg-white px-3 py-1.5 text-sm font-medium text-secondary-700 hover:bg-secondary-50">Paying cash → TrumpRx & compounded</Link></li>
+              <li><Link href="/faq#compounded-safe" className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">General → Safety & legality</Link></li>
+            </ul>
+          </div>
+        </section>
+        <section className="border-b border-slate-200 bg-slate-50">
+          <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
+            <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center">
+              <div className="relative h-36 w-48 shrink-0 overflow-hidden rounded-none border border-slate-200 bg-white shadow-sm">
+                <ImagePlaceholder
+                  src="/images/inline/faq-support.webp"
+                  alt="Friendly support - we're here to answer your questions"
+                  width={192}
+                  height={144}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-lg font-semibold text-slate-900">Common questions, clear answers</h2>
+                <p className="mt-1 text-sm text-slate-600">
+                  Pricing, TrumpRx, legality, side effects, oral pills, and logistics. Not medical advice—we point you to the right info.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <Suspense fallback={<div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8" aria-hidden>Loading FAQ…</div>}>
+          <FAQClientWrapper />
+        </Suspense>
+        <RelatedPages pages={getRelatedPagesFor('faq')} />
+      </div>
+    </>
+  );
+}

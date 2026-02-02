@@ -1,0 +1,19 @@
+# GLP-1 项目开发规则
+
+## 自动启动开发服务器
+- **每次修改代码后**：自动执行 `lsof -ti:3000 | xargs kill -9 2>/dev/null || true` 清理端口，然后执行 `cd /Users/ouyangheng/coding/GLP-1 && npm run dev` 启动开发服务器（后台运行）。
+- **确保用户可以直接打开 http://localhost:3000 看到网站**，无需用户手动执行任何命令。
+
+## 代码质量检查
+- **每次修改代码后**：自动执行 `npm run check`（lint + build）确保代码无错误。
+- 如果构建失败，必须修复后再提交给用户。
+
+## 纯前端约束
+- **禁止**：不创建 `app/api/`、不创建 `route.ts`、不使用 `'use server'`。
+- **数据来源**：仅客户端 fetch 公开 API（如 FDA）或静态数据文件。
+- **构建**：使用 `output: 'export'` 静态导出到 `out/`。
+
+## 样式与路由
+- **确保**：`app/layout.tsx` 中有 `import './globals.css'`，`app/globals.css` 中有 `@tailwind base/components/utilities`。
+- **开发时**：使用 `npm run dev`（会清 `.next`），不要用 `dev:fast` 留缓存。
+- **预览构建**：使用 `npm run build && npm run start`（start 是 `serve out`，不是 `next start`）。
