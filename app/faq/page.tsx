@@ -56,27 +56,6 @@ export default function FAQPage() {
             </div>
           </div>
         </section>
-        <section className="border-b border-slate-200 bg-slate-50">
-          <div className="container-page max-w-4xl py-8 sm:px-6 lg:px-8">
-            <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center">
-              <div className="relative h-36 w-48 shrink-0 overflow-hidden rounded-none border border-slate-200 bg-white shadow-sm">
-                <ImagePlaceholder
-                  src="/images/inline/faq-support.webp"
-                  alt="Friendly support - we're here to answer your questions"
-                  width={192}
-                  height={144}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div>
-                <h2 className="text-lg font-semibold text-slate-900">Common questions, clear answers</h2>
-                <p className="mt-1 text-sm text-slate-600">
-                  Pricing, TrumpRx, legality, side effects, oral pills, and logistics. Not medical advice—we point you to the right info.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
         <Suspense fallback={<div className="container-page py-8 sm:px-6 lg:px-8" aria-hidden>Loading FAQ…</div>}>
           <FAQClientWrapper />
         </Suspense>
@@ -101,6 +80,27 @@ export default function FAQPage() {
           </div>
         </section>
         <RelatedPages pages={getRelatedPagesFor('faq')} />
+        {/* 页底：简短说明 + 免责 */}
+        <section className="border-t border-slate-200 bg-slate-50">
+          <div className="container-page max-w-4xl py-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap items-center gap-4">
+              <div className="relative h-20 w-28 shrink-0 overflow-hidden rounded-none border border-slate-200 bg-white">
+                <ImagePlaceholder
+                  src="/images/inline/faq-support.webp"
+                  alt=""
+                  width={112}
+                  height={80}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="text-xs text-slate-600">
+                  Common questions, clear answers. Not medical advice—we point you to the right info.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
