@@ -1,6 +1,6 @@
 {
   "_comment": "Update monthly. See docs/DATA-UPDATE-PROCESS.md",
-  "lastUpdated": "2026-01-30",
+  "lastUpdated": "2026-02-03",
   "medicationBaseCosts": {
     "wegovy": 1349,
     "ozempic": 968,

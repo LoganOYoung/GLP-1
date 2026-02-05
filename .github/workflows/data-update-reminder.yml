@@ -28,15 +28,14 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Optional: fetch from external URLs (set repo vars or secrets to enable)
-      - name: Fetch external data (optional)
+      # Fetch data: from repo vars (API/CDN) if set, else from repo raw (same branch) so step always succeeds
+      - name: Fetch external data
         env:
           CALCULATOR_PRICES_URL: ${{ vars.CALCULATOR_PRICES_URL }}
           TELEHEALTH_PLATFORMS_URL: ${{ vars.TELEHEALTH_PLATFORMS_URL }}
           TRUMPRX_STATES_URL: ${{ vars.TRUMPRX_STATES_URL }}
           DISCOUNT_CARDS_URL: ${{ vars.DISCOUNT_CARDS_URL }}
         run: node scripts/fetch-external-data.js
-        continue-on-error: true
 
       - name: Refresh all data lastUpdated to today
         run: node scripts/refresh-data-dates.js

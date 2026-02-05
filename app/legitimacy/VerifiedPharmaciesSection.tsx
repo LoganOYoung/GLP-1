@@ -42,9 +42,17 @@ export default function VerifiedPharmaciesSection() {
   );
 }
 
+/** 是否为占位链接（未配置真实合作方 URL 时不要跳转） */
+function isPlaceholderEligibilityUrl(url: string): boolean {
+  return !url || url.includes('example.com');
+}
+
 function VerifiedPharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
   const [open, setOpen] = useState(false);
-  const eligibilityUrl = `${pharmacy.eligibilityUrl}${pharmacy.eligibilityUrl.includes('?') ? '&' : '?'}ref=${AFFILIATE_REF}&utm_source=${UTM_SOURCE_LEGITIMACY}`;
+  const isPlaceholder = isPlaceholderEligibilityUrl(pharmacy.eligibilityUrl);
+  const eligibilityUrl = isPlaceholder
+    ? ''
+    : `${pharmacy.eligibilityUrl}${pharmacy.eligibilityUrl.includes('?') ? '&' : '?'}ref=${AFFILIATE_REF}&utm_source=${UTM_SOURCE_LEGITIMACY}`;
 
   return (
     <div className="flex flex-col rounded-none border border-slate-200 bg-white shadow-sm transition hover:border-slate-300">
@@ -108,14 +116,23 @@ function VerifiedPharmacyCard({ pharmacy }: { pharmacy: PharmacyPartner }) {
         </div>
       )}
       <div className="mt-auto border-t border-slate-200 p-4">
-        <a
-          href={eligibilityUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex w-full items-center justify-center gap-2 rounded-none bg-primary-600 px-3 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
-        >
-          Check Eligibility <ExternalLink className="h-4 w-4" />
-        </a>
+        {isPlaceholder ? (
+          <span
+            className="inline-flex w-full items-center justify-center gap-2 rounded-none bg-slate-200 px-3 py-2.5 text-sm font-medium text-slate-500"
+            aria-label="Eligibility link not yet configured"
+          >
+            Check Eligibility — Coming soon
+          </span>
+        ) : (
+          <a
+            href={eligibilityUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-none bg-primary-600 px-3 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
+          >
+            Check Eligibility <ExternalLink className="h-4 w-4" />
+          </a>
+        )}
       </div>
     </div>
   );

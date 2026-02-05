@@ -63,8 +63,17 @@ function refreshDiscountCards() {
   console.log('discount-cards.json lastUpdated ->', date);
 }
 
-refreshCalculatorPrices();
-refreshTelehealthPlatforms();
-refreshTrumprxStates();
-refreshDiscountCards();
+function run(fn, name) {
+  try {
+    fn();
+  } catch (err) {
+    console.error('refresh-data-dates: failed', name, err.message);
+    process.exit(1);
+  }
+}
+
+run(refreshCalculatorPrices, 'calculator-prices.json');
+run(refreshTelehealthPlatforms, 'telehealth-platforms.json');
+run(refreshTrumprxStates, 'trumprx-states.json');
+run(refreshDiscountCards, 'discount-cards.json');
 console.log('All data lastUpdated set to', date, '/', dateISO);

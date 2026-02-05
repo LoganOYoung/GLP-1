@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SkipLinks from '@/components/SkipLinks';
 import BackToTop from '@/components/BackToTop';
 import ReadingProgress from '@/components/ReadingProgress';
+
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-LTDPD4FYZ4';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -49,6 +52,18 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen min-w-0 flex flex-col bg-gray-50 text-gray-900 font-sans antialiased overflow-x-hidden">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-config" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <SkipLinks />
         <ReadingProgress />
         <Header />

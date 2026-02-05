@@ -11,12 +11,28 @@
  *
  * Response must be valid JSON matching existing schema (minimal checks below).
  * On any failure: log and continue; never overwrite with invalid data.
+ *
+ * In GitHub Actions, when a URL var is not set, falls back to the repo's raw
+ * file (current branch) so the fetch step always runs and succeeds; refresh-data-dates
+ * then updates lastUpdated. Set vars to override with your own API/CDN.
  */
 
 const fs = require('fs');
 const path = require('path');
 
 const DATA_DIR = path.join(__dirname, '..', 'data');
+
+function setDefaultUrlsInGitHubActions() {
+  if (process.env.GITHUB_ACTIONS !== 'true') return;
+  const repo = process.env.GITHUB_REPOSITORY;
+  const ref = process.env.GITHUB_REF_NAME || (process.env.GITHUB_REF || '').replace(/^refs\/heads\//, '') || 'main';
+  if (!repo || !ref) return;
+  const base = `https://raw.githubusercontent.com/${repo}/${ref}/data`;
+  if (!process.env.CALCULATOR_PRICES_URL?.trim()) process.env.CALCULATOR_PRICES_URL = `${base}/calculator-prices.json`;
+  if (!process.env.TELEHEALTH_PLATFORMS_URL?.trim()) process.env.TELEHEALTH_PLATFORMS_URL = `${base}/telehealth-platforms.json`;
+  if (!process.env.TRUMPRX_STATES_URL?.trim()) process.env.TRUMPRX_STATES_URL = `${base}/trumprx-states.json`;
+  if (!process.env.DISCOUNT_CARDS_URL?.trim()) process.env.DISCOUNT_CARDS_URL = `${base}/discount-cards.json`;
+}
 
 function isValidCalculatorPrices(obj) {
   return obj && typeof obj === 'object' && typeof obj.medicationBaseCosts === 'object';
@@ -67,6 +83,7 @@ async function tryFetch(name, urlEnv, filename, validator) {
 }
 
 async function main() {
+  setDefaultUrlsInGitHubActions();
   let updated = 0;
   updated += (await tryFetch(
     'calculator-prices',
