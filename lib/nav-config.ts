@@ -74,7 +74,7 @@ export const TOOLS_GROUP: NavGroup = {
   links: [
     { href: '/tools/dose-converter', label: 'Dose-to-Units Converter', icon: 'Scale' },
     { href: '/calculator', label: 'Cost Calculator', icon: 'Calculator' },
-    { href: '/alternatives', label: 'Stock Alert', icon: 'Bell' },
+    { href: '/alternatives#stock', label: 'Stock Alert', icon: 'Bell' },
   ],
 };
 

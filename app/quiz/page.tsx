@@ -38,7 +38,8 @@ const steps = [
 
 type Answers = Record<string, string>;
 
-type Result = { title: string; bullets: string[]; cta: string; href: string };
+type BulletSegment = { type: 'text'; value: string } | { type: 'link'; label: string; href: string };
+type Result = { title: string; bullets: BulletSegment[][]; cta: string; href: string };
 
 function getResult(answers: Answers): Result {
   const budget = answers.budget;
@@ -61,9 +62,9 @@ function getResult(answers: Answers): Result {
     return {
       title: 'Oral option in the $200–500 range',
       bullets: [
-        'Rybelsus (oral semaglutide) may fit with insurance + savings card. Use our Calculator to estimate.',
-        'If paying out of pocket, oral list price is high; compounded injectable may be in your range—see Alternative Hub.',
-        'Verify any compounded pharmacy with our Legitimacy Tracker.',
+        [{ type: 'text', value: 'Rybelsus (oral semaglutide) may fit with insurance + savings card. Use our ' }, { type: 'link', label: 'Calculator', href: '/calculator' }, { type: 'text', value: ' to estimate.' }],
+        [{ type: 'text', value: 'If paying out of pocket, oral list price is high; compounded injectable may be in your range—see ' }, { type: 'link', label: 'Alternatives', href: '/alternatives' }, { type: 'text', value: '.' }],
+        [{ type: 'text', value: 'Verify any compounded pharmacy with our ' }, { type: 'link', label: 'Legitimacy Tracker', href: '/legitimacy' }, { type: 'text', value: '.' }],
       ],
       cta: 'Calculator',
       href: '/calculator',
@@ -85,9 +86,9 @@ function getResult(answers: Answers): Result {
     return {
       title: 'Brand or compounded options',
       bullets: [
-        'Brand Ozempic, Wegovy, Mounjaro, or Zepbound may be feasible with insurance + savings card. Use our Calculator.',
-        'If paying out of pocket, compare brand list price vs licensed compounded in our Alternative Hub.',
-        'Check FDA shortage status on our Legitimacy page—supply can affect availability.',
+        [{ type: 'text', value: 'Brand Ozempic, Wegovy, Mounjaro, or Zepbound may be feasible with insurance + savings card. Use our ' }, { type: 'link', label: 'Calculator', href: '/calculator' }, { type: 'text', value: '.' }],
+        [{ type: 'text', value: 'If paying out of pocket, compare brand list price vs licensed compounded in our ' }, { type: 'link', label: 'Alternatives', href: '/alternatives' }, { type: 'text', value: '.' }],
+        [{ type: 'text', value: 'Check FDA shortage status on our ' }, { type: 'link', label: 'Legitimacy', href: '/legitimacy/shortage' }, { type: 'text', value: ' page—supply can affect availability.' }],
       ],
       cta: 'Calculator',
       href: '/calculator',
@@ -97,9 +98,9 @@ function getResult(answers: Answers): Result {
     return {
       title: 'You have flexibility—choose by preference',
       bullets: [
-        'Brand options (injection or oral) are often $25–$50/mo with insurance + card. Use our Calculator.',
-        'Compare oral vs injection in our Alternative Hub if you’re deciding.',
-        'Check shortage status on Legitimacy in case your dose is affected.',
+        [{ type: 'text', value: 'Brand options (injection or oral) are often $25–$50/mo with insurance + card. Use our ' }, { type: 'link', label: 'Calculator', href: '/calculator' }, { type: 'text', value: '.' }],
+        [{ type: 'text', value: 'Compare oral vs injection in our ' }, { type: 'link', label: 'Alternatives', href: '/alternatives' }, { type: 'text', value: " if you're deciding." }],
+        [{ type: 'text', value: 'Check shortage status on ' }, { type: 'link', label: 'Legitimacy', href: '/legitimacy/shortage' }, { type: 'text', value: ' in case your dose is affected.' }],
       ],
       cta: 'Calculator',
       href: '/calculator',
@@ -108,9 +109,9 @@ function getResult(answers: Answers): Result {
   return {
     title: 'Next steps',
     bullets: [
-      'Use our Out-of-Pocket Calculator to estimate cost with your insurance and options.',
-      'Read Alternative Hub for brand vs compounded and oral vs injection.',
-      'See Legitimacy Tracker to verify pharmacies and check shortage status.',
+      [{ type: 'text', value: 'Use our Out-of-Pocket ' }, { type: 'link', label: 'Calculator', href: '/calculator' }, { type: 'text', value: ' to estimate cost with your insurance and options.' }],
+      [{ type: 'text', value: 'Read ' }, { type: 'link', label: 'Alternatives', href: '/alternatives' }, { type: 'text', value: ' for brand vs compounded and oral vs injection.' }],
+      [{ type: 'text', value: 'See ' }, { type: 'link', label: 'Legitimacy Tracker', href: '/legitimacy' }, { type: 'text', value: ' to verify pharmacies and check shortage status.' }],
     ],
     cta: 'Calculator',
     href: '/calculator',
@@ -196,8 +197,18 @@ export default function QuizPage() {
         <div className="mt-8 rounded-none border border-gray-200 bg-white p-6 shadow-sm">
           <h2 className="text-lg font-semibold text-gray-900">{result?.title}</h2>
           <ul className="mt-4 list-inside list-disc space-y-2 text-sm text-gray-600">
-            {result?.bullets.map((b, i) => (
-              <li key={i}>{b}</li>
+            {result?.bullets.map((bullet, i) => (
+              <li key={i}>
+                {bullet.map((seg, j) =>
+                  seg.type === 'text' ? (
+                    <span key={j}>{seg.value}</span>
+                  ) : (
+                    <Link key={j} href={seg.href} className="font-medium text-primary-600 underline hover:no-underline">
+                      {seg.label}
+                    </Link>
+                  )
+                )}
+              </li>
             ))}
           </ul>
           <p className="mt-5 text-sm font-semibold text-gray-900">Based on your situation, your next step is:</p>

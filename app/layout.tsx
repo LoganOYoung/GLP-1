@@ -15,17 +15,31 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+const SITE_URL = 'https://www.rxlikewise.com';
+const DEFAULT_DESCRIPTION =
+  'GLP-1 cost: $0–$50/mo with insurance; $150–$350 compounded. Compare Ozempic, Wegovy, Mounjaro; check legitimacy & shortage. Rx Likewise.';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Rx Likewise | Same results, smarter choices',
     template: '%s | Rx Likewise',
   },
-  description:
-    'GLP-1 cost: $0–$50/mo with insurance; $150–$350 compounded. Compare Ozempic, Wegovy, Mounjaro; check legitimacy & shortage. Rx Likewise.',
+  description: DEFAULT_DESCRIPTION,
   keywords: 'GLP-1, Ozempic, Wegovy, Mounjaro, semaglutide, cost, insurance, shortage, compounded, legitimacy',
   openGraph: {
     type: 'website',
     locale: 'en_US',
+    url: SITE_URL,
+    siteName: 'Rx Likewise',
+    title: 'Rx Likewise | Same results, smarter choices',
+    description: DEFAULT_DESCRIPTION,
+    images: [{ url: '/images/banners/home-hero-banner.webp', width: 1200, height: 630, alt: 'Rx Likewise – GLP-1 cost and alternatives' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rx Likewise | Same results, smarter choices',
+    description: DEFAULT_DESCRIPTION,
   },
   robots: { index: true, follow: true },
 };

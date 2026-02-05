@@ -37,8 +37,9 @@ export default function AlternativesClient() {
         )}
       </section>
 
-      {/* 2. Path Comparison Matrix (summary only; full table on /comparison). #compounded / #oral 供导航锚点跳转 */}
+      {/* 2. Path Comparison Matrix (summary only; full table on /comparison). #brand / #compounded / #oral for anchor links */}
       <section id="compounded" aria-labelledby="path-comparison-heading">
+        <span id="brand" className="block" aria-hidden="true" />
         <h2 id="path-comparison-heading" className="text-xl font-semibold text-slate-900">
           Three paths: Brand vs Compounded vs Oral
         </h2>
@@ -140,8 +141,8 @@ export default function AlternativesClient() {
         </div>
       </section>
 
-      {/* 5. Stock tracker + dose converter teaser */}
-      <section aria-label="Stock and dosing">
+      {/* 5. Stock tracker + dose converter teaser (nav: Stock Alert → #stock) */}
+      <section id="stock" className="scroll-mt-24" aria-label="Stock and dosing">
         <StockTrackerWidget />
         <div className="mt-6 rounded-none border border-secondary-200 bg-secondary-50/50 p-4">
           <p className="text-sm font-semibold text-slate-900">Already have medication?</p>

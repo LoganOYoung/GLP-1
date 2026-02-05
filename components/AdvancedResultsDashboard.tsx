@@ -40,7 +40,8 @@ export default function AdvancedResultsDashboard({ results, input }: AdvancedRes
     if (typeof window !== 'undefined') window.print();
   };
 
-  const reportMailto = 'mailto:support@example.com?subject=Calculator%20price%20discrepancy%20report&body=Please%20describe%20the%20price%20or%20program%20you%20noticed%20that%20does%20not%20match%20our%20calculator.';
+  // Opens user's mail client with subject/body pre-filled; user chooses recipient (no fake domain).
+const reportMailto = 'mailto:?subject=Calculator%20price%20discrepancy%20report&body=Please%20describe%20the%20price%20or%20program%20you%20noticed%20that%20does%20not%20match%20our%20calculator.';
 
   return (
     <div className="space-y-6">
@@ -163,12 +164,23 @@ export default function AdvancedResultsDashboard({ results, input }: AdvancedRes
 
         <p className="mb-4 text-sm text-slate-700">{results.bestOption.recommendationReason}</p>
 
-        <Link
-          href={results.bestOption.ctaLink}
-          className="inline-flex items-center gap-2 rounded-none bg-secondary-500 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-secondary-600"
-        >
-          {results.bestOption.cta}
-        </Link>
+        {results.bestOption.ctaLink.startsWith('http') ? (
+          <a
+            href={results.bestOption.ctaLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-none bg-secondary-500 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-secondary-600"
+          >
+            {results.bestOption.cta}
+          </a>
+        ) : (
+          <Link
+            href={results.bestOption.ctaLink}
+            className="inline-flex items-center gap-2 rounded-none bg-secondary-500 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-secondary-600"
+          >
+            {results.bestOption.cta}
+          </Link>
+        )}
       </motion.div>
 
       {/* Detailed Cost Breakdown for Best Option */}
@@ -523,17 +535,32 @@ function ScenarioCard({
                 )}
               </div>
 
-              {/* CTA */}
-              <Link
-                href={scenario.ctaLink}
-                className={`block w-full rounded-none px-4 py-2.5 text-center text-sm font-medium transition ${
-                  isBestOption
-                    ? 'bg-secondary-500 text-white hover:bg-secondary-600'
-                    : 'border border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
-                }`}
-              >
-                {scenario.cta}
-              </Link>
+              {/* CTA: internal = Link, external = a with target _blank */}
+              {scenario.ctaLink.startsWith('http') ? (
+                <a
+                  href={scenario.ctaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block w-full rounded-none px-4 py-2.5 text-center text-sm font-medium transition ${
+                    isBestOption
+                      ? 'bg-secondary-500 text-white hover:bg-secondary-600'
+                      : 'border border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
+                  }`}
+                >
+                  {scenario.cta}
+                </a>
+              ) : (
+                <Link
+                  href={scenario.ctaLink}
+                  className={`block w-full rounded-none px-4 py-2.5 text-center text-sm font-medium transition ${
+                    isBestOption
+                      ? 'bg-secondary-500 text-white hover:bg-secondary-600'
+                      : 'border border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
+                  }`}
+                >
+                  {scenario.cta}
+                </Link>
+              )}
             </div>
           </motion.div>
         )}

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import NewsletterSignup from '@/components/NewsletterSignup';
@@ -5,6 +6,14 @@ import ImagePlaceholder from '@/components/ImagePlaceholder';
 import PopularPharmaciesBanner from '@/components/PopularPharmaciesBanner';
 import HomeComparisonSection from '@/components/HomeComparisonSection';
 import HomeFlowByRole from '@/components/HomeFlowByRole';
+
+export const metadata: Metadata = {
+  title: 'Rx Likewise | Same results, smarter choices',
+  description:
+    'GLP-1 cost: $0–$50/mo with insurance; $150–$350 compounded. Compare Ozempic, Wegovy, Mounjaro; check legitimacy & shortage. Rx Likewise.',
+  openGraph: { url: 'https://www.rxlikewise.com' },
+  alternates: { canonical: 'https://www.rxlikewise.com' },
+};
 
 export default function Home() {
   return (

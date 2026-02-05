@@ -715,16 +715,31 @@ function ScenarioCard({ scenario }: { scenario: ReturnType<typeof calculateScena
         ))}
       </ul>
 
-      <a
-        href={scenario.ctaLink}
-        className={`block w-full rounded-none px-4 py-2.5 text-center text-sm font-medium transition ${
-          isCompounded
-            ? 'bg-secondary-500 text-white hover:bg-secondary-600'
-            : 'bg-primary-500 text-white hover:bg-primary-600'
-        }`}
-      >
-        {scenario.cta}
-      </a>
+      {scenario.ctaLink.startsWith('http') ? (
+        <a
+          href={scenario.ctaLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`block w-full rounded-none px-4 py-2.5 text-center text-sm font-medium transition ${
+            isCompounded
+              ? 'bg-secondary-500 text-white hover:bg-secondary-600'
+              : 'bg-primary-500 text-white hover:bg-primary-600'
+          }`}
+        >
+          {scenario.cta}
+        </a>
+      ) : (
+        <Link
+          href={scenario.ctaLink}
+          className={`block w-full rounded-none px-4 py-2.5 text-center text-sm font-medium transition ${
+            isCompounded
+              ? 'bg-secondary-500 text-white hover:bg-secondary-600'
+              : 'bg-primary-500 text-white hover:bg-primary-600'
+          }`}
+        >
+          {scenario.cta}
+        </Link>
+      )}
     </motion.div>
   );
 }
