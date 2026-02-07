@@ -55,12 +55,11 @@ git push -u origin main
 
 1. 打开 [vercel.com](https://vercel.com)，用 GitHub 登录。
 2. **Add New** → **Project**，选择刚推送的仓库。
-3. **Framework Preset** 选 **Next.js**。
-4. **Build Command** 保持默认 `next build`（会执行 `package.json` 的 `build`，即 `next build && node scripts/inject-root-redirect.js`）。
-5. **Output Directory** 留空（Vercel 自动识别 Next 静态导出）。
-6. **Root Directory** 若仓库不是单体仓库，填 `GLP-1`；否则留空。
-7. 点击 **Deploy**，等待构建完成。
-8. 部署成功后会得到 `https://xxx.vercel.app` 的预览地址。
+3. **重要**：项目根目录的 `vercel.json` 已配置为**静态站点**部署（`framework: null`、`buildCommand: "npm run build"`、`outputDirectory: "out"`），Vercel 会直接部署 `out/` 目录，从而正确提供 `/sitemap.xml`、`/robots.txt` 等根路径静态文件。无需在控制台改 Framework 或 Output Directory，按默认导入即可。
+4. **Build Command** 由 `vercel.json` 覆盖为 `npm run build`（会先执行 `scripts/generate-sitemap.js` 生成 `public/sitemap.xml`，再执行 `next build` 和 `inject-root-redirect.js`）。
+5. **Root Directory** 若仓库不是单体仓库，填 `GLP-1`；否则留空。
+6. 点击 **Deploy**，等待构建完成。
+7. 部署成功后会得到 `https://xxx.vercel.app` 的预览地址。
 
 ---
 
