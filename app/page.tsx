@@ -133,8 +133,8 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div className="order-2 lg:order-1">
               <div className="relative h-56 w-full overflow-hidden rounded-none border border-secondary-200 shadow-lg sm:h-64 lg:h-72">
-                <ImagePlaceholder
-                  src="/images/banners/quiz-tool-banner.webp"
+                <Image
+                  src="/images/banners/quiz-tool-banner.png"
                   alt="Find your GLP-1 option - personalized quiz"
                   width={600}
                   height={288}
