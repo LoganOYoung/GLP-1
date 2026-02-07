@@ -72,6 +72,9 @@ export default function CalculatorPage() {
             <p className="text-sm text-slate-600">
               Discount cards and appeal templates: <Link href="/cost-insurance" className="font-medium text-primary-600 underline hover:no-underline">Cost & Insurance</Link>.
             </p>
+            <p className="mt-1 text-xs text-slate-500">
+              Estimates are for reference; verify at your pharmacy or insurer.
+            </p>
           </div>
         </section>
         <CalculatorMultiStep />

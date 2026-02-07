@@ -59,6 +59,14 @@ export const FAQ_ITEMS: FAQItem[] = [
     tags: ['#Cost', '#Insurance', '#Savings'],
   },
   {
+    id: 'data-sources',
+    category: 'Pricing & TrumpRx',
+    question: 'Where does your price and shortage data come from?',
+    answer:
+      'Our price ranges are estimates based on public list prices, typical insurance copays, and compounded market data—they are not real-time quotes. Shortage information is pulled from the FDA when available, with a cached snapshot as fallback. Always verify current prices with your pharmacy or insurer and check the official FDA Drug Shortages page for the latest supply status.',
+    tags: ['#Cost', '#Shortage', '#Transparency'],
+  },
+  {
     id: 'insurance-denial',
     category: 'Pricing & TrumpRx',
     question: 'My insurance denied coverage. What can I do?',

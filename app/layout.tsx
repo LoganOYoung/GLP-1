@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: '/images/logos/logo.png',
+    apple: '/images/logos/logo.png',
+  },
 };
 
 export default function RootLayout({

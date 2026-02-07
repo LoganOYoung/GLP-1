@@ -50,9 +50,9 @@ function getResult(answers: Answers): Result {
     return {
       title: 'Focus on lowest-cost options',
       bullets: [
-        'Check if you qualify for manufacturer savings or patient assistance (see Cost & Insurance).',
-        'Consider compounded semaglutide from a licensed pharmacy—typically ~$150–$350/month. See our Legitimacy Tracker to avoid scams.',
-        'If you have insurance, use our appeal letter template and discount card list on Cost & Insurance.',
+        [{ type: 'text', value: 'Check if you qualify for manufacturer savings or patient assistance (see ' }, { type: 'link', label: 'Cost & Insurance', href: '/cost-insurance' }, { type: 'text', value: ').' }],
+        [{ type: 'text', value: 'Consider compounded semaglutide from a licensed pharmacy—typically ~$150–$350/month. See our ' }, { type: 'link', label: 'Legitimacy Tracker', href: '/legitimacy' }, { type: 'text', value: ' to avoid scams.' }],
+        [{ type: 'text', value: 'If you have insurance, use our appeal letter template and discount card list on ' }, { type: 'link', label: 'Cost & Insurance', href: '/cost-insurance' }, { type: 'text', value: '.' }],
       ],
       cta: 'Cost & Insurance',
       href: '/cost-insurance',
@@ -74,9 +74,9 @@ function getResult(answers: Answers): Result {
     return {
       title: 'Injectable or compounded in the $200–500 range',
       bullets: [
-        'With insurance + savings card, brand injectables often run $25–$50/mo. Use our Calculator.',
-        'Without insurance, compounded semaglutide from a licensed pharmacy (~$150–$350/mo) may fit. See Alternative Hub and Legitimacy Tracker.',
-        'See Cost & Insurance for discount cards and appeal templates.',
+        [{ type: 'text', value: 'With insurance + savings card, brand injectables often run $25–$50/mo. Use our ' }, { type: 'link', label: 'Calculator', href: '/calculator' }, { type: 'text', value: '.' }],
+        [{ type: 'text', value: 'Without insurance, compounded semaglutide from a licensed pharmacy (~$150–$350/mo) may fit. See ' }, { type: 'link', label: 'Alternatives', href: '/alternatives' }, { type: 'text', value: ' and ' }, { type: 'link', label: 'Legitimacy Tracker', href: '/legitimacy' }, { type: 'text', value: '.' }],
+        [{ type: 'text', value: 'See ' }, { type: 'link', label: 'Cost & Insurance', href: '/cost-insurance' }, { type: 'text', value: ' for discount cards and appeal templates.' }],
       ],
       cta: 'Alternatives',
       href: '/alternatives',

@@ -277,6 +277,7 @@ export default function DrugInfoClient({ drug }: DrugInfoClientProps) {
                 >
                   Calculate Your Cost <ExternalLink className="h-4 w-4" />
                 </Link>
+                <p className="mt-2 text-xs text-slate-500">Prices are estimates; check with pharmacy or telehealth provider.</p>
               </div>
             </section>
 

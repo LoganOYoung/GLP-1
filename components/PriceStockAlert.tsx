@@ -60,7 +60,7 @@ export default function PriceStockAlert() {
       sendBrowserNotification(
         'Rx Likewise Alerts Enabled',
         'You will receive notifications for price and stock changes.',
-        '/favicon.ico'
+        '/images/logos/logo.png'
       );
     }
   };

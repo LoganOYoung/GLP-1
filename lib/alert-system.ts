@@ -147,8 +147,8 @@ export function sendBrowserNotification(title: string, body: string, icon?: stri
   
   new Notification(title, {
     body,
-    icon: icon || '/favicon.ico',
-    badge: '/favicon.ico',
+    icon: icon || '/images/logos/logo.png',
+    badge: '/images/logos/logo.png',
     tag: 'glp1-alert',
     requireInteraction: false,
   });

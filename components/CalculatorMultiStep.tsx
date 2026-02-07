@@ -9,6 +9,7 @@ import { calculateAdvancedScenarios, type AdvancedCalculatorResult } from '@/app
 import AdvancedResultsDashboard from './AdvancedResultsDashboard';
 import { getStateByCode, getActiveStates } from '@/app/trumprx/trumprx-data';
 import { US_STATES } from '@/lib/us-states';
+import { DATA_AS_OF } from '@/lib/data-freshness';
 import {
   trackCalculatorSelection,
   getPersonalizedRecommendations,
@@ -547,6 +548,9 @@ function ResultsDashboard({
                 <PASuccessChart successRate={paResult.percent} level={paResult.level} />
               </div>
 
+        <p className="mb-2 text-xs text-slate-500" role="note">
+          Estimates as of <strong>{DATA_AS_OF}</strong>. Verify at your pharmacy or insurer.
+        </p>
         <p className="mb-3 text-xs text-slate-500" role="note">
           We may earn a commission if you use certain links below. This does not change our editorial content.
         </p>

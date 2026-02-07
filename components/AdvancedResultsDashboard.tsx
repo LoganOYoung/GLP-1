@@ -6,9 +6,7 @@ import { ChevronDown, ChevronUp, CheckCircle2, Info, TrendingDown, DollarSign, S
 import Link from 'next/link';
 import type { AdvancedCalculatorResult } from '@/app/calculator/advanced-calculator-engine';
 import ShareButtons from './ShareButtons';
-
-/** Data freshness label for calculator (align with docs/DATA-UPDATE-PROCESS.md) */
-const DATA_AS_OF = 'January 2026';
+import { DATA_AS_OF } from '@/lib/data-freshness';
 
 interface AdvancedResultsDashboardProps {
   results: AdvancedCalculatorResult;

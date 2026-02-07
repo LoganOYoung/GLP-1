@@ -17,13 +17,14 @@ function parseFdaResults(data: { results?: unknown[] }): ShortageItem[] {
   const results = data?.results;
   if (!Array.isArray(results) || results.length === 0) return [];
   const mapped = results
-    .filter((r: Record<string, unknown>) => {
+    .filter((r): r is Record<string, unknown> => typeof r === 'object' && r !== null && !Array.isArray(r))
+    .filter((r) => {
       const openfda = r.openfda as { brand_name?: string[] } | undefined;
       const brand = openfda?.brand_name;
       const name = Array.isArray(brand) ? brand.join(' ') : String(r.product_name ?? r.drug_name ?? '');
       return /ozempic|wegovy|mounjaro|zepbound|semaglutide|tirzepatide|rybelsus|glp-1|glp1/i.test(name);
     })
-    .map((r: Record<string, unknown>) => ({
+    .map((r) => ({
       name: ((r.openfda as { brand_name?: string[] })?.brand_name)?.[0] ?? String(r.product_name ?? r.drug_name ?? ''),
       status: String(r.shortage_reason ?? r.reason ?? 'See FDA'),
       link: (r.link as string[] | undefined)?.[0],
@@ -50,7 +51,7 @@ export default function ShortageClient() {
           setItems(mapped);
           setSource('live');
           setLoading(false);
-          return { fromLive: true };
+          return { fromLive: true, fallback: null };
         }
         return fetch(FALLBACK_URL)
           .then((r) => (r.ok ? r.json() : Promise.reject(new Error('No fallback'))))

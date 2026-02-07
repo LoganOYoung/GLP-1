@@ -19,6 +19,7 @@ const STATIC_PATHS = [
   '/tools/dose-converter',
   '/faq',
   '/about',
+  '/report',
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

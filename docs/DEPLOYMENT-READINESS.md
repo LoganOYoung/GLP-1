@@ -87,6 +87,7 @@ git push -u origin main
 | 检查项 | 操作 |
 |--------|------|
 | 根路径 | 访问 `https://glp1guide.com/` 和 `https://www.glp1guide.com/`（若已绑），应正常显示首页且无 404。 |
+| **Sitemap / robots** | 访问 `https://你的域名/sitemap.xml` 和 `https://你的域名/robots.txt`，应返回 XML/文本内容而非 404。构建后二者在 `out/` 根目录，部署时需一并发布。若 404，检查托管是否把整个 `out/` 根目录作为站点根（含 `sitemap.xml`、`robots.txt`）。 |
 | 静态资源 | 检查样式、图片、脚本是否加载正常（当前为静态导出，资源均来自同域或 CDN）。 |
 | 关键页 | 打开首页、Calculator、Alternatives、Legitimacy、FAQ、About，确认无白屏或报错。 |
 | 移动端 | 用手机或 DevTools 移动模式看导航、表单、CTA 是否可用。 |
