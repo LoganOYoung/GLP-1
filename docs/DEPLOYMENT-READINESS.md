@@ -55,7 +55,7 @@ git push -u origin main
 
 1. 打开 [vercel.com](https://vercel.com)，用 GitHub 登录。
 2. **Add New** → **Project**，选择刚推送的仓库。
-3. **重要**：项目根目录的 `vercel.json` 已配置为**静态站点**部署（`framework: null`、`buildCommand: "npm run build"`、`outputDirectory: "out"`），Vercel 会直接部署 `out/` 目录，从而正确提供 `/sitemap.xml`、`/robots.txt` 等根路径静态文件。无需在控制台改 Framework 或 Output Directory，按默认导入即可。
+3. **重要**：项目根目录的 `vercel.json` 已配置为**静态站点**部署（`framework: null`、`buildCommand: "npm run build"`、`outputDirectory: "out"`、**`cleanUrls: true`**、`trailingSlash: false`）。**切勿删除 `cleanUrls: true`**，否则 `/quiz`、`/calculator` 等路径会 404（Vercel 需通过 cleanUrls 将无后缀 URL 对应到 `xxx.html`）。无需在控制台改 Framework 或 Output Directory，按默认导入即可。
 4. **Build Command** 由 `vercel.json` 覆盖为 `npm run build`（会先执行 `scripts/generate-sitemap.js` 生成 `public/sitemap.xml`，再执行 `next build` 和 `inject-root-redirect.js`）。
 5. **Root Directory** 若仓库不是单体仓库，填 `GLP-1`；否则留空。
 6. 点击 **Deploy**，等待构建完成。
@@ -88,7 +88,7 @@ git push -u origin main
 | 根路径 | 访问 `https://glp1guide.com/` 和 `https://www.glp1guide.com/`（若已绑），应正常显示首页且无 404。 |
 | **Sitemap / robots** | 访问 `https://你的域名/sitemap.xml` 和 `https://你的域名/robots.txt`，应返回 XML/文本内容而非 404。构建后二者在 `out/` 根目录，部署时需一并发布。若 404，检查托管是否把整个 `out/` 根目录作为站点根（含 `sitemap.xml`、`robots.txt`）。 |
 | 静态资源 | 检查样式、图片、脚本是否加载正常（当前为静态导出，资源均来自同域或 CDN）。 |
-| 关键页 | 打开首页、Calculator、Alternatives、Legitimacy、FAQ、About，确认无白屏或报错。 |
+| 关键页 | 打开首页、**/quiz**、**/calculator**、Alternatives、Legitimacy、FAQ、About、Cost & Insurance，确认无 404 且无白屏。若出现 404，检查 `vercel.json` 是否含 `cleanUrls: true` 且未改 Output Directory。 |
 | 移动端 | 用手机或 DevTools 移动模式看导航、表单、CTA 是否可用。 |
 | 每月数据更新 | 若已启用 GitHub Actions（`data-update-reminder.yml`），确认 1/15 或手动触发后，Vercel 能收到 push 并自动重新部署。 |
 
