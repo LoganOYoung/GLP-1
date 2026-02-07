@@ -42,30 +42,16 @@ export default function LegitimacyPage() {
         <div className="container-page section-pad">
           <Breadcrumbs items={[{ label: 'Legitimacy' }]} />
           <p className="text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Legitimacy</p>
-          <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
-            <div>
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Legitimacy Tracker
-              </h1>
-              <p className="mt-4 text-lg text-gray-600">
-                Legitimate GLP-1 sources are US-licensed pharmacies that require a prescription; scams skip the prescription, use overseas shipping, or pressure payment by crypto or wire. Use the checklist below and the verified pharmacy list—we do not endorse any single pharmacy; verify yourself with your state board of pharmacy.
-              </p>
-              <p className="mt-2 text-sm font-medium text-slate-500">
-                For anyone checking a pharmacy or shortage before buying.
-              </p>
-            </div>
-            <div className="hidden lg:block">
-              <div className="relative h-64 w-full rounded-none overflow-hidden shadow-lg">
-                <ImagePlaceholder
-                  src="/images/banners/legitimacy-hero-banner.webp"
-                  alt="Legitimacy Tracker"
-                  width={600}
-                  height={256}
-                  className="h-full w-full object-cover"
-                  priority
-                />
-              </div>
-            </div>
+          <div className="max-w-3xl">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Legitimacy Tracker
+            </h1>
+            <p className="mt-4 text-lg text-gray-600">
+              Legitimate GLP-1 sources are US-licensed pharmacies that require a prescription; scams skip the prescription, use overseas shipping, or pressure payment by crypto or wire. Use the checklist below and the verified pharmacy list—we do not endorse any single pharmacy; verify yourself with your state board of pharmacy.
+            </p>
+            <p className="mt-2 text-sm font-medium text-slate-500">
+              For anyone checking a pharmacy or shortage before buying.
+            </p>
           </div>
         </div>
       </section>

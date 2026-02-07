@@ -11,27 +11,13 @@ export default function AboutClient() {
       {/* Hero + Value Proposition */}
       <section className="border-b border-slate-200 bg-white">
         <div className="container-page section-pad">
-          <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
-            <div>
-              <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                We&apos;re Your Trust Oasis in the GLP-1 Information Chaos
-              </h1>
-              <p className="mt-4 max-w-2xl text-lg text-slate-600">
-                Real-time data, verified sources, actionable insights—not static blogs. We help 50K+ users navigate GLP-1 medications with transparency and accuracy.
-              </p>
-            </div>
-            <div className="hidden lg:block">
-              <div className="relative h-64 w-full rounded-none overflow-hidden shadow-lg">
-                <ImagePlaceholder
-                  src="/images/banners/about-hero-banner.webp"
-                  alt="About Rx Likewise"
-                  width={600}
-                  height={256}
-                  className="h-full w-full object-cover"
-                  priority
-                />
-              </div>
-            </div>
+          <div className="max-w-3xl">
+            <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              We&apos;re Your Trust Oasis in the GLP-1 Information Chaos
+            </h1>
+            <p className="mt-4 text-lg text-slate-600">
+              Real-time data, verified sources, actionable insights—not static blogs. We help 50K+ users navigate GLP-1 medications with transparency and accuracy.
+            </p>
           </div>
 
           {/* Key Metrics Cards */}

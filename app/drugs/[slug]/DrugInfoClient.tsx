@@ -33,54 +33,40 @@ export default function DrugInfoClient({ drug }: DrugInfoClientProps) {
       <section className="border-b border-slate-200 bg-white">
         <div className="container-page section-pad-tight">
           <Breadcrumbs items={[{ label: 'Alternatives', href: '/alternatives' }, { label: drug.name }]} />
-          <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
-            <div>
-              <div className="flex items-start gap-4">
-                <div className="rounded-none bg-primary-100 p-3 text-primary-600">
-                  {drug.type === 'injection' ? <Syringe className="h-8 w-8" /> : <Pill className="h-8 w-8" />}
-                </div>
-                <div className="flex-1">
-                  <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                    {drug.name}
-                  </h1>
-                  <p className="mt-2 text-lg text-slate-600">
-                    {drug.genericName} · {drug.manufacturer}
-                  </p>
-                  <p className="mt-2 text-sm text-slate-500">
-                    FDA Approved: {new Date(drug.fdaApproved).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                    })}
-                  </p>
-                  <div className="mt-4">
-                    <LastUpdated date={new Date('2026-01-30')} />
-                  </div>
-                </div>
+          <div className="max-w-3xl">
+            <div className="flex items-start gap-4">
+              <div className="rounded-none bg-primary-100 p-3 text-primary-600">
+                {drug.type === 'injection' ? <Syringe className="h-8 w-8" /> : <Pill className="h-8 w-8" />}
               </div>
-              <div className="mt-4">
-                <div className={`inline-flex items-center gap-2 rounded-none border px-4 py-2 ${availabilityColors[drug.availability]}`}>
-                  {drug.availability === 'in-stock' ? (
-                    <CheckCircle2 className="h-4 w-4" />
-                  ) : drug.availability === 'limited' ? (
-                    <AlertCircle className="h-4 w-4" />
-                  ) : (
-                    <XCircle className="h-4 w-4" />
-                  )}
-                  <span className="text-sm font-semibold">{availabilityLabels[drug.availability]}</span>
+              <div className="flex-1">
+                <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                  {drug.name}
+                </h1>
+                <p className="mt-2 text-lg text-slate-600">
+                  {drug.genericName} · {drug.manufacturer}
+                </p>
+                <p className="mt-2 text-sm text-slate-500">
+                  FDA Approved: {new Date(drug.fdaApproved).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </p>
+                <div className="mt-4">
+                  <LastUpdated date={new Date('2026-01-30')} />
                 </div>
               </div>
             </div>
-            <div className="hidden lg:block">
-              <div className="relative h-64 w-full rounded-none overflow-hidden shadow-lg">
-                <ImagePlaceholder
-                  src={`/images/drugs/${drug.id}-hero.webp`}
-                  alt={`${drug.name} medication`}
-                  width={600}
-                  height={256}
-                  className="h-full w-full object-cover"
-                  priority
-                />
+            <div className="mt-4">
+              <div className={`inline-flex items-center gap-2 rounded-none border px-4 py-2 ${availabilityColors[drug.availability]}`}>
+                {drug.availability === 'in-stock' ? (
+                  <CheckCircle2 className="h-4 w-4" />
+                ) : drug.availability === 'limited' ? (
+                  <AlertCircle className="h-4 w-4" />
+                ) : (
+                  <XCircle className="h-4 w-4" />
+                )}
+                <span className="text-sm font-semibold">{availabilityLabels[drug.availability]}</span>
               </div>
             </div>
           </div>

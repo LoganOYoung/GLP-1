@@ -60,33 +60,18 @@ export default function AlternativesPage() {
         <p className="text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Alternatives</p>
         {/* Hero Banner Section */}
         <div className="mb-8 border-2 border-primary-100 bg-white p-8 shadow-lg lg:p-12">
-          <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
-            <div>
-              <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-                GLP-1 Alternatives
-              </h1>
-              <p className="mt-2 text-base leading-relaxed text-slate-600 sm:text-lg">
-                Your main options are brand (Ozempic, Wegovy, Mounjaro, Zepbound), compounded semaglutide or tirzepatide from licensed pharmacies ($150–$350/mo), or oral Rybelsus—each differs in cost, access, and efficacy. Compare and find a path that fits when you&apos;re out of stock, priced out, or insurance denied.
-              </p>
-              <p className="mt-2 text-sm font-medium text-slate-500">
-                For people comparing options—with or without insurance.
-              </p>
-              <div className="mt-4">
-                <LastUpdated date={new Date('2026-01-30')} />
-              </div>
-            </div>
-            {/* Visual Element */}
-            <div className="hidden lg:block">
-              <div className="relative h-64 w-full overflow-hidden shadow-lg">
-                <ImagePlaceholder
-                  src="/images/banners/alternatives-hero-banner.webp"
-                  alt="GLP-1 Alternatives Comparison"
-                  width={600}
-                  height={256}
-                  className="h-full w-full object-cover"
-                  priority
-                />
-              </div>
+          <div className="max-w-3xl">
+            <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+              GLP-1 Alternatives
+            </h1>
+            <p className="mt-2 text-base leading-relaxed text-slate-600 sm:text-lg">
+              Your main options are brand (Ozempic, Wegovy, Mounjaro, Zepbound), compounded semaglutide or tirzepatide from licensed pharmacies ($150–$350/mo), or oral Rybelsus—each differs in cost, access, and efficacy. Compare and find a path that fits when you&apos;re out of stock, priced out, or insurance denied.
+            </p>
+            <p className="mt-2 text-sm font-medium text-slate-500">
+              For people comparing options—with or without insurance.
+            </p>
+            <div className="mt-4">
+              <LastUpdated date={new Date('2026-01-30')} />
             </div>
           </div>
         </div>

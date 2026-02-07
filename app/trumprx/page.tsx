@@ -111,36 +111,22 @@ export default function TrumpRxPage() {
           </div>
           <div className="container-page section-pad relative">
             <Breadcrumbs items={[{ label: 'TrumpRx $350 Program' }]} />
-            <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
-              <div>
-                <div className="mb-6 flex items-center gap-3">
-                  <div className="rounded-none bg-secondary-500 p-3 shadow-lg">
-                    <span className="text-xl font-bold text-white">$350</span>
-                  </div>
-                  <div>
-                    <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-                      TrumpRx $350 Program 2026
-                    </h1>
-                    <p className="mt-2 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
-                      State-by-state guide to the TrumpRx $350 program. Check if your state offers a $350/month cap on GLP-1
-                      medications for eligible individuals.
-                    </p>
-                    <div className="mt-4">
-                      <LastUpdated date={TRUMPRX_LAST_UPDATED} />
-                    </div>
-                  </div>
+            <div className="max-w-3xl">
+              <div className="mb-6 flex items-center gap-3">
+                <div className="rounded-none bg-secondary-500 p-3 shadow-lg">
+                  <span className="text-xl font-bold text-white">$350</span>
                 </div>
-              </div>
-              <div className="hidden lg:block">
-                <div className="relative h-64 w-full rounded-none overflow-hidden shadow-lg">
-                  <ImagePlaceholder
-                    src="/images/banners/trumprx-hero-banner.webp"
-                    alt="TrumpRx $350 Program"
-                    width={600}
-                    height={256}
-                    className="h-full w-full object-cover"
-                    priority
-                  />
+                <div>
+                  <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                    TrumpRx $350 Program 2026
+                  </h1>
+                  <p className="mt-2 text-base leading-relaxed text-slate-600 sm:text-lg">
+                    State-by-state guide to the TrumpRx $350 program. Check if your state offers a $350/month cap on GLP-1
+                    medications for eligible individuals.
+                  </p>
+                  <div className="mt-4">
+                    <LastUpdated date={TRUMPRX_LAST_UPDATED} />
+                  </div>
                 </div>
               </div>
             </div>

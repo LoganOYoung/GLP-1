@@ -58,46 +58,32 @@ export default function LabsPage() {
         <section className="border-b border-slate-200 bg-slate-50">
           <div className="container-page section-pad">
             <Breadcrumbs items={[{ label: 'Lab Transparency' }]} />
-            <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
-              <div>
-                <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                  Compounding Lab Transparency Database
-                </h1>
-                <p className="mt-4 max-w-2xl text-lg text-slate-600">
-                  View FDA inspection records, 503A/503B credentials, and lab information for compounding pharmacies used
-                  by Telehealth platforms. Transparency builds trust.
-                </p>
-                <div className="mt-4">
-                  <LastUpdated date={new Date('2026-01-30')} />
-                </div>
-              </div>
-            <div className="hidden lg:block">
-              <div className="relative h-64 w-full rounded-none overflow-hidden shadow-lg">
-                <ImagePlaceholder
-                  src="/images/banners/labs-hero-banner.webp"
-                  alt="Compounding Lab Transparency Database"
-                  width={600}
-                  height={256}
-                  className="h-full w-full object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-          <div className="mt-6 flex flex-wrap gap-4">
-            <div className="rounded-none border border-primary-200 bg-primary-50 px-4 py-2">
-              <p className="text-sm font-semibold text-primary-900">{COMPOUNDING_LABS.length} Labs Listed</p>
-              <p className="text-xs text-primary-700">
-                {labs503A.length} 503A · {labs503B.length} 503B
+            <div className="max-w-3xl">
+              <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                Compounding Lab Transparency Database
+              </h1>
+              <p className="mt-4 text-lg text-slate-600">
+                View FDA inspection records, 503A/503B credentials, and lab information for compounding pharmacies used
+                by Telehealth platforms. Transparency builds trust.
               </p>
+              <div className="mt-4">
+                <LastUpdated date={new Date('2026-01-30')} />
+              </div>
             </div>
-            <div className="rounded-none border border-slate-200 bg-white px-4 py-2">
-              <p className="text-sm font-semibold text-slate-900">Last Updated</p>
-              <p className="text-xs text-slate-600">January 30, 2026</p>
+            <div className="mt-6 flex flex-wrap gap-4">
+              <div className="rounded-none border border-primary-200 bg-primary-50 px-4 py-2">
+                <p className="text-sm font-semibold text-primary-900">{COMPOUNDING_LABS.length} Labs Listed</p>
+                <p className="text-xs text-primary-700">
+                  {labs503A.length} 503A · {labs503B.length} 503B
+                </p>
+              </div>
+              <div className="rounded-none border border-slate-200 bg-white px-4 py-2">
+                <p className="text-sm font-semibold text-slate-900">Last Updated</p>
+                <p className="text-xs text-slate-600">January 30, 2026</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <div className="container-page section-pad">
         {/* Info Section */}
