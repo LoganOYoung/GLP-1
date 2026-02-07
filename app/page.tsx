@@ -60,12 +60,12 @@ export default function Home() {
             </div>
             <div className="relative hidden lg:block">
               <div className="relative h-full min-h-[400px] w-full overflow-hidden shadow-xl">
-                <ImagePlaceholder
-                  src="/images/banners/home-hero-banner.webp"
+                <Image
+                  src="/images/banners/home-hero-banner.png"
                   alt="Rx Likewise - GLP-1 cost calculator and medication guide: real cost, alternatives, and legitimacy"
                   width={600}
                   height={400}
-                  className="object-cover"
+                  className="h-full min-h-[400px] w-full object-cover"
                   priority
                 />
               </div>
