@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: 'Rx Likewise',
     title: 'Rx Likewise | Same results, smarter choices',
     description: DEFAULT_DESCRIPTION,
-    images: [{ url: '/images/banners/home-hero-banner.webp', width: 1200, height: 630, alt: 'Rx Likewise – GLP-1 cost and alternatives' }],
+    images: [{ url: '/images/logos/logo.png', width: 512, height: 512, alt: 'Rx Likewise – GLP-1 cost and alternatives' }],
   },
   twitter: {
     card: 'summary_large_image',

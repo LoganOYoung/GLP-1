@@ -39,14 +39,11 @@ function FallbackView({
   }
   return (
     <div
-      className={`flex items-center justify-center bg-gradient-to-br from-primary-100 via-white to-secondary-100 ${className}`}
+      className={`bg-gradient-to-br from-primary-100 via-white to-secondary-100 ${className}`}
       style={{ width, height }}
-    >
-      <div className="text-center p-4">
-        <div className="text-4xl mb-2">📷</div>
-        <p className="text-xs text-gray-600 font-medium">{alt}</p>
-      </div>
-    </div>
+      role="img"
+      aria-label={alt}
+    />
   );
 }
 

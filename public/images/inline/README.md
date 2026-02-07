@@ -1,6 +1,6 @@
 # Inline images (trust & life)
 
-Place images here to improve trust and “life” on the site. Until files exist, the app shows a gradient/placeholder.
+**Current:** Site uses brand gradient (`from-primary-100 via-white to-secondary-100`) for all decorative slots; no image files required. Optional: place images here to replace gradient with real visuals.
 
 | File | Used on | Suggested content |
 |------|--------|--------------------|
