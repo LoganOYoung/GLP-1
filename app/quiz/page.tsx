@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import ImagePlaceholder from '@/components/ImagePlaceholder';
 
 const steps = [
   {
@@ -142,16 +142,17 @@ export default function QuizPage() {
     <div className="container-page max-w-2xl section-pad">
       <Breadcrumbs items={[{ label: 'Find Your Option' }]} />
       <p className="text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Find Your Option</p>
-      <div className="mb-8 overflow-hidden rounded-none border border-gray-200 bg-gradient-to-br from-primary-50 to-secondary-50 shadow-sm">
+      <div className="mb-8 overflow-hidden rounded-none border border-gray-200 shadow-sm">
         <div className="relative h-44 w-full">
-          <ImagePlaceholder
-            src="/images/banners/quiz-hero-banner.webp"
+          <Image
+            src="/images/banners/quiz-tool-banner.png"
             alt="Find your option - personalized next steps for GLP-1"
             width={800}
             height={176}
             className="h-full w-full object-cover"
+            priority
           />
-          <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-r from-black/30 to-transparent px-6">
+          <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-r from-black/40 to-transparent px-6">
             <h1 className="text-2xl font-bold text-white drop-shadow sm:text-3xl">Find Your Option</h1>
             <p className="mt-2 max-w-md text-sm text-white/95 drop-shadow">
               Answer a few questions to get personalized next steps. We don&apos;t prescribe or sell—we point you to the right content and tools.
