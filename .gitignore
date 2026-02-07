@@ -23,3 +23,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# generated at build (do not commit)
+/public/sitemap.xml

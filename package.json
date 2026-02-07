@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "rm -rf .next && next dev -p 3000",
     "dev:fast": "next dev -p 3000",
-    "build": "next build && node scripts/inject-root-redirect.js",
+    "build": "node scripts/generate-sitemap.js && next build && node scripts/inject-root-redirect.js",
     "start": "node scripts/serve-static.js",
     "lint": "next lint",
     "check": "next lint && next build",
