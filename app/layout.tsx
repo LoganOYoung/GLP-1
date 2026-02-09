@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   icons: {
-    icon: '/images/logos/favicon.svg',
-    apple: '/images/logos/favicon.svg',
+    icon: '/images/logos/logo.png',
+    apple: '/images/logos/logo.png',
   },
 };
 
