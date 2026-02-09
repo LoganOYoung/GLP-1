@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const SITE_URL = 'https://www.rxlikewise.com';
@@ -63,6 +64,39 @@ export default function Footer() {
       />
       <footer className="border-t-2 border-primary-100 bg-gradient-to-b from-gray-50 to-white">
         <div className="container-page section-pad">
+          {/* Logo + 声明（与 header 一致：图标 + Likewise） */}
+          <div className="mb-8">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-1.5 text-primary-600 hover:text-primary-700 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+              aria-label="Rx Likewise – Home"
+            >
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded bg-white sm:h-7 sm:w-7">
+                <Image
+                  src="/images/logos/favicon.png"
+                  alt=""
+                  width={28}
+                  height={28}
+                  className="h-6 w-6 object-contain sm:h-7 sm:w-7"
+                />
+              </span>
+              <span className="text-xl font-bold tracking-tight sm:text-2xl">Likewise</span>
+            </Link>
+            <hr className="mt-2 border-gray-200" aria-hidden />
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-gray-600">
+              This site is an information hub, not a pharmacy. We do not prescribe or sell medications.{' '}
+              <strong className="text-gray-800">Informational only. Not medical advice.</strong>{' '}
+              Consult your doctor and verify pharmacy legitimacy.{' '}
+              <Link
+                href="/about"
+                className="font-medium text-primary-500 underline hover:no-underline whitespace-nowrap"
+              >
+                Learn more
+              </Link>
+              .
+            </p>
+          </div>
+
           {/* Quick links：平铺，多列流动 */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="sm:col-span-2">
@@ -88,14 +122,6 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-3 text-xs leading-relaxed text-gray-500">
-                Informational only. We do not prescribe or sell medications. Some links may be affiliate or sponsored.
-                Consult your doctor; verify pharmacy legitimacy.{' '}
-                <Link href="/about" className="font-medium text-primary-500 underline hover:no-underline">
-                  Learn more
-                </Link>
-                .
-              </p>
             </div>
           </div>
 
