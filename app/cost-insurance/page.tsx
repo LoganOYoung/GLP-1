@@ -138,7 +138,7 @@ export default function CostInsurancePage() {
               <div className="hidden lg:block">
                 <div className="relative h-64 w-full overflow-hidden shadow-lg">
                   <Image
-                    src="/images/banners/cost-insurance-hero-banner.webp"
+                    src="/images/banners/cost-insurance-hero-banner.png"
                     alt="Cost & Insurance - medication and savings"
                     width={600}
                     height={256}
