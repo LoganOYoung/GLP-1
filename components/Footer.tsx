@@ -105,7 +105,7 @@ export default function Footer() {
               <span className="text-xl font-bold tracking-tight sm:text-2xl">Likewise</span>
             </Link>
             <hr className="mt-2 border-gray-200" aria-hidden />
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-gray-600">
+            <p className="mt-3 max-w-4xl text-sm leading-relaxed text-gray-600">
               This site is an information hub, not a pharmacy. We do not prescribe or sell medications.{' '}
               <strong className="text-gray-800">Informational only. Not medical advice.</strong>{' '}
               Consult your doctor and verify pharmacy legitimacy.{' '}
