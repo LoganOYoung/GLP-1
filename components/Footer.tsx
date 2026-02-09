@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const SITE_URL = 'https://www.rxlikewise.com';
@@ -100,8 +101,19 @@ export default function Footer() {
           </div>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-2 border-t border-primary-100 pt-6 text-center">
-            <p className="text-xs text-gray-500">
-              © {new Date().getFullYear()} Rx Likewise. Same results, smarter choices. US audience. Not medical advice.
+            <p className="flex flex-wrap items-center justify-center gap-1 text-xs text-gray-500">
+              © {new Date().getFullYear()}{' '}
+              <span className="inline-flex items-center gap-0.5">
+                <Image
+                  src="/images/logos/favicon.png"
+                  alt=""
+                  width={14}
+                  height={14}
+                  className="h-3.5 w-3.5 shrink-0 align-middle"
+                />
+                Likewise
+              </span>
+              . Same results, smarter choices. US audience. Not medical advice.
             </p>
             <p className="text-xs text-gray-400">Content updated 2026.</p>
           </div>
