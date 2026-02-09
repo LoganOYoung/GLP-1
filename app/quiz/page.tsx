@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 const steps = [
@@ -142,25 +141,15 @@ export default function QuizPage() {
     <div className="container-page max-w-2xl section-pad">
       <Breadcrumbs items={[{ label: 'Find Your Option' }]} />
       <p className="text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Find Your Option</p>
-      <div className="mb-8 overflow-hidden rounded-none border border-gray-200 shadow-sm">
-        <div className="relative h-44 w-full">
-          <Image
-            src="/images/banners/quiz-tool-banner.png"
-            alt="Find your option - personalized next steps for GLP-1"
-            width={800}
-            height={176}
-            className="h-full w-full object-cover"
-            priority
-          />
-          <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-r from-black/40 to-transparent px-6">
-            <h1 className="text-2xl font-bold text-white drop-shadow sm:text-3xl">Find Your Option</h1>
-            <p className="mt-2 max-w-md text-sm text-white/95 drop-shadow">
-              Answer a few questions to get personalized next steps. We don&apos;t prescribe or sell—we point you to the right content and tools.
-            </p>
-            <p className="mt-1 max-w-md text-xs text-white/80 drop-shadow">
-              For anyone not sure which path fits—budget, preference, and goals.
-            </p>
-          </div>
+      <div className="mb-8 rounded-none border border-gray-200 bg-gradient-to-br from-primary-50/70 via-white to-secondary-50/50 px-6 py-6 sm:px-8 sm:py-8">
+        <div className="hero-content">
+          <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">Find Your Option</h1>
+        <p className="mt-2 max-w-xl text-sm text-gray-600 sm:text-base">
+          Answer a few questions to get personalized next steps. We don&apos;t prescribe or sell—we point you to the right content and tools.
+        </p>
+        <p className="mt-1 max-w-xl text-xs text-gray-500">
+          For anyone not sure which path fits—budget, preference, and goals.
+        </p>
         </div>
       </div>
       <p className="mb-6 text-gray-600">Choose the option that best fits your budget, preference, and goal.</p>

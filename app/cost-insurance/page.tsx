@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LastUpdated from '@/components/LastUpdated';
 import RelatedPages from '@/components/RelatedPages';
@@ -113,39 +112,22 @@ export default function CostInsurancePage() {
 
       <div className="bg-gradient-to-b from-white to-primary-50/20">
         {/* Hero Section */}
-        <section className="relative overflow-hidden border-b-2 border-primary-100 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-0 right-0 h-96 w-96 translate-x-1/2 -translate-y-1/2 rounded-none bg-primary-500 blur-3xl" />
-          </div>
-          <div className="container-page relative section-pad">
+        <section className="hero-bg">
+          <div className="container-page section-pad">
             <Breadcrumbs items={[{ label: 'Cost & Insurance' }]} />
             <p className="text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Cost & Insurance</p>
-            <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
-              <div>
-                <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-                  Cost & Insurance
-                </h1>
-                <p className="mt-2 text-base leading-relaxed text-slate-600 sm:text-lg">
-                  With insurance and savings cards, many people pay $0–$50/month for GLP-1s; without insurance, compounded semaglutide is often $150–$350/month. You can lower cost with manufacturer discount cards, insurance appeals, the TrumpRx $350 program, and HSA/FSA—this page shows how. Always verify current terms on each program&apos;s official website.
-                </p>
-                <p className="mt-2 text-sm font-medium text-slate-500">
-                  For anyone with or without insurance who wants to pay less or appeal a denial.
-                </p>
-                <div className="mt-4">
-                  <LastUpdated date={new Date('2026-01-30')} />
-                </div>
-              </div>
-              <div className="hidden lg:block">
-                <div className="relative h-64 w-full overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/banners/cost-insurance-hero-banner.png"
-                    alt="Cost & Insurance - medication and savings"
-                    width={600}
-                    height={256}
-                    className="h-full w-full object-cover"
-                    priority
-                  />
-                </div>
+            <div className="hero-content max-w-3xl">
+              <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                Cost & Insurance
+              </h1>
+              <p className="mt-2 text-base leading-relaxed text-slate-600 sm:text-lg">
+                With insurance and savings cards, many people pay $0–$50/month for GLP-1s; without insurance, compounded semaglutide is often $150–$350/month. You can lower cost with manufacturer discount cards, insurance appeals, the TrumpRx $350 program, and HSA/FSA—this page shows how. Always verify current terms on each program&apos;s official website.
+              </p>
+              <p className="mt-2 text-sm font-medium text-slate-500">
+                For anyone with or without insurance who wants to pay less or appeal a denial.
+              </p>
+              <div className="mt-4">
+                <LastUpdated date={new Date('2026-01-30')} />
               </div>
             </div>
             <div className="mt-6">

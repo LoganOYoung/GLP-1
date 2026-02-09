@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import ImagePlaceholder from '@/components/ImagePlaceholder';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LastUpdated from '@/components/LastUpdated';
 import RelatedPages from '@/components/RelatedPages';
@@ -55,10 +54,10 @@ export default function LabsPage() {
     <>
       <div className="bg-white">
         {/* Hero Section */}
-        <section className="border-b border-slate-200 bg-slate-50">
+        <section className="hero-bg">
           <div className="container-page section-pad">
             <Breadcrumbs items={[{ label: 'Lab Transparency' }]} />
-            <div className="max-w-3xl">
+            <div className="hero-content max-w-3xl">
               <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
                 Compounding Lab Transparency Database
               </h1>
@@ -89,17 +88,6 @@ export default function LabsPage() {
         {/* Info Section */}
         <section className="mb-12 rounded-none border border-primary-200 bg-primary-50 p-6">
           <h2 className="mb-3 text-lg font-semibold text-primary-900">Understanding Lab Types</h2>
-          <div className="mb-6 flex justify-center">
-            <div className="relative h-36 w-full max-w-2xl overflow-hidden rounded-none border border-gray-200 bg-white shadow-sm">
-              <ImagePlaceholder
-                src="/images/inline/labs-transparency.webp"
-                alt="Lab transparency - FDA inspection and 503A/503B credentials"
-                width={700}
-                height={144}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
               <h3 className="mb-2 text-sm font-semibold text-primary-800">503A Compounding Pharmacy</h3>

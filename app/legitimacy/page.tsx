@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import ImagePlaceholder from '@/components/ImagePlaceholder';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LastUpdated from '@/components/LastUpdated';
 import RelatedPages from '@/components/RelatedPages';
@@ -38,11 +37,11 @@ export default function LegitimacyPage() {
   return (
     <div className="bg-white">
       {/* Hero Banner */}
-      <section className="border-b border-gray-200 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+      <section className="hero-bg">
         <div className="container-page section-pad">
           <Breadcrumbs items={[{ label: 'Legitimacy' }]} />
           <p className="text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Legitimacy</p>
-          <div className="max-w-3xl">
+          <div className="hero-content max-w-3xl">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Legitimacy Tracker
             </h1>
@@ -103,17 +102,6 @@ export default function LegitimacyPage() {
         <p className="mt-4 text-sm text-gray-600">
           To verify a US pharmacy: search “[your state] board of pharmacy” and use the licensee lookup to confirm the pharmacy’s name, address, and license status. If the pharmacy is not listed or the address does not match, do not use it.
         </p>
-        <div className="mt-6 flex justify-center">
-          <div className="relative h-40 w-full max-w-xl overflow-hidden rounded-none border border-gray-200 bg-gray-50 shadow-sm">
-            <ImagePlaceholder
-              src="/images/inline/verify-pharmacy.webp"
-              alt="How to verify a pharmacy - state board lookup and LegitScript"
-              width={600}
-              height={160}
-              className="h-full w-full object-cover"
-            />
-          </div>
-        </div>
       </section>
 
       <section id="compliance" className="mt-10 scroll-mt-24" aria-labelledby="compliance-heading">

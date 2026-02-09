@@ -13,6 +13,27 @@
   .section-pad-tight {
     @apply py-8 sm:py-10 lg:py-12;
   }
+
+  /* Hero / banner 区域：无图时的统一背景（渐变 + 柔和光晕） */
+  .hero-bg {
+    @apply relative overflow-hidden border-b border-gray-200 bg-gradient-to-br from-primary-50/70 via-white to-secondary-50/70;
+  }
+  .hero-bg::before {
+    content: '';
+    @apply absolute top-0 right-0 h-96 w-96 translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-500;
+    filter: blur(80px);
+    opacity: 0.06;
+  }
+  .hero-bg::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-96 w-96 -translate-x-1/2 translate-y-1/2 rounded-full bg-secondary-600;
+    filter: blur(80px);
+    opacity: 0.05;
+  }
+  /* 标题区左侧色条，增强层次 */
+  .hero-content {
+    @apply relative z-10 border-l-4 border-primary-400 pl-5 sm:pl-6;
+  }
 }
 
 /* Skip Links */

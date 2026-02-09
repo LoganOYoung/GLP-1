@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Suspense } from 'react';
-import ImagePlaceholder from '@/components/ImagePlaceholder';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LastUpdated from '@/components/LastUpdated';
 import RelatedPages from '@/components/RelatedPages';
@@ -29,10 +28,10 @@ export default function FAQPage() {
       />
       <div className="bg-white">
         {/* Hero Banner */}
-        <section className="border-b border-slate-200 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+        <section className="hero-bg">
           <div className="container-page section-pad">
             <Breadcrumbs items={[{ label: 'FAQ' }]} />
-            <div className="max-w-3xl">
+            <div className="hero-content max-w-3xl">
               <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
                 Frequently Asked Questions
               </h1>
@@ -69,22 +68,9 @@ export default function FAQPage() {
         {/* 页底：简短说明 + 免责 */}
         <section className="border-t border-slate-200 bg-slate-50">
           <div className="container-page max-w-4xl py-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap items-center gap-4">
-              <div className="relative h-20 w-28 shrink-0 overflow-hidden rounded-none border border-slate-200 bg-white">
-                <ImagePlaceholder
-                  src="/images/inline/faq-support.webp"
-                  alt=""
-                  width={112}
-                  height={80}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="min-w-0 flex-1">
-                <p className="text-xs text-slate-600">
-                  Common questions, clear answers. Not medical advice—we point you to the right info.
-                </p>
-              </div>
-            </div>
+            <p className="text-xs text-slate-600">
+              Common questions, clear answers. Not medical advice—we point you to the right info.
+            </p>
           </div>
         </section>
       </div>

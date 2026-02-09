@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import ImagePlaceholder from '@/components/ImagePlaceholder';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LastUpdated from '@/components/LastUpdated';
 import PageCTA from '@/components/PageCTA';
@@ -111,7 +110,7 @@ export default function TrumpRxPage() {
           </div>
           <div className="container-page section-pad relative">
             <Breadcrumbs items={[{ label: 'TrumpRx $350 Program' }]} />
-            <div className="max-w-3xl">
+            <div className="hero-content max-w-3xl">
               <div className="mb-6 flex items-center gap-3">
                 <div className="rounded-none bg-secondary-500 p-3 shadow-lg">
                   <span className="text-xl font-bold text-white">$350</span>
@@ -174,17 +173,6 @@ export default function TrumpRxPage() {
           <section className="mb-12">
             <h2 className="mb-4 text-xl font-semibold text-slate-900">Program Status by State</h2>
             <TrumpRxStateMap />
-            <div className="mt-6 flex justify-center">
-              <div className="relative h-36 w-full max-w-xl overflow-hidden rounded-none border border-gray-200 bg-gray-50 shadow-sm">
-                <ImagePlaceholder
-                  src="/images/inline/trumprx-apply.webp"
-                  alt="How to apply for TrumpRx $350 - eligibility and application"
-                  width={600}
-                  height={144}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </div>
           </section>
 
           {/* Active States */}

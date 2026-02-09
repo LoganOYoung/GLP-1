@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import ImagePlaceholder from '@/components/ImagePlaceholder';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import DisclaimerBanner from '@/components/DisclaimerBanner';
 import LastUpdated from '@/components/LastUpdated';
@@ -59,8 +58,8 @@ export default function AlternativesPage() {
         <Breadcrumbs items={[{ label: 'Alternatives' }]} />
         <p className="text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Alternatives</p>
         {/* Hero Banner Section */}
-        <div className="mb-8 border-2 border-primary-100 bg-white p-8 shadow-lg lg:p-12">
-          <div className="max-w-3xl">
+        <div className="mb-8 rounded-none border border-primary-100 bg-gradient-to-br from-primary-50/70 via-white to-secondary-50/50 p-8 lg:p-12">
+          <div className="hero-content max-w-3xl">
             <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
               GLP-1 Alternatives
             </h1>
@@ -90,18 +89,6 @@ export default function AlternativesPage() {
             <li><Link href="/cost-insurance" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Cost & Insurance</Link></li>
             <li><Link href="/legitimacy" className="rounded-none border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-gray-50">Legitimacy</Link></li>
           </ul>
-        </div>
-
-        <div className="mt-6 flex justify-center">
-          <div className="relative h-40 w-full max-w-2xl overflow-hidden rounded-none border border-gray-200 bg-gray-50 shadow-sm">
-            <ImagePlaceholder
-              src="/images/inline/alternatives-paths.webp"
-              alt="Your path - brand, compounded, or oral GLP-1 options"
-              width={700}
-              height={160}
-              className="h-full w-full object-cover"
-            />
-          </div>
         </div>
 
         {/* Why consider alternatives (short) */}
