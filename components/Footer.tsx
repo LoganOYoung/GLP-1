@@ -83,24 +83,18 @@ export default function Footer() {
               <span className="text-xl font-bold tracking-tight sm:text-2xl">Likewise</span>
             </Link>
             <hr className="mt-2 border-gray-200" aria-hidden />
-            <div className="mt-3 max-w-2xl text-sm leading-relaxed text-gray-600">
-              <p className="mb-1">
-                This site is an information hub, not a pharmacy. We do not prescribe or sell medications.
-              </p>
-              <p className="mb-1">
-                <strong className="text-gray-800">Informational only. Not medical advice.</strong>
-              </p>
-              <p>
-                Consult your doctor and verify pharmacy legitimacy.{' '}
-                <Link
-                  href="/about"
-                  className="font-medium text-primary-500 underline hover:no-underline whitespace-nowrap"
-                >
-                  Learn more
-                </Link>
-                .
-              </p>
-            </div>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-gray-600">
+              This site is an information hub, not a pharmacy. We do not prescribe or sell medications.{' '}
+              <strong className="text-gray-800">Informational only. Not medical advice.</strong>{' '}
+              Consult your doctor and verify pharmacy legitimacy.{' '}
+              <Link
+                href="/about"
+                className="font-medium text-primary-500 underline hover:no-underline whitespace-nowrap"
+              >
+                Learn more
+              </Link>
+              .
+            </p>
           </div>
 
           {/* Quick links：平铺，多列流动 */}
