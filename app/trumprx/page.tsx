@@ -175,7 +175,7 @@ export default function TrumpRxPage() {
             <h2 className="mb-4 text-xl font-semibold text-slate-900">Program Status by State</h2>
             <TrumpRxStateMap />
             <div className="mt-6 flex justify-center">
-              <div className="relative h-36 w-full max-w-xl overflow-hidden rounded-none border border-secondary-200 bg-secondary-50 shadow-sm">
+              <div className="relative h-36 w-full max-w-xl overflow-hidden rounded-none border border-gray-200 bg-gray-50 shadow-sm">
                 <ImagePlaceholder
                   src="/images/inline/trumprx-apply.webp"
                   alt="How to apply for TrumpRx $350 - eligibility and application"

@@ -90,7 +90,7 @@ export default function LabsPage() {
         <section className="mb-12 rounded-none border border-primary-200 bg-primary-50 p-6">
           <h2 className="mb-3 text-lg font-semibold text-primary-900">Understanding Lab Types</h2>
           <div className="mb-6 flex justify-center">
-            <div className="relative h-36 w-full max-w-2xl overflow-hidden rounded-none border border-primary-200 bg-white shadow-sm">
+            <div className="relative h-36 w-full max-w-2xl overflow-hidden rounded-none border border-gray-200 bg-white shadow-sm">
               <ImagePlaceholder
                 src="/images/inline/labs-transparency.webp"
                 alt="Lab transparency - FDA inspection and 503A/503B credentials"

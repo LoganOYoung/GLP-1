@@ -104,7 +104,7 @@ export default function LegitimacyPage() {
           To verify a US pharmacy: search “[your state] board of pharmacy” and use the licensee lookup to confirm the pharmacy’s name, address, and license status. If the pharmacy is not listed or the address does not match, do not use it.
         </p>
         <div className="mt-6 flex justify-center">
-          <div className="relative h-40 w-full max-w-xl overflow-hidden rounded-none border border-green-200 bg-green-50 shadow-sm">
+          <div className="relative h-40 w-full max-w-xl overflow-hidden rounded-none border border-gray-200 bg-gray-50 shadow-sm">
             <ImagePlaceholder
               src="/images/inline/verify-pharmacy.webp"
               alt="How to verify a pharmacy - state board lookup and LegitScript"

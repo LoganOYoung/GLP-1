@@ -93,7 +93,7 @@ export default function AlternativesPage() {
         </div>
 
         <div className="mt-6 flex justify-center">
-          <div className="relative h-40 w-full max-w-2xl overflow-hidden rounded-none border border-primary-200 bg-primary-50 shadow-sm">
+          <div className="relative h-40 w-full max-w-2xl overflow-hidden rounded-none border border-gray-200 bg-gray-50 shadow-sm">
             <ImagePlaceholder
               src="/images/inline/alternatives-paths.webp"
               alt="Your path - brand, compounded, or oral GLP-1 options"
