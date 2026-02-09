@@ -3,18 +3,22 @@ import Link from 'next/link';
 
 const SITE_URL = 'https://www.rxlikewise.com';
 
-/** Footer = Quick links：平铺常用链接，不按 header 分组 */
-const QUICK_LINKS = [
+/** Footer = Quick links 分三列 + Legal 一列 */
+const QUICK_LINKS_COL1 = [
   { href: '/', label: 'Home' },
   { href: '/quiz', label: 'Find Your Option' },
   { href: '/cost-insurance', label: 'Cost & Insurance' },
   { href: '/calculator', label: 'Cost Calculator' },
   { href: '/alternatives', label: 'Alternatives' },
+] as const;
+const QUICK_LINKS_COL2 = [
   { href: '/comparison', label: 'Tirzepatide vs Semaglutide' },
   { href: '/legitimacy', label: 'Pharmacy Radar' },
   { href: '/legitimacy/shortage', label: 'FDA Shortage' },
   { href: '/tools/dose-converter', label: 'Dose Converter' },
   { href: '/cost-insurance/appeals', label: 'Appeal Templates' },
+] as const;
+const QUICK_LINKS_COL3 = [
   { href: '/cost-insurance#discount-cards', label: 'Discount Cards' },
   { href: '/trumprx', label: 'TrumpRx Policy' },
   { href: '/labs', label: 'Clinical Data' },
@@ -51,7 +55,25 @@ function buildOrganizationSchema() {
 }
 
 const linkClass =
-  'block py-2 transition-colors hover:text-primary-500 md:py-0 min-h-[44px] flex items-center md:min-h-0 text-sm text-gray-600';
+  'block py-1.5 text-sm text-gray-600 transition-colors hover:text-primary-500 md:py-1';
+
+function LinkColumn({
+  links,
+}: {
+  links: readonly { href: string; label: string }[];
+}) {
+  return (
+    <ul className="space-y-1">
+      {links.map((item) => (
+        <li key={item.href}>
+          <Link href={item.href} className={linkClass}>
+            {item.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default function Footer() {
   const organizationSchema = buildOrganizationSchema();
@@ -83,13 +105,13 @@ export default function Footer() {
               <span className="text-xl font-bold tracking-tight sm:text-2xl">Likewise</span>
             </Link>
             <hr className="mt-2 border-gray-200" aria-hidden />
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-gray-600">
+            <p className="mt-3 max-w-2xl overflow-x-auto text-sm leading-relaxed text-gray-600 whitespace-nowrap">
               This site is an information hub, not a pharmacy. We do not prescribe or sell medications.{' '}
               <strong className="text-gray-800">Informational only. Not medical advice.</strong>{' '}
               Consult your doctor and verify pharmacy legitimacy.{' '}
               <Link
                 href="/about"
-                className="font-medium text-primary-500 underline hover:no-underline whitespace-nowrap"
+                className="font-medium text-primary-500 underline hover:no-underline"
               >
                 Learn more
               </Link>
@@ -97,31 +119,31 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick links：平铺，多列流动 */}
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="sm:col-span-2">
-              <h3 className="mb-3 text-sm font-bold text-gray-900">Quick links</h3>
-              <ul className="columns-2 gap-x-8 text-sm lg:columns-3 [&>li]:break-inside-avoid">
-                {QUICK_LINKS.map((link) => (
-                  <li key={`${link.href}-${link.label}`}>
-                    <Link href={link.href} className={linkClass}>
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          {/* Quick links 三列 + Legal 一列 */}
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
+            <div>
+              <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-500">
+                Quick links
+              </h3>
+              <LinkColumn links={QUICK_LINKS_COL1} />
             </div>
             <div>
-              <h3 className="mb-3 text-sm font-bold text-gray-900">Legal</h3>
-              <ul className="space-y-0 text-sm">
-                {LEGAL_LINKS.map((item) => (
-                  <li key={item.href}>
-                    <Link href={item.href} className={linkClass}>
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-500">
+                Compare & tools
+              </h3>
+              <LinkColumn links={QUICK_LINKS_COL2} />
+            </div>
+            <div>
+              <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-500">
+                Resources
+              </h3>
+              <LinkColumn links={QUICK_LINKS_COL3} />
+            </div>
+            <div>
+              <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-500">
+                Legal
+              </h3>
+              <LinkColumn links={LEGAL_LINKS} />
             </div>
           </div>
 

@@ -1,14 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import NewsletterSignup from '@/components/NewsletterSignup';
 import ImagePlaceholder from '@/components/ImagePlaceholder';
 import PopularPharmaciesBanner from '@/components/PopularPharmaciesBanner';
 import HomeComparisonSection from '@/components/HomeComparisonSection';
 import HomeFlowByRole from '@/components/HomeFlowByRole';
 import HomeLiveDataStrip from '@/components/HomeLiveDataStrip';
 import HomeInsuranceNavigator from '@/components/HomeInsuranceNavigator';
-import CrowdsourceFeed from '@/components/crowdsource/CrowdsourceFeed';
 
 export const metadata: Metadata = {
   title: 'Rx Likewise | Same results, smarter choices',
@@ -76,17 +74,6 @@ export default function Home() {
 
       {/* 实时数据看板占位：建立数据驱动、专业感 */}
       <HomeLiveDataStrip />
-
-      {/* Recent community reports strip */}
-      <section className="border-b border-gray-200 bg-white">
-        <div className="container-page section-pad-tight">
-          <h2 className="text-lg font-semibold text-gray-900">Recent community reports</h2>
-          <p className="mt-1 text-sm text-gray-600">Real prices and supply updates shared by visitors.</p>
-          <div className="mt-4">
-            <CrowdsourceFeed limit={3} showAllLink />
-          </div>
-        </div>
-      </section>
 
       {/* 分流模块：按角色（有保险 / 无保险 / 不确定）快速导向深层页 */}
       <HomeFlowByRole />
@@ -236,29 +223,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Newsletter + CTA before global Footer (Quick links live in Footer) */}
-      <section className="border-b border-gray-200 bg-gray-50">
-        <div className="container-page section-pad-tight">
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-            <div className="lg:max-w-sm">
-              <h2 className="text-lg font-semibold text-gray-900">Get updates</h2>
-              <p className="mt-1 text-sm text-gray-600">Cost tips, shortage alerts, new guides (no spam).</p>
-              <div className="mt-4">
-                <NewsletterSignup />
-              </div>
-            </div>
-            <div className="text-center lg:text-right">
-              <p className="text-base font-semibold text-gray-900">Not sure where to start?</p>
-              <Link
-                href="/quiz"
-                className="mt-3 inline-flex items-center gap-2 bg-primary-500 px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-primary-600"
-              >
-                Take the quiz
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
