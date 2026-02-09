@@ -55,7 +55,7 @@ function buildOrganizationSchema() {
 }
 
 const linkClass =
-  'block py-1.5 text-sm text-gray-600 transition-colors hover:text-primary-500 md:py-1';
+  'flex min-h-[44px] items-center py-1.5 text-sm text-gray-600 transition-colors hover:text-primary-500 md:min-h-0 md:py-1';
 
 function LinkColumn({
   links,
