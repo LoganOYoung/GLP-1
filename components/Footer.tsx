@@ -104,13 +104,15 @@ export default function Footer() {
             <p className="flex flex-wrap items-center justify-center gap-1 text-xs text-gray-500">
               © {new Date().getFullYear()}{' '}
               <span className="inline-flex items-center gap-0.5">
-                <Image
-                  src="/images/logos/favicon.png"
-                  alt=""
-                  width={14}
-                  height={14}
-                  className="h-3.5 w-3.5 shrink-0 align-middle"
-                />
+                <span className="inline-flex shrink-0 items-center justify-center rounded bg-white">
+                  <Image
+                    src="/images/logos/favicon.png"
+                    alt=""
+                    width={14}
+                    height={14}
+                    className="h-3.5 w-3.5 shrink-0 align-middle"
+                  />
+                </span>
                 Likewise
               </span>
               . Same results, smarter choices. US audience. Not medical advice.
