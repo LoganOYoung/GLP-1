@@ -12,13 +12,13 @@ export default function Header() {
           className="flex shrink-0 items-center gap-1.5 py-2 min-h-[44px] min-w-[44px] text-primary-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-none"
           aria-label="Rx Likewise – Home"
         >
-          <span className="flex shrink-0 items-center justify-center rounded bg-white">
+          <span className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded bg-white sm:h-7 sm:w-7">
             <Image
               src="/images/logos/favicon.png"
               alt=""
               width={28}
               height={28}
-              className="h-6 w-6 shrink-0 sm:h-7 sm:w-7"
+              className="h-6 w-6 object-contain sm:h-7 sm:w-7"
             />
           </span>
           <span className="text-xl font-bold tracking-tight sm:text-2xl">Likewise</span>

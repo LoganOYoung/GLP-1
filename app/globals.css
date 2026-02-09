@@ -28,7 +28,8 @@
   border-width: 0;
 }
 
-.sr-only:focus {
+.sr-only:focus,
+.sr-only:focus-within {
   position: fixed;
   width: auto;
   height: auto;
@@ -37,6 +38,7 @@
   overflow: visible;
   clip: auto;
   white-space: normal;
+  z-index: 9999;
 }
 
 /* Print Styles */
