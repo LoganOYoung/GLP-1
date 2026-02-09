@@ -46,7 +46,7 @@ export default function FAQPage() {
         </Suspense>
         {/* 看完 FAQ 后：快捷跳转 + 按情境 */}
         <section className="border-b border-slate-200 bg-white">
-          <div className="container-page max-w-4xl section-pad-tight">
+          <div className="container-page section-pad-tight">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Quick links</p>
             <ul className="flex flex-wrap gap-2">
               <li><Link href="/calculator" className="rounded-none border border-primary-300 bg-white px-3 py-1.5 text-sm font-medium text-primary-700 hover:bg-primary-50">Calculator</Link></li>
@@ -67,7 +67,7 @@ export default function FAQPage() {
         <RelatedPages pages={getRelatedPagesFor('faq')} />
         {/* 页底：简短说明 + 免责 */}
         <section className="border-t border-slate-200 bg-slate-50">
-          <div className="container-page max-w-4xl py-4 sm:px-6 lg:px-8">
+          <div className="container-page py-4 sm:px-6 lg:px-8">
             <p className="text-xs text-slate-600">
               Common questions, clear answers. Not medical advice—we point you to the right info.
             </p>

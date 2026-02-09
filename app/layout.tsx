@@ -83,6 +83,19 @@ export default function RootLayout({
           `}
         </Script>
         <SkipLinks />
+        {/* 全站极淡噪点纹理，增强层次、不干扰阅读 */}
+        <div
+          className="pointer-events-none fixed inset-0 z-0 opacity-[0.04]"
+          aria-hidden
+        >
+          <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+            <filter id="site-noise">
+              <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" stitchTiles="stitch" result="n" />
+              <feColorMatrix in="n" type="saturate" values="0" />
+            </filter>
+            <rect width="100%" height="100%" filter="url(#site-noise)" />
+          </svg>
+        </div>
         <ReadingProgress />
         <Header />
         <main id="main-content" className="flex-1">{children}</main>

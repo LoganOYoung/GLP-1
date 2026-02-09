@@ -69,7 +69,7 @@ export default function LegitimacyPage() {
         </div>
       </div>
       
-      <div className="container-page max-w-4xl section-pad">
+      <div className="container-page section-pad">
 
       <section className="mt-10">
         <h2 className="text-lg font-semibold text-gray-900">Pharmacy & clinic red flags</h2>

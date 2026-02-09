@@ -144,7 +144,7 @@ export default function CalculatorMultiStep() {
         />
       </div>
 
-      <div className="container-page max-w-4xl py-6 sm:py-8">
+      <div className="container-page py-6 sm:py-8">
         {personalizedRec?.recommendedPage && (
           <div className="mb-6 text-center">
             <div className="mx-auto max-w-md rounded-none border border-secondary-200 bg-secondary-50 p-3">

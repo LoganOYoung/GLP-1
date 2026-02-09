@@ -53,7 +53,7 @@ export default function CalculatorPage() {
         </section>
         {/* Intro */}
         <section className="border-b border-slate-200 bg-white">
-          <div className="container-page max-w-4xl py-4 sm:py-5">
+          <div className="container-page py-4 sm:py-5">
             <p className="text-sm text-slate-600">
               Discount cards and appeal templates: <Link href="/cost-insurance" className="font-medium text-primary-600 underline hover:no-underline">Cost & Insurance</Link>.
             </p>

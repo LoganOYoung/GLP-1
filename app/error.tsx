@@ -15,7 +15,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="container-page max-w-2xl section-pad text-center">
+    <div className="container-page section-pad text-center">
       <h1 className="text-2xl font-bold text-gray-900">Something went wrong</h1>
       <p className="mt-2 text-gray-600">
         We couldn’t load this page. Try again or go back home.

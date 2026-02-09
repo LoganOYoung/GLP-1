@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ShortagePage() {
   return (
-    <div className="container-page max-w-4xl section-pad">
+    <div className="container-page section-pad">
       <Breadcrumbs items={[{ label: 'Legitimacy', href: '/legitimacy' }, { label: 'FDA Shortage Status' }]} />
       <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
         FDA Shortage Status

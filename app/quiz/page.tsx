@@ -138,7 +138,7 @@ export default function QuizPage() {
   const result = done ? getResult(answers) : null;
 
   return (
-    <div className="container-page max-w-2xl section-pad">
+    <div className="container-page section-pad">
       <Breadcrumbs items={[{ label: 'Find Your Option' }]} />
       <p className="text-xs font-medium uppercase tracking-wide text-slate-500">You&apos;re in: Find Your Option</p>
       <div className="mb-8 rounded-none border border-gray-200 bg-gradient-to-br from-primary-50/70 via-white to-secondary-50/50 px-6 py-6 sm:px-8 sm:py-8">
