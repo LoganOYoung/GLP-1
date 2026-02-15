@@ -1,6 +1,6 @@
 {
   "_comment": "Update quarterly. See docs/DATA-UPDATE-PROCESS.md",
-  "lastUpdated": "2026-02-03T03:16:44Z",
+  "lastUpdated": "2026-02-15T09:58:05Z",
   "states": [
     {
       "stateCode": "CA",
@@ -15,7 +15,7 @@
         "Prescription from licensed physician"
       ],
       "applicationLink": "https://www.dhcs.ca.gov/services/Pages/TrumpRx.aspx",
-      "lastUpdated": "2026-02-03",
+      "lastUpdated": "2026-02-15",
       "notes": "First state to implement TrumpRx program. High demand expected."
     },
     {
@@ -31,7 +31,7 @@
         "Prescription from licensed physician"
       ],
       "applicationLink": "https://www.hhs.texas.gov/services/health/trumprx",
-      "lastUpdated": "2026-02-03"
+      "lastUpdated": "2026-02-15"
     },
     {
       "stateCode": "FL",
@@ -44,7 +44,7 @@
         "Household income below 400% of federal poverty level",
         "US citizen or legal resident"
       ],
-      "lastUpdated": "2026-02-03",
+      "lastUpdated": "2026-02-15",
       "notes": "Pending legislative approval. Expected to launch March 2026."
     },
     {
@@ -60,7 +60,7 @@
         "Prescription from licensed physician"
       ],
       "applicationLink": "https://www.health.ny.gov/trumprx",
-      "lastUpdated": "2026-02-03"
+      "lastUpdated": "2026-02-15"
     },
     {
       "stateCode": "IL",
@@ -71,7 +71,7 @@
         "Uninsured or underinsured",
         "Household income below 400% of federal poverty level"
       ],
-      "lastUpdated": "2026-02-03",
+      "lastUpdated": "2026-02-15",
       "notes": "Legislation introduced. Vote expected Q2 2026."
     },
     {
@@ -86,7 +86,7 @@
         "US citizen or legal resident"
       ],
       "applicationLink": "https://www.health.pa.gov/Programs/TrumpRx",
-      "lastUpdated": "2026-02-03"
+      "lastUpdated": "2026-02-15"
     },
     {
       "stateCode": "OH",
@@ -94,7 +94,7 @@
       "status": "not-available",
       "monthlyCap": 350,
       "eligibilityCriteria": [],
-      "lastUpdated": "2026-02-03",
+      "lastUpdated": "2026-02-15",
       "notes": "No legislation introduced. Check back for updates."
     },
     {
@@ -106,7 +106,7 @@
         "Uninsured or underinsured",
         "Household income below 350% of federal poverty level"
       ],
-      "lastUpdated": "2026-02-03",
+      "lastUpdated": "2026-02-15",
       "notes": "Legislation in committee. Expected vote Q2 2026."
     },
     {
@@ -121,7 +121,7 @@
         "US citizen or legal resident"
       ],
       "applicationLink": "https://www.ncdhhs.gov/trumprx",
-      "lastUpdated": "2026-02-03"
+      "lastUpdated": "2026-02-15"
     },
     {
       "stateCode": "MI",
@@ -132,7 +132,7 @@
         "Uninsured or underinsured",
         "Household income below 400% of federal poverty level"
       ],
-      "lastUpdated": "2026-02-03",
+      "lastUpdated": "2026-02-15",
       "notes": "Legislation passed, implementation pending."
     }
   ]
